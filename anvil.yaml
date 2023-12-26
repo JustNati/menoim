@@ -1,7 +1,7 @@
 allow_embedding: false
-package_name: Material_Design_1
-startup: {type: form, module: PerformanceTest}
-name: Material Design 1
+package_name: Menoim
+startup: {type: form, module: NewPerformanceTestForm}
+name: Menoim
 startup_form: null
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}

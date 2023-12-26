@@ -17,6 +17,7 @@ components:
       properties: {text: בדיקת כח חדשה}
       type: Button
       layout_properties: {grid_position: 'AOHUXW,XWGHCL'}
+      event_bindings: {click: new_test_click}
     - name: report_by_tail
       properties: {text: דו"ח לפי מטוס}
       type: Button
@@ -29,12 +30,12 @@ components:
       properties: {text: דו"ח למנוע מהרכבה אחרונה}
       type: Button
       layout_properties: {grid_position: 'NWVYSX,JTOVYL'}
-    - name: button_5
-      properties: {text: button_5}
+    - name: update
+      properties: {text: עדכון מנוע\מטוס}
       type: Button
       layout_properties: {grid_position: 'WYYASN,ZACIER'}
-    - name: button_6
-      properties: {text: button_6}
+    - name: explore_records
+      properties: {text: עיון בבדיקות מדווחת}
       type: Button
       layout_properties: {grid_position: 'ZUADXP,SHNKDD'}
 - type: FlowPanel

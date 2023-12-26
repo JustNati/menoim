@@ -7,3 +7,9 @@ class PerformanceTest(PerformanceTestTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def new_test_click(self, **event_args) -> None:
+    '''
+    move to ne
+    '''
+    open_form('NewPerformanceTestForm')
