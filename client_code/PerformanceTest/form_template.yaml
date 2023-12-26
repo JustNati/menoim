@@ -1,0 +1,43 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'RJKWEF,HRNSQP'}
+    components:
+    - name: new_test
+      properties: {text: בדיקת כח חדשה}
+      type: Button
+      layout_properties: {grid_position: 'AOHUXW,XWGHCL'}
+    - name: report_by_tail
+      properties: {text: דו"ח לפי מטוס}
+      type: Button
+      layout_properties: {grid_position: 'QHUIGT,XZKYGW'}
+    - name: engine_graph
+      properties: {text: תרשים מנוע}
+      type: Button
+      layout_properties: {grid_position: 'FWCETC,REKYFE'}
+    - name: report_last_assemble
+      properties: {text: דו"ח למנוע מהרכבה אחרונה}
+      type: Button
+      layout_properties: {grid_position: 'NWVYSX,JTOVYL'}
+    - name: button_5
+      properties: {text: button_5}
+      type: Button
+      layout_properties: {grid_position: 'WYYASN,ZACIER'}
+    - name: button_6
+      properties: {text: button_6}
+      type: Button
+      layout_properties: {grid_position: 'ZUADXP,SHNKDD'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
