@@ -102,27 +102,167 @@ components:
       properties: {align: right}
       type: FlowPanel
       components:
-      - name: test_date
-        properties: {format: DD/MM/YYYY, date: null}
-        type: DatePicker
+      - name: recheck_btn
+        properties: {text: בדיקה חוזרת, font_size: 12}
+        type: CheckBox
         layout_properties: {}
+      - name: test_date
+        properties: {format: DD/MM/YYYY, date: null, font_size: 10}
+        type: DatePicker
+        layout_properties: {width: 84.8000244140625}
       - name: date_lbl
-        properties: {text: תאריך, bold: true}
+        properties: {text: תאריך, bold: true, font_size: 12}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_11
+      properties: {align: right}
+      type: FlowPanel
+      components:
+      - name: engine_time
+        properties: {text: TEST, font_size: 12}
+        type: TextBox
+        layout_properties: {}
+      - name: engine_time_lbl
+        properties: {bold: true, text: שעות מנוע, font_size: 12}
         type: Label
         layout_properties: {}
     - name: flow_panel_6
       properties: {align: right}
       type: FlowPanel
       components:
-      - name: engine_time
-        properties: {text: TEST}
-        type: TextBox
+      - name: add_tmp_dd
+        properties: {font_size: 12}
+        type: DropDown
+        layout_properties: {width: 60.39996337890625}
+      - name: add_tmp_lbl
+        properties: {text: +, font_size: 12}
+        type: Label
         layout_properties: {}
-      - name: engine_time_lbl
-        properties: {bold: true, text: שעות מנוע}
+      - name: max_env_tmp_txt
+        properties: {type: number, font_size: 12}
+        type: TextBox
+        layout_properties: {width: 74.60001220703126}
+      - name: env_tmp_lbl
+        properties: {text: OAT טמפרטורת הסביבה המקסימלית, font_size: 12, bold: true}
         type: Label
         layout_properties: {}
       layout_properties: {}
+    - name: flow_panel_9
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: engine_torque_txt
+        properties: {type: number, font_size: 12}
+        type: TextBox
+        layout_properties: {width: 72.188}
+      - name: engine_torque_lbl
+        properties: {text: פיתול מנוע, font_size: 12, bold: true}
+        type: Label
+        layout_properties: {}
+      - name: text_box_1
+        properties: {type: number, font_size: 12}
+        type: TextBox
+        layout_properties: {width: 79.1879755859375}
+      - name: barometric_pressure_lbl
+        properties: {text: גובה לחץ ברומטרי, font_size: 12, bold: true}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_10
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: n1_rpm_txt
+        properties: {type: number, font_size: 12}
+        type: TextBox
+        layout_properties: {width: 83.7879755859375}
+      - name: n1_rpm_lbl
+        properties: {text: בעת הבדיקה N1 סל"ד מנוע, font_size: 12, bold: true}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_14
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: out_ff_temp_txt
+        properties: {type: number, font_size: 12}
+        type: TextBox
+      - name: out_itt_ff_lbl
+        properties: {text: בעת הבדיקה ITT זרימת דלק, font_size: 12, bold: true}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_13
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: required_wf_ff_txt
+        properties: {type: number, font_size: 12}
+        type: TextBox
+      - name: required_wf_ff_lbl
+        properties: {text: נדרשת WF זרימת דלק, font_size: 12, bold: true}
+        type: Label
+        layout_properties: {}
+      - name: out_wf_ff_txt
+        properties: {type: number, font_size: 12}
+        type: TextBox
+      - name: out_wf_ff_lbl
+        properties: {text: בעת הבדיקה WF זרימת דלק, font_size: 12, bold: true}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_12
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: text_area_1
+        properties: {}
+        type: TextArea
+      - name: label_1
+        properties: {text: הערות, bold: true}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_16
+      properties: {align: right}
+      type: FlowPanel
+      components:
+      - name: approver_name_dd
+        properties: {}
+        type: DropDown
+      - name: approver_name_lbl
+        properties: {text: פרטי מזין הנתונים, bold: true}
+        type: Label
+        layout_properties: {}
+      - name: submitter_name_dd
+        properties: {}
+        type: DropDown
+      - name: submitter_name_lbl
+        properties: {text: פרטי מזין הנתונים, bold: true}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_15
+      properties: {align: right}
+      type: FlowPanel
+      components:
+      - name: usability_dd
+        properties: {}
+        type: DropDown
+      - name: usability_lbl
+        properties: {text: שמישות, bold: true}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_17
+      properties: {align: center}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: button_1
+        properties: {text: עדכן, foreground: 'theme:White', background: 'theme:Primary
+            500'}
+        type: Button
+        layout_properties: {}
 - type: FlowPanel
   properties: {}
   name: navbar_links
