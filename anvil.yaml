@@ -1,5 +1,99 @@
 allow_embedding: false
 package_name: Menoim
+db_schema:
+  powertests:
+    client: full
+    server: full
+    columns:
+    - name: engine_num
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: tail
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: side
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: assmble_date
+      admin_ui: {order: 3, width: 200}
+      type: date
+    - name: assmble_eng_hours
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: test_date
+      admin_ui: {width: 200, order: 5}
+      type: date
+    - name: cur_engine_hours
+      admin_ui: {width: 200, order: 6}
+      type: number
+    - name: max_env_temp_OAT
+      admin_ui: {width: 200, order: 7}
+      type: number
+    - name: barometric_pressure
+      admin_ui: {width: 200, order: 8}
+      type: number
+    - name: engine_torque
+      admin_ui: {width: 200, order: 9}
+      type: number
+    - name: test_n1_rpm
+      admin_ui: {width: 200, order: 10}
+      type: number
+    - name: test_itt
+      admin_ui: {width: 200, order: 11}
+      type: number
+    - name: test_wf
+      admin_ui: {width: 200, order: 12}
+      type: number
+    - name: required_wf
+      admin_ui: {width: 200, order: 13}
+      type: number
+    - name: test_notes
+      admin_ui: {width: 200, order: 14}
+      type: string
+    - name: submitter
+      admin_ui: {width: 200, order: 15}
+      type: string
+    - name: approver
+      admin_ui: {width: 200, order: 16}
+      type: string
+    - name: test_result
+      admin_ui: {width: 200, order: 17}
+      type: string
+    - name: reference
+      admin_ui: {order: -1, width: 200}
+      type: number
+    title: powerTests
+  tails:
+    client: full
+    server: full
+    columns:
+    - name: tail_number
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: left_engine_num
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: right_engine_num
+      admin_ui: {width: 200, order: 2}
+      type: string
+    title: tails
+  engines:
+    client: full
+    server: full
+    columns:
+    - name: engine_num
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: tail_num
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: side
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: assemble_date
+      admin_ui: {width: 200, order: 3}
+      type: date
+    title: engines
 startup: {type: form, module: NewPerformanceTestForm}
 name: Menoim
 startup_form: null
