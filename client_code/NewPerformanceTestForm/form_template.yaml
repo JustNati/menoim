@@ -77,6 +77,18 @@ components:
         properties: {text: שעות מנוע בהרכבה, bold: true}
         type: Label
         layout_properties: {}
+    - name: flow_panel_2
+      properties: {align: right}
+      type: FlowPanel
+      components:
+      - name: engine_type_info_lbl
+        properties: {}
+        type: Label
+      - name: engine_type_lbl
+        properties: {text: סוג מנוע, bold: true}
+        type: Label
+        layout_properties: {}
+      layout_properties: {}
   - name: test_form_panel
     properties: {visible: false}
     type: LinearPanel

@@ -61,12 +61,13 @@ class NewPerformanceTestForm(NewPerformanceTestFormTemplate):
       # Engine details
       rows = app_tables.engines.get(engine_num=self.engine_num_dd.selected_value)
       rows_dict = {x[0]:x[1] for x in list(rows)}
-      print(rows_dict)
       self.tail_num_info_lbl.text = rows_dict['tail_num']
       self.side_info_lbl.text = rows_dict['side']
       day, month, year = rows_dict['assemble_date'].day, rows_dict['assemble_date'].month, rows_dict['assemble_date'].year
       self.assemble_date.text = f'{day}/{month}/{year}'
       self.time_on_asseble.text = rows_dict['time_on_assemble']
+      e_type = rows_dict['engine_type']
+      self.engine_type_info_lbl.text = f'PT6-A{e_type}'
 
       # fields init
       self.add_tmp_dd.selected_value = '4'
