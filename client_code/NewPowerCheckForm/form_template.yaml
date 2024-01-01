@@ -126,18 +126,6 @@ components:
       properties: {align: right}
       type: FlowPanel
       components:
-      - name: add_tmp_dd
-        properties:
-          font_size: 12
-          items: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-          align: right
-        type: DropDown
-        layout_properties: {width: 40.58751220703125}
-        data_bindings: []
-      - name: add_tmp_lbl
-        properties: {text: +, font_size: 12}
-        type: Label
-        layout_properties: {}
       - name: max_env_tmp_txt
         properties: {type: number, font_size: 12}
         type: TextBox
@@ -147,6 +135,14 @@ components:
         type: Label
         layout_properties: {}
       layout_properties: {}
+    - name: flow_panel_6_copy
+      properties: {align: right}
+      type: FlowPanel
+      components:
+      - name: env_final_tmp_lbl
+        properties: {text: 'טמפ'' הסביבה המדווחת(+4): 0', font_size: 12, bold: true}
+        type: Label
+        layout_properties: {}
     - name: flow_panel_9
       properties: {align: right}
       type: FlowPanel

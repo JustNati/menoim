@@ -1,10 +1,10 @@
-from ._anvil_designer import PerformanceTestTemplate
+from ._anvil_designer import PowerCheckTemplate
 from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class PerformanceTest(PerformanceTestTemplate):
+class PowerCheck(PowerCheckTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -15,4 +15,4 @@ class PerformanceTest(PerformanceTestTemplate):
     '''
     move to ne
     '''
-    open_form('NewPerformanceTestForm')
+    open_form('NewPowerCheckForm')
