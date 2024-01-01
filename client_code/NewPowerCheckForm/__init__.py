@@ -1,4 +1,4 @@
-from ._anvil_designer import NewPerformanceTestFormTemplate
+from ._anvil_designer import NewPowerCheckFormTemplate
 from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -7,7 +7,7 @@ from datetime import datetime
 from ..utils import *
 # TODO: tail list
 
-class NewPerformanceTestForm(NewPerformanceTestFormTemplate):
+class NewPowerCheckForm(NewPowerCheckFormTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
