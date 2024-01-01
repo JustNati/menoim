@@ -24,12 +24,12 @@ def find_nearest_value(arr: list, target: float):
 def calc_ng(x: float) -> tuple:
   m = 1.46 if x<44 else 0.33
   c = 812 if x<44 else 857.5
-  return m, c
+  return m*x + c
 
 def calc_itt(x: float) -> tuple:
   m = 3 if x<43.5 else 2
   c = 655 if x<43.5 else 696
-  return m, c
+  return m*x + c
 
 def validate_empty_values(dictionary, values_list):
     # Check if any values in the dictionary are empty or match any value in the list
@@ -54,4 +54,4 @@ def calc_barometric_pressure(x: float, barometric_pressure_val: float,
     c = 532.5 if x<44 else 670
   elif barometric_val == 31:
     c = 547.5 if x<44 else 690
-  return m, c
+  return m*x + c

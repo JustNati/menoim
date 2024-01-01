@@ -5,6 +5,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import datetime
 from ..utils import *
+from .. import config# import *
 # TODO: tail list
 
 class NewPowerCheckForm(NewPowerCheckFormTemplate):
@@ -70,7 +71,7 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
       self.engine_type_info_lbl.text = f'PT6-A{e_type}'
 
       # fields init
-      self.add_tmp_dd.selected_value = '4'
+      #self.add_tmp_dd.selected_value = '4'
       
       # users init
       approvers, submitters = [], []
@@ -93,3 +94,10 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
   def engine_num_dd_change(self, **event_args):
     """This method is called when an item is selected"""
     self.load_engine_data()
+
+  def max_env_tmp_txt_change(self, **event_args):
+    """This method is called when the text in this text box is edited"""
+    final_tmp = 0
+    if self.max_env_tmp_txt.text != '' and not self.max_env_tmp_txt.text is None:
+      final_tmp = float(self.max_env_tmp_txt.text) + config.temperature_addition_factor
+    self.env_final_tmp_lbl.text = f"טמפ' הסביבה המדווחת(+4): {final_tmp}"

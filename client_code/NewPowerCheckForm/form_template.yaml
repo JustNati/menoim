@@ -130,6 +130,7 @@ components:
         properties: {type: number, font_size: 12}
         type: TextBox
         layout_properties: {width: 51.199975585937494}
+        event_bindings: {change: max_env_tmp_txt_change}
       - name: env_tmp_lbl
         properties: {text: OAT 'טמפ' הסביבה המקס, font_size: 12, bold: true}
         type: Label
