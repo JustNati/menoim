@@ -34,7 +34,7 @@ def calc_itt(x: float) -> tuple:
 def validate_empty_values(dictionary, values_list):
     # Check if any values in the dictionary are empty or match any value in the list
     for val in dictionary.values():
-        if val == "" or val in values_list:
+        if val in values_list:
             return False
     return True
 

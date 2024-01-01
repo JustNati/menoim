@@ -29,6 +29,7 @@ class NewPerformanceTestForm(NewPerformanceTestFormTemplate):
       'assmble_data' : self.assemble_date.text,
       'assmble_eng_hours' : self.time_on_asseble.text,
       'test_date' : self.test_date.date,
+      'is_retest' : self.recheck_btn.checked,
       'cur_engine_hours' : self.engine_time.text,
       'max_env_temp_OAT' : self.max_env_tmp_txt.text,
       'barometric_pressure' : self.barometric_pressure_txt.text,
@@ -49,7 +50,7 @@ class NewPerformanceTestForm(NewPerformanceTestFormTemplate):
              title="A message title",
              style="danger").show()
   
-  def load_engine_data_click(self, **event_args):
+  def load_engine_data(self):
     """This method is called when the button is clicked"""
     print(self.engine_num_dd.selected_value)
     if self.engine_num_dd.selected_value is None:
@@ -57,9 +58,37 @@ class NewPerformanceTestForm(NewPerformanceTestFormTemplate):
              title="A message title",
              style="danger").show()
     else:
+      # Engine details
+      rows = app_tables.engines.get(engine_num=self.engine_num_dd.selected_value)
+      rows_dict = {x[0]:x[1] for x in list(rows)}
+      print(rows_dict)
+      self.tail_num_info_lbl.text = rows_dict['tail_num']
+      self.side_info_lbl.text = rows_dict['side']
+      day, month, year = rows_dict['assemble_date'].day, rows_dict['assemble_date'].month, rows_dict['assemble_date'].year
+      self.assemble_date.text = f'{day}/{month}/{year}'
+      self.time_on_asseble.text = rows_dict['time_on_assemble']
+
+      # fields init
+      self.add_tmp_dd.selected_value = '4'
+      
+      # users init
+      approvers, submitters = [], []
+      for r in app_tables.users.search():
+        submitters.append(r['name'])
+        if r['is_approver']:
+          approvers.append(r['name'])
+      self.submitter_name_dd.items = submitters
+      self.approver_name_dd.items = approvers
+      
+      
       self.engine_info_panel.visible = True
       self.test_form_panel.visible = True
+      
 
   def update_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.update_test()
+
+  def engine_num_dd_change(self, **event_args):
+    """This method is called when an item is selected"""
+    self.load_engine_data()

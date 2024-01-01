@@ -17,20 +17,10 @@ components:
       properties: {include_placeholder: true, placeholder: בחרו מנוע, align: full}
       type: DropDown
       layout_properties: {}
+      event_bindings: {change: engine_num_dd_change}
     - name: engine_num_lbl
       properties: {text: מספר מנוע, bold: true}
       type: Label
-  - name: flow_panel_2
-    properties: {align: center}
-    type: FlowPanel
-    layout_properties: {grid_position: 'DTYUIJ,DKWRZD'}
-    components:
-    - name: load_engine_data
-      properties: {text: טען נתוני מנוע, foreground: 'theme:White', background: 'theme:Primary
-          500'}
-      type: Button
-      layout_properties: {}
-      event_bindings: {click: load_engine_data_click}
   - name: engine_info_panel
     properties: {visible: false}
     type: LinearPanel
@@ -125,9 +115,13 @@ components:
       type: FlowPanel
       components:
       - name: add_tmp_dd
-        properties: {font_size: 12}
+        properties:
+          font_size: 12
+          items: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+          align: right
         type: DropDown
         layout_properties: {width: 40.58751220703125}
+        data_bindings: []
       - name: add_tmp_lbl
         properties: {text: +, font_size: 12}
         type: Label
@@ -234,7 +228,7 @@ components:
       type: FlowPanel
       components:
       - name: submitter_name_dd
-        properties: {placeholder: בחרו מזין נתונים, include_placeholder: true}
+        properties: {placeholder: בחרו מזין נתונים, include_placeholder: true, align: right}
         type: DropDown
         layout_properties: {}
       - name: submitter_name_lbl
@@ -246,7 +240,7 @@ components:
       type: FlowPanel
       components:
       - name: approver_name_dd
-        properties: {include_placeholder: true, placeholder: בחרו מאשר נתונים}
+        properties: {include_placeholder: true, placeholder: בחרו מאשר נתונים, align: right}
         type: DropDown
         layout_properties: {}
       - name: approver_name_lbl
@@ -258,7 +252,11 @@ components:
       type: FlowPanel
       components:
       - name: usability_dd
-        properties: {include_placeholder: true, placeholder: בחרו שמישות}
+        properties:
+          include_placeholder: true
+          placeholder: בחרו שמישות
+          align: right
+          items: [שמיש - משוחרר, לא שמיש]
         type: DropDown
         layout_properties: {}
       - name: usability_lbl
