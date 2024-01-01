@@ -9,7 +9,7 @@ class TorqueCalc(TorqueCalcTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  def calc_torque(self):
+  def calc_torque(self, **event_args):
     self.final_result.text = (self.desired_torque * self.torque_len) / (self.torque_len + self.extention_len)
     self.final_result.visible = true
     # Any code you write here will run before the form opens.
