@@ -24,13 +24,25 @@ components:
       layout_properties: {}
   - name: data_grid_1
     properties:
+      role: null
       columns:
-      - {id: JKSDUP, title: תאריך בדיקה, data_key: column_1}
-      - {id: VJQQOR, title: שעות מנוע, data_key: column_2}
-      - {id: OJLQEN, title: הפרש סל"ד, data_key: column_3}
+      - {id: JKSDUP, title: תאריך בדיקה, data_key: engine_date}
+      - {id: VJQQOR, title: שעות מנוע, data_key: engine_hours}
+      - {id: OJLQEN, title: הפרש סל"ד, data_key: ff_diff}
       - {id: HYFIOK, data_key: column_1, title: הפרש טמפ}
       - {id: QKCQKQ, data_key: column_2, title: הפרש FF}
       - {id: MGZNXG, data_key: column_3, title: הערות}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
     type: DataGrid
     components:
     - name: repeating_panel_1

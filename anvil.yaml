@@ -2,124 +2,124 @@ allow_embedding: false
 package_name: Menoim
 db_schema:
   powertests:
+    title: powerTests
     client: full
     server: full
     columns:
+    - name: reference
+      admin_ui: {width: 200}
+      type: number
     - name: engine_num
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
+      type: string
+    - name: tail
+      admin_ui: {width: 200}
       type: string
     - name: side
-      admin_ui: {width: 200, order: 2}
+      admin_ui: {width: 200}
       type: string
     - name: assmble_date
-      admin_ui: {order: 3, width: 200}
+      admin_ui: {width: 200}
       type: date
     - name: assmble_eng_hours
-      admin_ui: {width: 200, order: 4}
+      admin_ui: {width: 200}
       type: number
     - name: test_date
-      admin_ui: {width: 200, order: 5}
+      admin_ui: {width: 200}
       type: date
+    - name: is_retest
+      admin_ui: {width: 200}
+      type: bool
     - name: cur_engine_hours
-      admin_ui: {width: 200, order: 6}
+      admin_ui: {width: 200}
       type: number
     - name: max_env_temp_OAT
-      admin_ui: {width: 200, order: 7}
+      admin_ui: {width: 200}
       type: number
     - name: barometric_pressure
-      admin_ui: {width: 200, order: 8}
+      admin_ui: {width: 200}
       type: number
     - name: engine_torque
-      admin_ui: {width: 200, order: 9}
+      admin_ui: {width: 200}
       type: number
     - name: test_n1_rpm
-      admin_ui: {width: 200, order: 10}
+      admin_ui: {width: 200}
       type: number
     - name: test_itt
-      admin_ui: {width: 200, order: 11}
+      admin_ui: {width: 200}
       type: number
     - name: test_wf
-      admin_ui: {width: 200, order: 12}
+      admin_ui: {width: 200}
       type: number
     - name: test_notes
-      admin_ui: {width: 200, order: 14}
-      type: string
-    - name: submitter
-      admin_ui: {order: 15.9375, width: 200}
-      type: string
-    - name: approver
-      admin_ui: {width: 200, order: 16}
-      type: string
-    - name: test_result
-      admin_ui: {width: 200, order: 17}
-      type: string
-    - name: reference
-      admin_ui: {order: -1, width: 200}
-      type: number
-    - name: is_retest
-      admin_ui: {order: 5.5, width: 200}
-      type: bool
-    - name: tail
-      admin_ui: {order: 1, width: 200}
+      admin_ui: {width: 200}
       type: string
     - name: n1_diff
-      admin_ui: {order: 15.5, width: 200}
+      admin_ui: {width: 200}
       type: number
     - name: itt_diff
-      admin_ui: {order: 15.75, width: 200}
+      admin_ui: {width: 200}
       type: number
     - name: wf_ff_diff
-      admin_ui: {order: 15.875, width: 200}
+      admin_ui: {width: 200}
       type: number
-    title: powerTests
+    - name: submitter
+      admin_ui: {width: 200}
+      type: string
+    - name: approver
+      admin_ui: {width: 200}
+      type: string
+    - name: test_result
+      admin_ui: {width: 200}
+      type: string
   tails:
+    title: tails
     client: full
     server: full
     columns:
     - name: tail_number
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: string
     - name: left_engine_num
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {width: 200}
       type: string
     - name: right_engine_num
-      admin_ui: {width: 200, order: 2}
+      admin_ui: {width: 200}
       type: string
-    title: tails
   engines:
+    title: engines
     client: full
     server: full
     columns:
     - name: engine_num
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: string
     - name: tail_num
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {width: 200}
       type: string
     - name: side
-      admin_ui: {width: 200, order: 2}
+      admin_ui: {width: 200}
       type: string
     - name: assemble_date
-      admin_ui: {width: 200, order: 3}
+      admin_ui: {width: 200}
       type: date
     - name: time_on_assemble
-      admin_ui: {order: 4, width: 200}
+      admin_ui: {width: 200}
       type: number
     - name: engine_type
-      admin_ui: {width: 200, order: 5}
+      admin_ui: {width: 200}
       type: number
-    title: engines
   users:
+    title: users
     client: full
     server: full
     columns:
     - name: name
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: string
     - name: is_approver
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {width: 200}
       type: bool
-    title: users
 startup: {type: form, module: ChecksHistoryByEngine}
 name: Menoim
 startup_form: null
