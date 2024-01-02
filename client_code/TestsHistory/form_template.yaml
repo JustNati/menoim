@@ -10,7 +10,7 @@ components:
   components:
   - type: DataGrid
     properties:
-      role: null
+      role: widetest
       columns:
       - {id: NITKEN, title: סימוכין, data_key: reference, width: 115, expand: false}
       - {id: VRNMLQ, title: תוצאת בדיקה, data_key: test_result, width: 98.79998779296875,
@@ -19,9 +19,10 @@ components:
         expand: false}
       - {id: UJFGKT, title: הפרש סל"ד, data_key: n1_diff}
       - {id: OCCJAZ, title: שעות מנוע, data_key: engine_hours}
-      - {id: GTLMCN, title: הפרש טמפ, data_key: itt_diff}
+      - {id: GTLMCN, title: הפרש טמפ, data_key: itt_diff, width: 103.4000244140625,
+        expand: false}
       - {id: IKVSRK, title: הפרש FF, data_key: wf_ff_diff}
-      - {id: MSGQSM, title: הערות, data_key: test_notes, width: -211.2000732421875,
+      - {id: MSGQSM, title: הערות, data_key: test_notes, width: 13.5999755859375,
         expand: false}
       auto_header: true
       tooltip: ''
@@ -35,14 +36,15 @@ components:
       spacing_below: small
       background: ''
     name: data_grid_1
-    layout_properties: {grid_position: 'DMVNOW,ZOEBXU', full_width_row: false}
+    layout_properties: {grid_position: 'GZWNGO,BBBKWO'}
     components:
     - type: RepeatingPanel
       properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
         visible: true, spacing_above: none, spacing_below: none, item_template: TestsHistory.RowTemplate1,
         background: ''}
       name: repeating_panel_tests
-      layout_properties: {}
+      layout_properties: {pinned: false}
+    data_bindings: []
 - type: FlowPanel
   properties: {}
   name: navbar_links

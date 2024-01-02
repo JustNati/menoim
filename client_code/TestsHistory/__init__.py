@@ -14,4 +14,5 @@ class TestsHistory(TestsHistoryTemplate):
     self.repeating_panel_tests.items = anvil.server.call('get_powertest')
     self.data_grid_1.role = 'wide'
     self.data_grid_1.columns[0]['width'] = 500
+    
     #self.data_grid_1.columns = self.data_grid_1.columns
