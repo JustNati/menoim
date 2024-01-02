@@ -2,6 +2,26 @@
  This CSS implements the Material Design look and feel for Anvil apps.
  **/
 
+/** ============= Adding horizontal scrolling bar ============== **/
+.anvil-role-horizontal-repeater {
+    display: flex;
+}
+.anvil-role-horizontal-repeater>div {
+    min-width: 200px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.anvil-role-horizontal-repeater .anvil-panel-col {
+    min-width: 200px;
+}  
+.anvil-role-twod-repeater .anvil-role-horizontal-repeater>div {
+    overflow: hidden;
+}
+.anvil-role-twod-repeater>div {
+    overflow-x: auto;
+}
+# ========================================== 
 /* Stop panel-cols cutting off drop shadows */
 .anvil-panel-col {
   padding-bottom: 10px;

@@ -1,4 +1,9 @@
 correct_dependency_ids: {}
+dependencies:
+- dep_id: dep_jilw4c45biemd
+  version: {dev: false}
+  resolution_hints: {app_id: NJKCHJEMN2SI3MKK, name: Clone of Horizontal Repeater Example,
+    package_name: HorizontalRepeaterExample}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
