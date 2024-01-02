@@ -62,6 +62,9 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
         }
         new_record.update(res_record)
         app_tables.powertests.add_row(**new_record)
+        Notification("!הנתונים נשמרו בהצלחה",
+             title="נתונים נשמרו",
+             style="success").show()
       
   def load_engine_data(self):
     """This method is called when the button is clicked"""
