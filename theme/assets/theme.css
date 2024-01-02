@@ -3,23 +3,14 @@
  **/
 
 /** ============= Adding horizontal scrolling bar ============== **/
-.anvil-role-horizontal-repeater {
-    display: flex;
+.anvil-role-wide .data-grid-child-panel {
+  overflow-x: auto;
 }
-.anvil-role-horizontal-repeater>div {
-    min-width: 200px;
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-.anvil-role-horizontal-repeater .anvil-panel-col {
-    min-width: 200px;
-}  
-.anvil-role-twod-repeater .anvil-role-horizontal-repeater>div {
-    overflow: hidden;
-}
-.anvil-role-twod-repeater>div {
-    overflow-x: auto;
+
+.anvil-role-wide .anvil-data-row-panel {
+  flex-wrap: nowrap;
+  min-width: -moz-min-content;
+  min-width: min-content;
 }
 # ========================================== 
 /* Stop panel-cols cutting off drop shadows */

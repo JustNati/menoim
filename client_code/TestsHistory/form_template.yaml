@@ -12,14 +12,17 @@ components:
     properties:
       role: null
       columns:
-      - {id: NITKEN, title: סימוכין, data_key: reference, width: 61, expand: false}
-      - {id: VRNMLQ, title: תוצאת בדיקה, data_key: test_result}
-      - {id: WMKZFL, title: תאריך בדיקה, data_key: test_date}
+      - {id: NITKEN, title: סימוכין, data_key: reference, width: 115, expand: false}
+      - {id: VRNMLQ, title: תוצאת בדיקה, data_key: test_result, width: 98.79998779296875,
+        expand: false}
+      - {id: WMKZFL, title: תאריך בדיקה, data_key: test_date, width: 93.5999755859375,
+        expand: false}
       - {id: UJFGKT, title: הפרש סל"ד, data_key: n1_diff}
       - {id: OCCJAZ, title: שעות מנוע, data_key: engine_hours}
       - {id: GTLMCN, title: הפרש טמפ, data_key: itt_diff}
       - {id: IKVSRK, title: הפרש FF, data_key: wf_ff_diff}
-      - {id: MSGQSM, title: הערות, data_key: test_notes}
+      - {id: MSGQSM, title: הערות, data_key: test_notes, width: -211.2000732421875,
+        expand: false}
       auto_header: true
       tooltip: ''
       border: ''
