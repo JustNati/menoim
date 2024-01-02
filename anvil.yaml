@@ -1,5 +1,16 @@
-allow_embedding: false
+correct_dependency_ids: {}
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: TestsHistory}
 package_name: Menoim
+allow_embedding: false
+name: Menoim
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {}
+startup_form: null
 db_schema:
   powertests:
     title: powerTests
@@ -120,12 +131,3 @@ db_schema:
     - name: is_approver
       admin_ui: {width: 200}
       type: bool
-startup: {type: form, module: ChecksHistoryByEngine}
-name: Menoim
-startup_form: null
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}

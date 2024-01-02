@@ -22,11 +22,11 @@ components:
       properties: {text: ':מספר מנוע', bold: true}
       type: Label
       layout_properties: {}
-  - name: data_grid_1
+  - name: main_data_grid
     properties:
       role: null
       columns:
-      - {id: JKSDUP, title: תאריך בדיקה, data_key: engine_date}
+      - {id: JKSDUP, title: תאריך בדיקה, data_key: test_date}
       - {id: VJQQOR, title: שעות מנוע, data_key: engine_hours}
       - {id: OJLQEN, title: הפרש סל"ד, data_key: ff_diff}
       - {id: HYFIOK, data_key: column_1, title: הפרש טמפ}

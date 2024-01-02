@@ -11,6 +11,7 @@ class ChecksHistoryByEngine(ChecksHistoryByEngineTemplate):
     self.init_components(**properties)
     engines = sorted([r['engine_num'] for r in app_tables.engines.search()])
     self.engine_num_dd.items = engines
+    self.main_data_grid.items = anvil.server.call('get_powertests')
 
     # Any code you write here will run before the form opens.
 

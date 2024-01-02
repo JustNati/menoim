@@ -17,5 +17,5 @@ import anvil.server
 #
 
 @anvil.server.callable
-def get_powertests():
+def get_powertest():
   return app_tables.powertests.search()
