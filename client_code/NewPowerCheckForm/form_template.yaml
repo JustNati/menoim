@@ -208,18 +208,6 @@ components:
         properties: {text: בעת הבדיקה WF זרימת דלק, font_size: 12, bold: true}
         type: Label
         layout_properties: {}
-    - name: flow_panel_13_copy
-      properties: {align: right}
-      type: FlowPanel
-      components:
-      - name: required_wf_ff_txt
-        properties: {type: number, font_size: 12}
-        type: TextBox
-        layout_properties: {width: 95.5999755859375}
-      - name: required_wf_ff_lbl
-        properties: {text: נדרשת WF זרימת דלק, font_size: 12, bold: true}
-        type: Label
-        layout_properties: {}
     - name: flow_panel_12
       properties: {align: right}
       type: FlowPanel
@@ -283,6 +271,9 @@ components:
         type: Button
         layout_properties: {}
         event_bindings: {click: update_btn_click}
+    - name: spacer_1
+      properties: {height: 32}
+      type: Spacer
 - type: FlowPanel
   properties: {}
   name: navbar_links

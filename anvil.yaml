@@ -44,9 +44,6 @@ db_schema:
     - name: test_wf
       admin_ui: {width: 200, order: 12}
       type: number
-    - name: required_wf
-      admin_ui: {width: 200, order: 13}
-      type: number
     - name: test_notes
       admin_ui: {width: 200, order: 14}
       type: string

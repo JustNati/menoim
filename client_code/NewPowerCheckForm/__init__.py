@@ -32,13 +32,12 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
       'test_date' : self.test_date.date,
       'is_retest' : self.recheck_btn.checked,
       'cur_engine_hours' : self.engine_time.text,
-      'max_env_temp_OAT' : self.max_env_tmp_txt.text,
+      'max_env_temp_OAT' : self.max_env_tmp_txt.text + config.temperature_addition_factor,
       'barometric_pressure' : self.barometric_pressure_txt.text,
       'engine_torque' : self.engine_torque_txt.text,
       'test_n1_rpm' : self.n1_rpm_txt.text,
       'test_itt' : self.out_itt_ff_temp_txt.text,
       'test_wf' : self.out_wf_ff_txt.text,
-      'required_wf' : self.required_wf_ff_txt.text,
       'test_notes' : self.notes_area.text,
       'submitter' : self.submitter_name_dd.selected_value,
       'approver' : self.approver_name_dd.selected_value,
@@ -47,8 +46,8 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
 
     is_valid_record = validate_empty_values(new_record, default_values)
     if not is_valid_record or self.engine_num_dd.selected_value is None:
-      Notification("A message",
-             title="A message title",
+      Notification("נא למלא את כל השדות הרלוונטים",
+             title="חסר נתונים",
              style="danger").show()
   
   def load_engine_data(self):
@@ -100,4 +99,9 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
     final_tmp = 0
     if self.max_env_tmp_txt.text != '' and not self.max_env_tmp_txt.text is None:
       final_tmp = float(self.max_env_tmp_txt.text) + config.temperature_addition_factor
-    self.env_final_tmp_lbl.text = f"טמפ' הסביבה המדווחת(+4): {final_tmp}"
+    self.env_final_tmp_lbl.text = f"טמפ' הסביבה המדווחת(+{config.temperature_addition_factor}): {final_tmp}"
+
+  # ---------------------------------------------
+  # ----------------- Validation ----------------
+  def validate_submitters(self):
+    return self.submitter_name_dd.selected_value == self.approver_name_dd.selected_value
