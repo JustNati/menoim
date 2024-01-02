@@ -1,5 +1,6 @@
 from ._anvil_designer import PowerTestResultTemplate
 from anvil import *
+import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -7,13 +8,13 @@ from ..utils import *
 from .. import config
 
 class PowerTestResult(PowerTestResultTemplate):
-  def __init__(self, recorded_n1, recorded_itt, recorded_ff, **properties):
+  def __init__(self, recorded_n1, recorded_itt, recorded_ff, barometric_pressure, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.updated = False
     self.n1_res.text = calc_ng(recorded_n1)
     self.itt_res.text = calc_itt(recorded_itt)
-    self.wf_ff_res.text = calc_barometric_pressure(recorded_ff, )
+    self.wf_ff_res.text = calc_barometric_pressure(recorded_ff, barometric_pressure)
 
     # users init
     approvers, submitters = [], []
@@ -33,9 +34,9 @@ class PowerTestResult(PowerTestResultTemplate):
     """This method is called when the button is clicked"""
     Notification("!הנתונים לא נשמרו",
       title="שימו לב",
-      style="danger").show()
+      style="warning").show()
     self.raise_event('x-close-alert')
-
+    
   def update_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
     res_record = {

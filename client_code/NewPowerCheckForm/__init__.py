@@ -1,5 +1,6 @@
 from ._anvil_designer import NewPowerCheckFormTemplate
 from anvil import *
+import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -19,7 +20,10 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
     engines = sorted([r['engine_num'] for r in app_tables.engines.search()])
     self.engine_num_dd.items = engines
     self.origin_assemble_date = None
- 
+  
+  def clear_data(self):
+    open_form('NewPowerCheckForm')
+    
   def update_test(self):
     last_ref = app_tables.powertests.search(tables.order_by('reference', ascending=False))[0]['reference']
     
@@ -32,13 +36,13 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
       'assmble_eng_hours' : float(self.time_on_asseble.text),
       'test_date' : self.test_date.date,
       'is_retest' : self.recheck_btn.checked,
-      'cur_engine_hours' : float(self.engine_time.text),
+      'cur_engine_hours' : self.engine_time.text,
       'max_env_temp_OAT' : float(self.env_final_tmp_lbl.text.split(': ')[1]),
-      'barometric_pressure' : float(self.barometric_pressure_txt.text),
-      'engine_torque' : float(self.engine_torque_txt.text),
-      'test_n1_rpm' : float(self.n1_rpm_txt.text),
-      'test_itt' : float(self.out_itt_ff_temp_txt.text),
-      'test_wf' : float(self.out_wf_ff_txt.text),
+      'barometric_pressure' : self.barometric_pressure_txt.text,
+      'engine_torque' : self.engine_torque_txt.text,
+      'test_n1_rpm' : self.n1_rpm_txt.text,
+      'test_itt' : self.out_itt_ff_temp_txt.text,
+      'test_wf' : self.out_wf_ff_txt.text,
       'test_notes' : self.notes_area.text
     }
 
@@ -49,8 +53,8 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
              style="danger").show()
     else:
       res_modal = PowerTestResult(new_record['test_n1_rpm'], new_record['test_itt'], 
-                                  new_record['test_wf'], new_record['barometric_pressure'])
-      alert(res_modal, large=True, dismissible=False)
+                                  new_record['test_wf'], new_record['barometric_pressure'],)
+      alert(res_modal, large=True, dismissible=False, buttons=[])
       if res_modal.updated:
         res_record = {
           'n1_diff': float(res_modal.n1_res.text),
@@ -62,6 +66,7 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
         }
         new_record.update(res_record)
         app_tables.powertests.add_row(**new_record)
+        self.clear_data()
         Notification("!הנתונים נשמרו בהצלחה",
              title="נתונים נשמרו",
              style="success").show()
@@ -86,8 +91,6 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
       self.engine_type_info_lbl.text = f'PT6-A{e_type}'
 
       # fields init
-      #self.add_tmp_dd.selected_value = '4'   
-      
       self.engine_info_panel.visible = True
       self.test_form_panel.visible = True
       
