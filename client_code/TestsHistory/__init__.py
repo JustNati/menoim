@@ -12,3 +12,4 @@ class TestsHistory(TestsHistoryTemplate):
 
     # Any code you write here will run before the form opens.
     self.repeating_panel_tests.items = anvil.server.call('get_powertest')
+    self.repeating_panel_tests.role = "horizontal-scroll"

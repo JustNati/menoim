@@ -12,9 +12,14 @@ components:
     properties:
       role: null
       columns:
-      - {id: NITKEN, title: Column 1, data_key: engine_}
-      - {id: WMKZFL, title: Column 2, data_key: column_2}
-      - {id: OCCJAZ, title: Column 3, data_key: column_3}
+      - {id: NITKEN, title: סימוכין, data_key: reference, width: 61, expand: false}
+      - {id: VRNMLQ, title: תוצאת בדיקה, data_key: test_result}
+      - {id: WMKZFL, title: תאריך בדיקה, data_key: test_date}
+      - {id: UJFGKT, title: הפרש סל"ד, data_key: n1_diff}
+      - {id: OCCJAZ, title: שעות מנוע, data_key: engine_hours}
+      - {id: GTLMCN, title: הפרש טמפ, data_key: itt_diff}
+      - {id: IKVSRK, title: הפרש FF, data_key: wf_ff_diff}
+      - {id: MSGQSM, title: הערות, data_key: test_notes}
       auto_header: true
       tooltip: ''
       border: ''
@@ -27,10 +32,12 @@ components:
       spacing_below: small
       background: ''
     name: data_grid_1
-    layout_properties: {grid_position: 'DMVNOW,ZOEBXU'}
+    layout_properties: {grid_position: 'DMVNOW,ZOEBXU', full_width_row: false}
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: TestsHistory.RowTemplate1}
+      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: none, spacing_below: none, item_template: TestsHistory.RowTemplate1,
+        background: ''}
       name: repeating_panel_tests
       layout_properties: {}
 - type: FlowPanel
