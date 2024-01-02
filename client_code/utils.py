@@ -31,11 +31,12 @@ def calc_itt(x: float) -> tuple:
   c = 655 if x<43.5 else 696
   return m*x + c
 
-def validate_empty_values(dictionary, values_list):
+def validate_empty_values(dictionary, values_list, exclude_list=[]):
     # Check if any values in the dictionary are empty or match any value in the list
-    for val in dictionary.values():
-        if val in values_list:
-            return False
+    for k, val in dictionary.items():
+      if k in exclude_list: continue # exclude from check
+      if val in values_list:
+        return False
     return True
 
 def calc_barometric_pressure(x: float, barometric_pressure_val: float,

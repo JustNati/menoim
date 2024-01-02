@@ -9,3 +9,5 @@ from anvil.tables import app_tables
 #    Module1.say_hello()
 #
 temperature_addition_factor = 4
+default_values = ['',None]
+#['','בחרו מנוע','בחרו מזין נתונים', 'בחרו מאשר נתונים', 'בחרו שמישות']

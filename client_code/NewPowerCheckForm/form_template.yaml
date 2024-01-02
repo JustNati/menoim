@@ -115,7 +115,7 @@ components:
       type: FlowPanel
       components:
       - name: engine_time
-        properties: {text: TEST, font_size: 12}
+        properties: {text: '', font_size: 12, align: center, type: number}
         type: TextBox
         layout_properties: {width: 83.7999267578125}
       - name: engine_time_lbl
@@ -220,53 +220,13 @@ components:
         properties: {text: הערות, bold: true}
         type: Label
         layout_properties: {}
-    - name: flow_panel_16
-      properties: {align: right}
-      type: FlowPanel
-      components:
-      - name: submitter_name_dd
-        properties: {placeholder: בחרו מזין נתונים, include_placeholder: true, align: right}
-        type: DropDown
-        layout_properties: {}
-      - name: submitter_name_lbl
-        properties: {text: פרטי מזין הנתונים, bold: true}
-        type: Label
-        layout_properties: {}
-    - name: flow_panel_16_copy
-      properties: {align: right}
-      type: FlowPanel
-      components:
-      - name: approver_name_dd
-        properties: {include_placeholder: true, placeholder: בחרו מאשר נתונים, align: right}
-        type: DropDown
-        layout_properties: {}
-      - name: approver_name_lbl
-        properties: {text: פרטי מאשר הנתונים, bold: true}
-        type: Label
-        layout_properties: {}
-    - name: flow_panel_15
-      properties: {align: right}
-      type: FlowPanel
-      components:
-      - name: usability_dd
-        properties:
-          include_placeholder: true
-          placeholder: בחרו שמישות
-          align: right
-          items: [שמיש - משוחרר, לא שמיש]
-        type: DropDown
-        layout_properties: {}
-      - name: usability_lbl
-        properties: {text: שמישות, bold: true}
-        type: Label
-        layout_properties: {}
     - name: flow_panel_17
       properties: {align: center}
       type: FlowPanel
       layout_properties: {}
       components:
       - name: update_btn
-        properties: {text: עדכן, foreground: 'theme:White', background: 'theme:Primary
+        properties: {text: בדוק שמישות, foreground: 'theme:White', background: 'theme:Primary
             500'}
         type: Button
         layout_properties: {}

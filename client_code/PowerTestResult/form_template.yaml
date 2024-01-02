@@ -1,0 +1,120 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+    layout_properties: {grid_position: 'HBWJUH,RNTTZD'}
+    components:
+    - name: flow_panel_1
+      properties: {align: right}
+      type: FlowPanel
+      components:
+      - name: n1_res
+        properties: {font_size: 12}
+        type: Label
+        layout_properties: {}
+      - name: n1_lbl
+        properties: {text: ':N1 הפרש', bold: true, font_size: 12}
+        type: Label
+        layout_properties: {}
+      layout_properties: {}
+    - name: flow_panel_2
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: itt_res
+        properties: {font_size: 12}
+        type: Label
+        layout_properties: {}
+      - name: itt_lbl
+        properties: {text: ':ITT הפרש', bold: true, font_size: 12}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_3
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: wf_ff_res
+        properties: {font_size: 12}
+        type: Label
+        layout_properties: {}
+      - name: wf_ff_lbl
+        properties: {text: ':WF FF הפרש', bold: true, font_size: 12}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_16
+      properties: {align: right}
+      type: FlowPanel
+      components:
+      - name: submitter_name_dd
+        properties: {placeholder: בחרו מזין נתונים, include_placeholder: true, align: right,
+          font_size: 12}
+        type: DropDown
+        layout_properties: {}
+      - name: submitter_name_lbl
+        properties: {text: פרטי מזין הנתונים, bold: true, font_size: 12}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_16_copy
+      properties: {align: right}
+      type: FlowPanel
+      components:
+      - name: approver_name_dd
+        properties: {include_placeholder: true, placeholder: בחרו מאשר נתונים, align: right,
+          font_size: 12}
+        type: DropDown
+        layout_properties: {}
+      - name: approver_name_lbl
+        properties: {text: פרטי מאשר הנתונים, bold: true, font_size: 12}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_15
+      properties: {align: right}
+      type: FlowPanel
+      components:
+      - name: usability_dd
+        properties:
+          include_placeholder: true
+          placeholder: בחרו שמישות
+          align: right
+          items: [שמיש - משוחרר, לא שמיש]
+          font_size: 12
+        type: DropDown
+        layout_properties: {}
+      - name: usability_lbl
+        properties: {text: שמישות, bold: true, font_size: 12}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_4
+      properties: {align: center}
+      type: FlowPanel
+      components:
+      - name: cancel_btn
+        properties: {text: בטל, background: 'theme:Secondary 500', foreground: 'theme:White'}
+        type: Button
+        layout_properties: {}
+        event_bindings: {click: cancel_btn_click}
+      - name: update_btn
+        properties: {text: עדכן, background: 'theme:Primary 500', foreground: 'theme:White'}
+        type: Button
+        layout_properties: {}
+        event_bindings: {click: update_btn_click}
+      layout_properties: {}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: title_lbl
+  properties: {text: נתוני מנוע}
+  type: Label
+  layout_properties: {slot: title}

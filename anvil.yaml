@@ -8,9 +8,6 @@ db_schema:
     - name: engine_num
       admin_ui: {width: 200, order: 0}
       type: string
-    - name: tail
-      admin_ui: {width: 200, order: 1}
-      type: number
     - name: side
       admin_ui: {width: 200, order: 2}
       type: string
@@ -62,6 +59,9 @@ db_schema:
     - name: is_retest
       admin_ui: {order: 5.5, width: 200}
       type: bool
+    - name: tail
+      admin_ui: {order: 1, width: 200}
+      type: string
     title: powerTests
   tails:
     client: full
