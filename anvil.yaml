@@ -45,7 +45,7 @@ db_schema:
       admin_ui: {width: 200, order: 14}
       type: string
     - name: submitter
-      admin_ui: {width: 200, order: 15}
+      admin_ui: {order: 15.9375, width: 200}
       type: string
     - name: approver
       admin_ui: {width: 200, order: 16}
@@ -62,6 +62,15 @@ db_schema:
     - name: tail
       admin_ui: {order: 1, width: 200}
       type: string
+    - name: n1_diff
+      admin_ui: {order: 15.5, width: 200}
+      type: number
+    - name: itt_diff
+      admin_ui: {order: 15.75, width: 200}
+      type: number
+    - name: wf_ff_diff
+      admin_ui: {order: 15.875, width: 200}
+      type: number
     title: powerTests
   tails:
     client: full

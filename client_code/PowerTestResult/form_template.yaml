@@ -52,6 +52,19 @@ components:
         properties: {text: ':WF FF הפרש', bold: true, font_size: 12}
         type: Label
         layout_properties: {}
+    - name: flow_panel_5
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: barometric_pressure_res
+        properties: {font_size: 12}
+        type: Label
+        layout_properties: {}
+      - name: barometric_pressure_lbl
+        properties: {text: ':הפרש לחץ ברומטרי', bold: true, font_size: 12}
+        type: Label
+        layout_properties: {}
     - name: flow_panel_16
       properties: {align: right}
       type: FlowPanel

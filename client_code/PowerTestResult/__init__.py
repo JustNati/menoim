@@ -7,10 +7,13 @@ from ..utils import *
 from .. import config
 
 class PowerTestResult(PowerTestResultTemplate):
-  def __init__(self, **properties):
+  def __init__(self, recorded_n1, recorded_itt, recorded_ff, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.updated = False
+    self.n1_res.text = calc_ng(recorded_n1)
+    self.itt_res.text = calc_itt(recorded_itt)
+    self.wf_ff_res.text = calc_barometric_pressure(recorded_ff, )
 
     # users init
     approvers, submitters = [], []

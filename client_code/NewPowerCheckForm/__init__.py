@@ -48,10 +48,14 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
              title="חסר נתונים",
              style="danger").show()
     else:
-      res_modal =PowerTestResult()
+      res_modal = PowerTestResult(new_record['test_n1_rpm'], new_record['test_itt'], 
+                                  new_record['test_wf'], new_record['barometric_pressure'])
       alert(res_modal, large=True, dismissible=False)
       if res_modal.updated:
         res_record = {
+          'n1_diff': float(res_modal.n1_res.text),
+          'itt_diff': float(res_modal.itt_res.text),
+          'wf_ff_diff': float(res_modal.wf_ff_res.text),
           'submitter': res_modal.submitter_name_dd.selected_value,
           'approver': res_modal.approver_name_dd.selected_value,
           'test_result': res_modal.usability_dd.selected_value
@@ -59,7 +63,6 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
         new_record.update(res_record)
         app_tables.powertests.add_row(**new_record)
       
-    
   def load_engine_data(self):
     """This method is called when the button is clicked"""
     if self.engine_num_dd.selected_value is None:
