@@ -1,32 +1,33 @@
-from ._anvil_designer import ChecksHistoryByEngineTemplate
+from ._anvil_designer import ChecksHistoryByTailTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class ChecksHistoryByEngine(ChecksHistoryByEngineTemplate):
+class ChecksHistoryByTail(ChecksHistoryByTailTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    engines = sorted([r['engine_num'] for r in app_tables.engines.search()])
-    self.engine_num_dd.items = engines
+    tails = sorted([r['tail_number'] for r in app_tables.tails.search()])
+    self.tail_num_dd.items = tails
     # Any code you write here will run before the form opens.
 
   def load_engine_data(self):
     """This method is called when the button is clicked"""
-    if self.engine_num_dd.selected_value is None:
-      Notification("נא לבחור מספר מנוע",
-             title="מספר מנוע לא תקין",
+    if self.tail_num_dd.selected_value is None:
+      Notification("נא לבחור מספר זנב",
+             title="מספר זנב לא תקין",
              style="warning").show()
       return
     else:
       # Quering the database for engine num rows
-      rows = app_tables.powertests.search(engine_num=self.engine_num_dd.selected_value)
+      rows = app_tables.powertests.search(tail=self.tail_num_dd.selected_value)
       finished_rows = []
       # For every row i create a new presentable and organized list
       for r in rows:
         new_row = {
+          'engine_num': r['tail'],
           'test_date': r['test_date'],
           'engine_hours': r['cur_engine_hours'],
           'rpm_diff': r['n1_diff'],
@@ -39,10 +40,10 @@ class ChecksHistoryByEngine(ChecksHistoryByEngineTemplate):
       # Appending the finished list to the visual table
       self.repeating_panel_1.items = finished_rows
       self.main_data_grid.visible = True
-  
-      
-      
 
-  def engine_num_dd_change(self, **event_args):
+
+
+
+  def tail_num_dd_change(self, **event_args):
     """This method is called when an item is selected"""
     self.load_engine_data()

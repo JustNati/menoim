@@ -13,20 +13,21 @@ components:
     type: FlowPanel
     layout_properties: {grid_position: 'IVUIXL,SWOHEK'}
     components:
-    - name: engine_num_dd
-      properties: {include_placeholder: true, placeholder: יש לבחור מספר מנוע}
+    - name: tail_num_dd
+      properties: {include_placeholder: true, placeholder: יש לבחור מספר זנב}
       type: DropDown
       layout_properties: {}
-      event_bindings: {change: engine_num_dd_change}
+      event_bindings: {change: tail_num_dd_change}
     - name: pick_engine_lbl
-      properties: {text: ':מספר מנוע', bold: true}
+      properties: {text: ':מספר זנב', bold: true}
       type: Label
       layout_properties: {}
   - name: main_data_grid
     properties:
       role: null
       columns:
-      - {id: JKSDUP, title: תאריך בדיקה, data_key: test_date}
+      - {id: PYPKSX, data_key: engine_num, title: מס' מנוע}
+      - {id: JKSDUP, title: תאריך בדיקה, data_key: test_date, expand: false}
       - {id: VJQQOR, title: שעות מנוע, data_key: engine_hours}
       - {id: OJLQEN, title: הפרש סל"ד, data_key: rpm_diff}
       - {id: HYFIOK, data_key: temp_diff, title: הפרש טמפ}

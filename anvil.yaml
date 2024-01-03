@@ -8,7 +8,7 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: TestsHistory}
+startup: {type: form, module: ChecksHistoryByTail}
 package_name: Menoim
 allow_embedding: false
 name: Menoim
