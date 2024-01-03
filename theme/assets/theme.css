@@ -267,6 +267,11 @@ a:hover, a:active {
     z-index: 2;
     background-color: rgba(0,0,0,0.2);
   }
+  /* Added another role 'wide' here (inside @media) and changed the min-width to constant 600px */
+  .anvil-role-wide .anvil-data-row-panel {
+    flex-wrap: nowrap;
+    min-width: 600px;
+  }
  }
 
 .nav-holder .left-nav, .left-nav-placeholder {
