@@ -41,6 +41,12 @@ class AddEngine(AddEngineTemplate):
                                         time_on_assemble=self.start_hours.text,
                                         side=self.engine_side.selected_value,
                                         tail_num=self.tail_num.selected_value)
+      if (self.engine_side.selected_value == 'right'):
+        changed_tail = app_tables.tails.get(tail_number=self.tail_num.selected_value)
+        changed_tail['right_engine_num'] = self.engine_num.text
+      else:
+        changed_tail = app_tables.tails.get(tail_number=self.tail_num.selected_value)
+        changed_tail['left_engine_num'] = self.engine_num.text
       Notification("!מנוע הותקן בהצלחה",
              title="הוספה הצליחה",
              style="success").show()
