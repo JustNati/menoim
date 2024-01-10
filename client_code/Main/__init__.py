@@ -1,5 +1,6 @@
 from ._anvil_designer import MainTemplate
 from anvil import *
+import anvil.users
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -9,7 +10,7 @@ class Main(MainTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    user = anvil.users.login_with_form()
     # Any code you write here will run before the form opens.
 
   def torque_calc_click(self, **event_args) -> None:
@@ -22,4 +23,4 @@ class Main(MainTemplate):
     '''
     move to performance test page.
     '''
-    open_form('PerformanceTest')
+    open_form('PowerCheck')

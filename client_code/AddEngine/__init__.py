@@ -1,5 +1,6 @@
 from ._anvil_designer import AddEngineTemplate
 from anvil import *
+import anvil.users
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -16,7 +17,7 @@ class AddEngine(AddEngineTemplate):
     
   def add_engine_click(self, **event_args):
     """This method is called when the button is clicked"""
-
+    # Check if All the fields are filled
     if (self.engine_num.text is None or
           self.engine_side.selected_value is None or
           self.engine_type.text is None or
@@ -26,14 +27,18 @@ class AddEngine(AddEngineTemplate):
       Notification("נא למלא את כל השדות",
              title="חסרים נתונים",
              style="danger").show()
+    # Check if there are more than 0 engines on that specific tail & side
     elif (len(app_tables.engines.search(tail_num=self.tail_num.selected_value, side=self.engine_side.selected_value)) > 0):
-      Notification("קיים מנוע אחר שמורכב במטוס זה באותו הצד",
+      Notification("קיים מנוע אחר שמורכב באותו המקום",
              title="מנוע אחר מורכב",
              style="danger").show()
+    # Check if that engine is already in the database (which means it already exists)
     elif (len(app_tables.engines.search(engine_num=self.engine_num.text))> 0):
-      Notification("מנוע זה כבר מורכב על מנוע",
+      Notification("מנוע זה כבר מורכב",
              title="מנוע בשימוש",
              style="danger").show()
+    # If the engine is not in the database, and the place in the plane is empty,
+    # create new engine in the database and change the engine number in the tails database
     else:   
       newRow = app_tables.engines.add_row(assemble_date=self.assembly_date.date,
                                           engine_num=self.engine_num.text,
