@@ -7,6 +7,10 @@ dependencies:
 - dep_id: dep_km42uxb8ia8lq
   version: {dev: false}
   resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
+- dep_id: dep_w11ao09u1vun36
+  version: {dev: false}
+  resolution_hints: {app_id: CL46PUN5VXCRUF66, name: Clone of Data Grid tutorial - Add Edit and Delete with Horizontal Scrolling,
+    package_name: CRUD_HorizontalScroll}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
