@@ -27,6 +27,7 @@ components:
       role: null
       columns:
       - {id: PYPKSX, data_key: engine_num, title: מס' מנוע}
+      - {id: GVHWHM, data_key: side, title: צד}
       - {id: JKSDUP, title: תאריך בדיקה, data_key: test_date, expand: false}
       - {id: VJQQOR, title: שעות מנוע, data_key: engine_hours}
       - {id: OJLQEN, title: הפרש סל"ד, data_key: rpm_diff}

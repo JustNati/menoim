@@ -58,7 +58,7 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
       alert(res_modal, large=True, dismissible=False, buttons=[])
       if res_modal.updated:
         res_record = {
-          'n1_diff': float(res_modal.n1_res.text),
+          'n1_diff': round(float(res_modal.n1_res.text),3),
           'itt_diff': float(res_modal.itt_res.text),
           'wf_ff_diff': float(res_modal.wf_ff_res.text),
           'submitter': res_modal.submitter_name_dd.selected_value,

@@ -28,7 +28,8 @@ class ChecksHistoryByTail(ChecksHistoryByTailTemplate):
       # For every row i create a new presentable and organized list
       for r in rows:
         new_row = {
-          'engine_num': r['tail'],
+          'engine_num': r['engine_num'],
+          'side': r['side'],
           'test_date': r['test_date'],
           'engine_hours': r['cur_engine_hours'],
           'rpm_diff': r['n1_diff'],
