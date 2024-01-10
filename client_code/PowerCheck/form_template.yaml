@@ -36,15 +36,16 @@ components:
       properties: {text: דו"ח למנוע מהרכבה אחרונה}
       type: Button
       layout_properties: {grid_position: 'NWVYSX,JTOVYL'}
-    - name: add_engine
+    - name: remove_engine
       properties: {text: הורדת מנוע}
       type: Button
       layout_properties: {grid_position: 'WYYASN,ZACIER'}
-      event_bindings: {}
-    - name: remove_engine
+      event_bindings: {click: remove_engine_click}
+    - name: add_engine
       properties: {text: הרכבת מנוע}
       type: Button
       layout_properties: {grid_position: 'SEOQAE,NXCHSI'}
+      event_bindings: {click: add_engine_click}
     - name: explore_records
       properties: {text: עיון בבדיקות מדווחת}
       type: Button

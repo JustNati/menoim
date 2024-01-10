@@ -37,5 +37,13 @@ class PowerCheck(PowerCheckTemplate):
     """This method is called when the button is clicked"""
     open_form('TestsHistory')
 
+  def add_engine_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('AddEngine')
+
+  def remove_engine_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('RemoveEngine')
+
 
 
