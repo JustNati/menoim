@@ -9,8 +9,10 @@ from datetime import datetime, date
 from ..utils import *
 from .. import config# import *
 from ..PowerTestResult import PowerTestResult
+from anvil_extras import routing
 # TODO: tail list
 
+@routing.route('NewPowerCheckForm')
 class NewPowerCheckForm(NewPowerCheckFormTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.

@@ -6,8 +6,18 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil_extras import routing
+from ..AddEngine import AddEngine
+from ..ChecksHistoryByEngine import ChecksHistoryByEngine
+from ..ChecksHistoryByTail import ChecksHistoryByTail
+from ..NewPowerCheckForm import NewPowerCheckForm
+from ..PowerCheck import PowerCheck
+from ..RemoveEngine import RemoveEngine
+from ..TestsHistory import TestsHistory
+from ..TorqueCalc import TorqueCalc
+from ..PowerTestResult import PowerTestResult
 
-# @routing.route('')  i need to work on this
+@routing.route('')
+@routing.main_router
 class Main(MainTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -19,10 +29,12 @@ class Main(MainTemplate):
     '''
     move to torque calculation page.
     '''
-    open_form('TorqueCalc')
+   #open_form('TorqueCalc')
+    routing.set_url_hash('TorqueCalc')
 
   def performance_click(self, **event_args):
     '''
     move to performance test page.
     '''
-    open_form('PowerCheck')
+    #open_form('PowerCheck')
+    routing.set_url_hash('PowerCheck')

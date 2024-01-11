@@ -5,7 +5,9 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from anvil_extras import routing
 
+@routing.route('PowerCheck')
 class PowerCheck(PowerCheckTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -23,27 +25,33 @@ class PowerCheck(PowerCheckTemplate):
     '''
     move to ne
     '''
-    open_form('NewPowerCheckForm')
+    #open_form('NewPowerCheckForm')
+    routing.set_url_hash('NewPowerCheckForm')
 
   def report_by_tail_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('ChecksHistoryByTail')
+    #open_form('ChecksHistoryByTail')
+    routing.set_url_hash('ChecksHistoryByTail')
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('ChecksHistoryByEngine')
+    #open_form('ChecksHistoryByEngine')
+    routing.set_url_hash('ChecksHistoryByEngine')
 
   def explore_records_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('TestsHistory')
+    #open_form('TestsHistory')
+    routing.set_url_hash('TestsHistory')
 
   def add_engine_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('AddEngine')
+    #open_form('AddEngine')
+    routing.set_url_hash('AddEngine')
 
   def remove_engine_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('RemoveEngine')
+    #open_form('RemoveEngine')
+    routing.set_url_hash('RemoveEngine')
 
 
 
