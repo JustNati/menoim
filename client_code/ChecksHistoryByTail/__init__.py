@@ -14,6 +14,8 @@ class ChecksHistoryByTail(ChecksHistoryByTailTemplate):
     self.init_components(**properties)
     tails = sorted([r['tail_number'] for r in app_tables.tails.search()])
     self.tail_num_dd.items = tails
+    self.main_data_grid.role = 'wide'
+    self.main_data_grid.columns[0]['width'] = 500
     # Any code you write here will run before the form opens.
 
   def load_engine_data(self):
@@ -37,6 +39,7 @@ class ChecksHistoryByTail(ChecksHistoryByTailTemplate):
           'rpm_diff': r['n1_diff'],
           'temp_diff': r['itt_diff'],
           'ff_diff': r['wf_ff_diff'],
+          'reference': r['reference'],
           'comments': r['test_notes']
         }
         finished_rows.append(new_row)

@@ -12,7 +12,7 @@ class AddEngine(AddEngineTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    tails = sorted([r['tail_number'] for r in app_tables.tails.search()])
+    tails = sorted([r['tail_number'] for r in app_tables.tails.search(q.any_of(left_engine_num='-1', right_engine_num='-1'))])
     self.tails = tails
     self.tail_num.items = tails
     # Any code you write here will run before the form opens.

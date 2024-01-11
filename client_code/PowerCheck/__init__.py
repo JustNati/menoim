@@ -13,7 +13,7 @@ class PowerCheck(PowerCheckTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     logged_user = anvil.users.get_user()
-    if (logged_user['is_moderator'] is False):
+    if (logged_user['is_moderator'] is False or logged_user['is_moderator'] is None):
       self.add_engine.visible = False
       self.remove_engine.visible = False
     else:
@@ -52,6 +52,10 @@ class PowerCheck(PowerCheckTemplate):
     """This method is called when the button is clicked"""
     #open_form('RemoveEngine')
     routing.set_url_hash('RemoveEngine')
+
+  def engine_graph_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    routing.set_url_hash('EngineGraph')
 
 
 

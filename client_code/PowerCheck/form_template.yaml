@@ -32,6 +32,7 @@ components:
       properties: {text: תרשים מנוע, align: center}
       type: Button
       layout_properties: {grid_position: 'FWCETC,REKYFE'}
+      event_bindings: {click: engine_graph_click}
     - name: report_last_assemble
       properties: {text: דו"ח למנוע מהרכבה אחרונה}
       type: Button

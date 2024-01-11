@@ -1,0 +1,19 @@
+container: {type: ColumnPanel}
+components:
+- name: headline_1
+  properties: {role: headline, align: center, text: גרפים של נתוני מנוע, font_size: 35}
+  type: Label
+  layout_properties: {grid_position: 'HPLYHH,XDCIUV'}
+- name: flow_panel_1
+  properties: {align: right}
+  type: FlowPanel
+  layout_properties: {grid_position: 'HVCQBC,IKVLEB'}
+  components:
+  - name: engines_dd
+    properties: {}
+    type: DropDown
+  - name: label_1
+    properties: {align: right, text: ':מס'' מנוע'}
+    type: Label
+    layout_properties: {}
+is_package: true

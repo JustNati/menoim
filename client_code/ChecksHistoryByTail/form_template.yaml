@@ -33,6 +33,7 @@ components:
       - {id: OJLQEN, title: הפרש סל"ד, data_key: rpm_diff}
       - {id: HYFIOK, data_key: temp_diff, title: הפרש טמפ}
       - {id: QKCQKQ, data_key: ff_diff, title: הפרש FF}
+      - {id: MJOJLU, data_key: reference, title: סימוכין}
       - {id: MGZNXG, data_key: comments, title: הערות}
       auto_header: true
       tooltip: ''
