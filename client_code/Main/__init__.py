@@ -16,7 +16,7 @@ from ..TestsHistory import TestsHistory
 from ..TorqueCalc import TorqueCalc
 from ..PowerTestResult import PowerTestResult
 
-@routing.route('')
+@routing.route('', title='Home')
 @routing.main_router
 class Main(MainTemplate):
   def __init__(self, **properties):

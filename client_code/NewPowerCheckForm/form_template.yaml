@@ -8,6 +8,10 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: label_7
+    properties: {text: בדיקת כח חדשה, align: center, font_size: 28}
+    type: Label
+    layout_properties: {grid_position: 'PWDGBS,IQYLYR'}
   - name: flow_panel_4
     properties: {align: center}
     type: FlowPanel
@@ -238,7 +242,3 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
-- name: label_7
-  properties: {text: בדיקת כח חדשה}
-  type: Label
-  layout_properties: {slot: title}

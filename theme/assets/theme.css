@@ -270,7 +270,7 @@ a:hover, a:active {
   /* Added another role 'wide' here (inside @media) and changed the min-width to constant 600px */
   .anvil-role-wide .anvil-data-row-panel {
     flex-wrap: nowrap;
-    min-width: 600px;
+    min-width: 700px;
   }
  }
 
