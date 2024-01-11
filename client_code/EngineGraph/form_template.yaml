@@ -16,4 +16,20 @@ components:
     properties: {align: right, text: ':מס'' מנוע'}
     type: Label
     layout_properties: {}
+- name: plot_1
+  properties: {}
+  type: Plot
+  layout_properties: {grid_position: 'WYZFZD,QBMMPU BCTRIJ,LDIFKN'}
+- name: plot_3
+  properties: {}
+  type: Plot
+  layout_properties: {grid_position: 'WYZFZD,QBMMPU SXDBAK,WROPGM'}
+- name: plot_2
+  properties: {}
+  type: Plot
+  layout_properties: {grid_position: 'WYZFZD,CPNJZR IPAPSH,KTHBKR'}
+- name: plot_4
+  properties: {}
+  type: Plot
+  layout_properties: {grid_position: 'WYZFZD,CPNJZR TXFIMO,EJFUHY'}
 is_package: true
