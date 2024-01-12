@@ -108,7 +108,7 @@ class EngineStartup(EngineStartupTemplate):
         isAcceptable = False
       else:
         self.max_rpm.foreground = 'black'
-      if (self.max_rpm.text >= 2690 and self.max_rpm <=2700):
+      if (self.max_rpm.text >= 2690 and self.max_rpm.text <=2700):
         if (self.metered_ffp_max.text > 18.4 or self.metered_ffp_max.text < 16.5):
           self.metered_ffp_max.foreground = 'red'
           isAcceptable = False
