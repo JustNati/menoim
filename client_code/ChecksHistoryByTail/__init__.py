@@ -34,7 +34,7 @@ class ChecksHistoryByTail(ChecksHistoryByTailTemplate):
         new_row = {
           'engine_num': r['engine_num'],
           'side': r['side'],
-          'test_date': r['test_date'],
+          'test_date': r['test_date'].strftime("%d/%m/%Y"),
           'engine_hours': r['cur_engine_hours'],
           'rpm_diff': r['n1_diff'],
           'temp_diff': r['itt_diff'],

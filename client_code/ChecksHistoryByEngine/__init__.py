@@ -32,7 +32,7 @@ class ChecksHistoryByEngine(ChecksHistoryByEngineTemplate):
       # For every row i create a new presentable and organized list
       for r in rows:
         new_row = {
-          'test_date': r['test_date'],
+          'test_date': r['test_date'].strftime("%d/%m/%Y"),
           'engine_hours': r['cur_engine_hours'],
           'rpm_diff': r['n1_diff'],
           'temp_diff': r['itt_diff'],

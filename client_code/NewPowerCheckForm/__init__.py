@@ -25,7 +25,10 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
     self.origin_assemble_date = None
   
   def clear_data(self):
-    open_form('NewPowerCheckForm')
+    self.engine_info_panel.visible = False
+    self.test_form_panel.visible = False
+    self.engine_num_dd.selected_value = None
+    routing.set_url_hash('NewPowerCheckForm')
     
   def update_test(self):
     last_ref = app_tables.powertests.search(tables.order_by('reference', ascending=False))[0]['reference']

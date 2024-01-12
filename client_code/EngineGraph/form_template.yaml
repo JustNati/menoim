@@ -12,6 +12,7 @@ components:
   - name: engines_dd
     properties: {}
     type: DropDown
+    event_bindings: {change: engines_dd_change}
   - name: label_1
     properties: {align: right, text: ':מס'' מנוע'}
     type: Label
@@ -28,8 +29,4 @@ components:
   properties: {}
   type: Plot
   layout_properties: {grid_position: 'WYZFZD,CPNJZR IPAPSH,KTHBKR'}
-- name: plot_4
-  properties: {}
-  type: Plot
-  layout_properties: {grid_position: 'WYZFZD,CPNJZR TXFIMO,EJFUHY'}
 is_package: true

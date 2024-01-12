@@ -9,6 +9,7 @@ from ..utils import *
 from .. import config
 from anvil_extras import routing
 
+@routing.route('PowerTestResult')
 class PowerTestResult(PowerTestResultTemplate):
   def __init__(self, recorded_n1, recorded_itt, recorded_ff, barometric_pressure, **properties):
     # Set Form properties and Data Bindings.
@@ -21,9 +22,10 @@ class PowerTestResult(PowerTestResultTemplate):
     # users init
     approvers, submitters = [], []
     for r in app_tables.users.search():
-      submitters.append(r['name'])
-      if r['is_approver']:
-        approvers.append(r['name'])
+      if(r['name'] is not None):
+        submitters.append(r['name'])
+        if r['is_approver']:
+          approvers.append(r['name'])
     self.submitter_name_dd.items = submitters
     self.approver_name_dd.items = approvers
 

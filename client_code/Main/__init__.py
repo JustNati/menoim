@@ -39,3 +39,7 @@ class Main(MainTemplate):
     '''
     #open_form('PowerCheck')
     routing.set_url_hash('PowerCheck')
+
+  def engine_startup_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    routing.set_url_hash('EngineStartup')
