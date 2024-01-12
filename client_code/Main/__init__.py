@@ -16,6 +16,7 @@ from ..TestsHistory import TestsHistory
 from ..TorqueCalc import TorqueCalc
 from ..PowerTestResult import PowerTestResult
 from ..EngineGraph import EngineGraph
+from ..EngineStartup import EngineStartup
 
 @routing.route('', title='Home')
 @routing.main_router
