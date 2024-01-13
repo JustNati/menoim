@@ -16,9 +16,11 @@ class PowerCheck(PowerCheckTemplate):
     if (logged_user['is_moderator'] is False or logged_user['is_moderator'] is None):
       self.add_engine.visible = False
       self.remove_engine.visible = False
+      self.user_management.visible = False
     else:
       self.add_engine.visible = True
       self.remove_engine.visible = True
+      self.user_management.visible = True
     # Any code you write here will run before the form opens.
 
   def new_test_click(self, **event_args) -> None:
@@ -56,6 +58,10 @@ class PowerCheck(PowerCheckTemplate):
   def engine_graph_click(self, **event_args):
     """This method is called when the button is clicked"""
     routing.set_url_hash('EngineGraph')
+
+  def user_management_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    routing.set_url_hash('UserManagement')
 
 
 
