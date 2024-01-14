@@ -6,13 +6,14 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil_extras import routing
+from ..utils import search_engines_with_query
 
 @routing.route('ChecksHistoryByEngine')
 class ChecksHistoryByEngine(ChecksHistoryByEngineTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    engines = sorted([r['engine_num'] for r in app_tables.engines.search()])
+    engines = sorted([r['engine_num'] for r in app_tables.engines.search(tables.order_by("reference", ascending=False))])
     self.engine_num_dd.items = engines
     self.main_data_grid.role = 'wide'
     self.main_data_grid.columns[0]['width'] = 500
@@ -52,3 +53,9 @@ class ChecksHistoryByEngine(ChecksHistoryByEngineTemplate):
   def engine_num_dd_change(self, **event_args):
     """This method is called when an item is selected"""
     self.load_engine_data()
+
+  def send_query_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    returned_engines = search_engines_with_query(self.search_query.text)
+    self.repeating_panel_1.items = returned_engines
+    

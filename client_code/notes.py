@@ -11,9 +11,9 @@ from anvil.tables import app_tables
 #    Module1.say_hello()
 #
 # TO ADD:
-  # Search box - https://anvil.works/learn/tutorials/data-grids/searching
+  # Search box - https://anvil.works/learn/tutorials/data-grids/searching    ✓
   # Filter by columns
-  # present records by Reference Number - descending order.
+  # present records by Reference Number - descending order.    ✓
   # Consider management password instead of login user?
   # Seperate between Jet/piston
   # think about UX/UI
@@ -25,6 +25,9 @@ from anvil.tables import app_tables
   # wrong tail numbers
   # Add engine before removing
   # 
+
+# To Consider:
+  # The 'TestsHistory' page became useless after adding the search bar to the other search pages (consider deleting)
 
 # Code refactor:
   # Comments.

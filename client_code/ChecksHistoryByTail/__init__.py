@@ -6,6 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil_extras import routing
+from ..utils import search_engines_with_query_for_tail
 
 @routing.route('ChecksHistoryByTail')
 class ChecksHistoryByTail(ChecksHistoryByTailTemplate):
@@ -27,7 +28,7 @@ class ChecksHistoryByTail(ChecksHistoryByTailTemplate):
       return
     else:
       # Quering the database for engine num rows
-      rows = app_tables.powertests.search(tail=self.tail_num_dd.selected_value)
+      rows = app_tables.powertests.search(tables.order_by("reference", ascending=False),tail=self.tail_num_dd.selected_value)
       finished_rows = []
       # For every row i create a new presentable and organized list
       for r in rows:
@@ -54,3 +55,8 @@ class ChecksHistoryByTail(ChecksHistoryByTailTemplate):
   def tail_num_dd_change(self, **event_args):
     """This method is called when an item is selected"""
     self.load_engine_data()
+
+  def send_query_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    returned_engines = search_engines_with_query_for_tail(self.search_query.text)
+    self.repeating_panel_1.items = returned_engines
