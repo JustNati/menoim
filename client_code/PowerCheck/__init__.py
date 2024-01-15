@@ -27,23 +27,12 @@ class PowerCheck(PowerCheckTemplate):
     '''
     move to ne
     '''
-    #open_form('NewPowerCheckForm')
     routing.set_url_hash('NewPowerCheckForm')
 
-  def report_by_tail_click(self, **event_args):
+  def history_click(self, **event_args):
     """This method is called when the button is clicked"""
     #open_form('ChecksHistoryByTail')
-    routing.set_url_hash('ChecksHistoryByTail')
-
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    #open_form('ChecksHistoryByEngine')
-    routing.set_url_hash('ChecksHistoryByEngine')
-
-  def explore_records_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    #open_form('TestsHistory')
-    routing.set_url_hash('TestsHistory')
+    routing.set_url_hash('History')
 
   def add_engine_click(self, **event_args):
     """This method is called when the button is clicked"""

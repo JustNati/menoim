@@ -18,16 +18,11 @@ components:
       type: Button
       layout_properties: {grid_position: 'AOHUXW,XWGHCL'}
       event_bindings: {click: new_test_click}
-    - name: report_by_tail
-      properties: {text: דו"ח לפי מס' זנב}
+    - name: history
+      properties: {text: היסטוריית בדיקות כוח}
       type: Button
       layout_properties: {grid_position: 'QHUIGT,XZKYGW'}
-      event_bindings: {click: report_by_tail_click}
-    - name: button_1
-      properties: {text: דו"ח לפי מס' מנוע}
-      type: Button
-      layout_properties: {grid_position: 'RHYFDS,JKHQJL'}
-      event_bindings: {click: button_1_click}
+      event_bindings: {click: history_click}
     - name: engine_graph
       properties: {text: תרשים מנוע, align: center}
       type: Button
@@ -48,11 +43,6 @@ components:
       type: Button
       layout_properties: {grid_position: 'SEOQAE,NXCHSI'}
       event_bindings: {click: add_engine_click}
-    - name: explore_records
-      properties: {text: עיון בבדיקות מדווחות}
-      type: Button
-      layout_properties: {grid_position: 'ZUADXP,SHNKDD'}
-      event_bindings: {click: explore_records_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

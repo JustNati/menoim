@@ -58,7 +58,7 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
              title="חסר נתונים",
              style="danger").show()
     else:
-      res_modal = PowerTestResult(new_record['test_n1_rpm'], new_record['test_itt'], 
+      res_modal = PowerTestResult(new_record['test_n1_rpm'], new_record['test_itt'], new_record['max_env_temp_OAT'], 
                                   new_record['test_wf'], new_record['barometric_pressure'],)
       alert(res_modal, large=True, dismissible=False, buttons=[])
       if res_modal.updated:

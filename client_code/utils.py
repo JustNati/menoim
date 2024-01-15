@@ -24,14 +24,14 @@ def find_nearest_value(arr: list, target: float):
     return closest_value
   
 def calc_ng(x: float) -> tuple:
-  m = 1.46 if x<44 else 0.33
-  c = 812 if x<44 else 857.5
-  return m*x + c
+  m = 0.147 if x<44 else 0.04
+  c = 95.1 if x<44 else 101.4
+  return round(m*x + c,2)
 
 def calc_itt(x: float) -> tuple:
   m = 3 if x<43.5 else 2
-  c = 655 if x<43.5 else 696
-  return m*x + c
+  c = 653 if x<43.5 else 694
+  return round(m*x + c,2)
 
 def validate_empty_values(dictionary, values_list, exclude_list=[]):
     # Check if any values in the dictionary are empty or match any value in the list
@@ -45,8 +45,7 @@ def calc_barometric_pressure(x: float, barometric_pressure_val: float,
                             barometric_vaues = [24,26,28,29.97,31]) -> tuple:
   m = 0.17 if x<44 else -3
   c = 0
-  barometric_val = find_nearest_value(barometric_vaues, barometric_pressure_val)
-                              
+  barometric_val = find_nearest_value(barometric_vaues, barometric_pressure_val)                          
   if barometric_val == 24:
     c = 427.5 if x<44 else 565
   elif barometric_val == 26:

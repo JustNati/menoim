@@ -1,5 +1,0 @@
-is_package: true
-container: {type: DataRowPanel}
-components: []
-data_bindings:
-- {property: item, code: 'self.item['''']', writeback: false}

@@ -7,17 +7,15 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil_extras import routing
 from ..AddEngine import AddEngine
-from ..ChecksHistoryByEngine import ChecksHistoryByEngine
-from ..ChecksHistoryByTail import ChecksHistoryByTail
 from ..NewPowerCheckForm import NewPowerCheckForm
 from ..PowerCheck import PowerCheck
 from ..RemoveEngine import RemoveEngine
-from ..TestsHistory import TestsHistory
 from ..TorqueCalc import TorqueCalc
 from ..PowerTestResult import PowerTestResult
 from ..EngineGraph import EngineGraph
 from ..EngineStartup import EngineStartup
 from ..UserManagement import UserManagement
+from ..History import History
 
 @routing.route('', title='Home')
 @routing.main_router

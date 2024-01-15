@@ -12,22 +12,20 @@ from anvil.tables import app_tables
 #
 # TO ADD:
   # Search box - https://anvil.works/learn/tutorials/data-grids/searching    ✓
-  # Filter by columns
+  # Filter by columns    ✓
   # present records by Reference Number - descending order.    ✓
   # Consider management password instead of login user?
   # Seperate between Jet/piston
   # think about UX/UI
+  # Change engine list in 'History' (currently display only added engines, not every engine in existance)
 
-# Validation - Consult woth Stav Lobel for more tests:
+# Validation - Consult with Stav Lobel for more tests:
   # Validate Results of power check!!!
   # new power tests
   # wrong engine numbers
   # wrong tail numbers
   # Add engine before removing
   # 
-
-# To Consider:
-  # The 'TestsHistory' page became useless after adding the search bar to the other search pages (consider deleting)
 
 # Code refactor:
   # Comments.

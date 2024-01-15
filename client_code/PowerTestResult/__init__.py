@@ -11,14 +11,13 @@ from anvil_extras import routing
 
 @routing.route('PowerTestResult')
 class PowerTestResult(PowerTestResultTemplate):
-  def __init__(self, recorded_n1, recorded_itt, recorded_ff, barometric_pressure, **properties):
+  def __init__(self, recorded_n1, recorded_itt, max_temp, recorded_ff, barometric_pressure, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.updated = False
-    self.n1_res.text = calc_ng(recorded_n1)
-    self.itt_res.text = calc_itt(recorded_itt)
-    self.wf_ff_res.text = calc_barometric_pressure(recorded_ff, barometric_pressure)
-
+    self.n1_res.text = round(recorded_n1 - calc_ng(max_temp),2)
+    self.itt_res.text =  round(recorded_itt - calc_itt(max_temp),2) 
+    self.wf_ff_res.text = round(calc_barometric_pressure(max_temp, barometric_pressure) - recorded_ff,2)
     # users init
     approvers, submitters = [], []
     for r in app_tables.users.search():

@@ -22,7 +22,7 @@ components:
     layout_properties: {width: 102.9500244140625}
     event_bindings: {change: engine_num_dd_change}
   - name: label_7
-    properties: {align: right, text: מס' מנוע}
+    properties: {align: right, text: 'מס'' מנוע     '}
     type: Label
     layout_properties: {}
 - name: flow_panel_2
@@ -38,13 +38,17 @@ components:
   - name: search_query
     properties: {align: right, placeholder: הכנס פרטי סינון, text: ''}
     type: TextBox
-    layout_properties: {width: 230.786951171875}
+    layout_properties: {width: 228.5370244140625}
+  - name: label_9
+    properties: {text: ' '}
+    type: Label
+    layout_properties: {}
 - name: main_data_grid
   properties:
     columns:
     - {id: HOAPHL, data_key: engine_num, title: '', width: '', expand: false}
     - {id: VAMYTQ, data_key: side, title: ''}
-    - {id: HIYJVL, data_key: date, title: ''}
+    - {id: HIYJVL, data_key: date, title: '', width: '120'}
     - {id: ILKEHH, data_key: engine_hours, title: ''}
     - {id: IEIHDH, data_key: rpm_diff, title: ''}
     - {id: NIKEKR, data_key: temp_diff, title: ''}
@@ -55,54 +59,66 @@ components:
   type: DataGrid
   components:
   - name: data_row_panel_2
-    properties: {}
+    properties: {auto_display_data: false}
     type: DataRowPanel
     components:
-    - name: engin_num
-      properties: {text: מס' מנוע}
-      type: Label
+    - name: engine_num
+      properties: {text: מס' מנוע, spacing_below: none, spacing_above: none, col_spacing: none,
+        wrap_on: never, bold: true, align: left}
+      type: Link
       layout_properties: {column: HOAPHL}
-      data_bindings:
-      - {property: tag, code: 'self.item[''column_!'']', writeback: false}
+      event_bindings: {click: engine_num_click}
     - name: side
-      properties: {text: צד}
-      type: Label
+      properties: {text: צד, wrap_on: never, spacing_above: none, spacing_below: none,
+        col_spacing: none, bold: true, align: left}
+      type: Link
       layout_properties: {column: VAMYTQ}
-      data_bindings:
-      - {property: tag, code: 'self.item[''column_2'']', writeback: false}
-    - name: Date
-      properties: {text: תאריך}
-      type: Label
+      event_bindings: {click: side_click}
+    - name: date
+      properties: {text: תאריך, wrap_on: never, spacing_above: none, spacing_below: none,
+        col_spacing: none, bold: true, align: left}
+      type: Link
       layout_properties: {column: HIYJVL}
-      data_bindings:
-      - {property: tag, code: 'self.item[''column_3'']', writeback: false}
-    - name: label_1
-      properties: {text: שעות מנוע}
-      type: Label
+      event_bindings: {click: date_click}
+    - name: engine_hours
+      properties: {text: שעות מנוע, spacing_above: none, spacing_below: none, bold: true,
+        align: left}
+      type: Link
       layout_properties: {column: ILKEHH}
-    - name: label_2
-      properties: {text: הפרש סל"ד}
-      type: Label
-      layout_properties: {column: IEIHDH}
-    - name: label_3
-      properties: {text: '''הפרש טמפ'}
-      type: Label
+      event_bindings: {click: engine_hours_click}
+    - name: temp_diff
+      properties: {text: '''הפרש טמפ', spacing_above: none, spacing_below: none, bold: true,
+        align: left}
+      type: Link
       layout_properties: {column: NIKEKR}
-    - name: label_4
-      properties: {text: FF הפרש}
-      type: Label
+      event_bindings: {click: temp_diff_click}
+    - name: ff_diff
+      properties: {text: FF הפרש, spacing_above: none, spacing_below: none, bold: true,
+        align: left}
+      type: Link
       layout_properties: {column: PDXPON}
-    - name: label_5
-      properties: {text: סימוכין}
-      type: Label
+      event_bindings: {click: ff_diff_click}
+    - name: reference
+      properties: {text: סימוכין, spacing_above: none, spacing_below: none, bold: true,
+        align: left}
+      type: Link
       layout_properties: {column: IHECWU}
-    - name: label_6
-      properties: {text: הערות}
-      type: Label
+      event_bindings: {click: reference_click}
+    - name: comments
+      properties: {text: הערות, spacing_above: none, spacing_below: none, bold: true,
+        align: left}
+      type: Link
       layout_properties: {column: KXGEFT}
+      event_bindings: {click: comments_click}
+    - name: rpm_diff
+      properties: {text: הפרש סל"ד, spacing_above: none, spacing_below: none, bold: true,
+        align: left}
+      type: Link
+      layout_properties: {column: IEIHDH}
+      event_bindings: {click: rpm_diff_click}
     layout_properties: {pinned: true}
   - name: repeating_panel_data
-    properties: {item_template: TestingColumnSort.RowTemplate12}
+    properties: {item_template: History.RowTemplate12}
     type: RepeatingPanel
   layout_properties: {grid_position: 'PXDKDA,SUFKAR'}
 is_package: true
