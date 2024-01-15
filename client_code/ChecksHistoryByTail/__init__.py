@@ -6,7 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil_extras import routing
-from ..utils import search_engines_with_query_for_tail
+from ..utils import *
 
 @routing.route('ChecksHistoryByTail')
 class ChecksHistoryByTail(ChecksHistoryByTailTemplate):

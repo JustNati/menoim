@@ -13,7 +13,7 @@ class ChecksHistoryByEngine(ChecksHistoryByEngineTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    engines = sorted([r['engine_num'] for r in app_tables.engines.search(tables.order_by("reference", ascending=False))])
+    engines = sorted([r['engine_num'] for r in app_tables.engines.search()])
     self.engine_num_dd.items = engines
     self.main_data_grid.role = 'wide'
     self.main_data_grid.columns[0]['width'] = 500

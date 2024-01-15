@@ -59,33 +59,6 @@ def calc_barometric_pressure(x: float, barometric_pressure_val: float,
     c = 547.5 if x<44 else 690
   return m*x + c
 
-def search_engines_with_query(query):
-  result = app_tables.powertests.search(tables.order_by("reference", ascending=False))
-  finished_results = []
-  if query:
-    result = [
-      row for row in result
-        if query in str(row['test_date'].strftime("%d/%m/%Y"))
-        or query in str(row['cur_engine_hours'])
-        or query in str(row['n1_diff'])
-        or query in str(row['itt_diff'])
-        or query in str(row['wf_ff_diff'])
-        or query in str(row['reference'])
-        or query in str(row['test_notes'])
-    ]
-  for r in result:
-    new_row = {
-          'test_date': r['test_date'].strftime("%d/%m/%Y"),
-          'engine_hours': r['cur_engine_hours'],
-          'rpm_diff': r['n1_diff'],
-          'temp_diff': r['itt_diff'],
-          'ff_diff': r['wf_ff_diff'],
-          'reference': r['reference'],
-          'comments': r['test_notes']
-    }
-    finished_results.append(new_row)
-  return finished_results
-
 def search_engines_with_query_for_tail(query):
   result = app_tables.powertests.search(tables.order_by("reference", ascending=False))
   finished_results = []
