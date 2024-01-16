@@ -15,11 +15,11 @@ components:
     type: Label
     layout_properties: {row: BPZXBK, width_xs: 6, col_xs: 6}
   - name: approver
-    properties: {align: center, foreground: '#4ec551'}
+    properties: {align: center, foreground: 'theme:Black'}
     type: TextBox
     layout_properties: {row: ZYZERW, width_xs: 3, col_xs: 2}
   - name: reg_user
-    properties: {align: center, foreground: '#33b7c4', background: ''}
+    properties: {align: center, foreground: 'theme:Black', background: ''}
     type: TextBox
     layout_properties: {row: ZYZERW, width_xs: 3, col_xs: 7}
   - name: add_approver
@@ -49,12 +49,12 @@ components:
     type: Label
     layout_properties: {row: CZFNDA, width_xs: 4, col_xs: 5}
   - name: approver_dd
-    properties: {include_placeholder: true}
+    properties: {include_placeholder: true, foreground: 'theme:Black'}
     type: DropDown
     layout_properties: {row: PZLHZP, width_xs: 3, col_xs: 2}
     event_bindings: {}
   - name: submiter_dd
-    properties: {include_placeholder: true}
+    properties: {include_placeholder: true, foreground: 'theme:Black'}
     type: DropDown
     layout_properties: {row: PZLHZP, width_xs: 3, col_xs: 7}
     event_bindings: {}

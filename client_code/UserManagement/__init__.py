@@ -12,10 +12,16 @@ class UserManagement(UserManagementTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.submiter_dd.items = app_tables.users.search(tables.order_by('name'),is_submiter=True)
-    self.approver_dd.items = app_tables.users.search(tables.order_by('name'),is_approver=True)
+    self.submiter_dd.items = sorted([r['name'] for r in app_tables.users.search(is_submiter=True)])
+    self.approver_dd.items = sorted([r['name'] for r in app_tables.users.search(is_approver=True)])
     # Any code you write here will run before the form opens.
 
+  def clear_data():
+    self.reg_user.text= ''
+    self.approver.text=''
+    self.submiter_dd.items = sorted([r['name'] for r in app_tables.users.search(is_submiter=True)])
+    self.approver_dd.items = sorted([r['name'] for r in app_tables.users.search(is_approver=True)])
+  
   def add_reg_user_click(self, **event_args):
     """This method is called when the button is clicked"""
     if (app_tables.users.get(name=self.reg_user.text, is_submiter=True)):
@@ -27,6 +33,7 @@ class UserManagement(UserManagementTemplate):
        Notification("הוסף מבצע",
               title="!פעולה בוצעה",
               style="success").show()
+       self.clear_data()
 
   def add_approver_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -40,11 +47,13 @@ class UserManagement(UserManagementTemplate):
       Notification("עודכן בודק",
               title="!פעולה בוצעה",
               style="success").show()
+      self.clear_data()
     else:
       new_row = app_tables.users.add_row(name=self.approver.text, is_submiter=True, is_moderator=False, is_approver=True)
       Notification("הוסף בודק",
               title="!פעולה בוצעה",
               style="success").show()
+      self.clear_data()
 
   def remove_reg_user_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -53,6 +62,7 @@ class UserManagement(UserManagementTemplate):
     Notification("נמחק בודק",
               title="!פעולה בוצעה",
               style="success").show()
+    self.clear_data()
 
   def remove_approver_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -61,5 +71,6 @@ class UserManagement(UserManagementTemplate):
     Notification("נמחק מבצע",
               title="!פעולה בוצעה",
               style="success").show()
+    self.clear_data()
 
     
