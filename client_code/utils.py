@@ -91,6 +91,8 @@ def search_engines_with_query_for_tail(query):
 
 def check_permissions():
   logged_user = anvil.users.get_user()
-  if (logged_user is not None):
+  if (logged_user is None):
+    return False
+  if (logged_user['is_moderator'] is not None and logged_user is not False):
     return True
   return False

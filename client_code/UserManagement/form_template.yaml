@@ -27,11 +27,13 @@ components:
         600', foreground: 'theme:Gray 200'}
     type: Button
     layout_properties: {row: ESVKDU, width_xs: 3, col_xs: 2}
+    event_bindings: {click: add_approver_click}
   - name: add_reg_user
     properties: {text: הוספת מבצע, font_size: 12, bold: true, background: 'theme:Gray
         600', foreground: 'theme:Gray 200'}
     type: Button
     layout_properties: {row: ESVKDU, width_xs: 3, col_xs: 7}
+    event_bindings: {click: add_reg_user_click}
 - name: grid_panel_2
   properties: {spacing_above: large, border: ''}
   type: GridPanel
@@ -46,23 +48,27 @@ components:
       bold: true}
     type: Label
     layout_properties: {row: CZFNDA, width_xs: 4, col_xs: 5}
-  - name: approver_rmv
-    properties: {align: center, foreground: '#4ec551'}
-    type: TextBox
-    layout_properties: {row: HFKBSU, width_xs: 3, col_xs: 2}
-  - name: reg_user_rmv
-    properties: {align: center, foreground: '#33b7c4', background: ''}
-    type: TextBox
-    layout_properties: {row: HFKBSU, width_xs: 3, col_xs: 7}
+  - name: approver_dd
+    properties: {include_placeholder: true}
+    type: DropDown
+    layout_properties: {row: PZLHZP, width_xs: 3, col_xs: 2}
+    event_bindings: {}
+  - name: submiter_dd
+    properties: {include_placeholder: true}
+    type: DropDown
+    layout_properties: {row: PZLHZP, width_xs: 3, col_xs: 7}
+    event_bindings: {}
   - name: remove_approver
     properties: {text: הורדת בודק, font_size: 12, bold: true, background: 'theme:Gray
         600', foreground: 'theme:Gray 200'}
     type: Button
     layout_properties: {row: HZOINS, width_xs: 3, col_xs: 2}
+    event_bindings: {click: remove_approver_click}
   - name: remove_reg_user
     properties: {text: הורדת מבצע, font_size: 12, bold: true, background: 'theme:Gray
         600', foreground: 'theme:Gray 200'}
     type: Button
     layout_properties: {row: HZOINS, width_xs: 3, col_xs: 7}
+    event_bindings: {click: remove_reg_user_click}
   data_bindings: []
 is_package: true

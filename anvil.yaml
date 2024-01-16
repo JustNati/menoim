@@ -160,5 +160,8 @@ db_schema:
       admin_ui: {order: 9, width: 200}
       type: datetime
     - name: is_moderator
-      admin_ui: {width: 200, order: 10}
+      admin_ui: {order: 1.75, width: 200}
+      type: bool
+    - name: is_submiter
+      admin_ui: {order: 1.5, width: 200}
       type: bool
