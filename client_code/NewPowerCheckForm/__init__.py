@@ -89,13 +89,6 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
       rows_dict = {x[0]:x[1] for x in list(rows)}
       self.tail_num_info_lbl.text = rows_dict['tail_num']
       self.side_info_lbl.text = rows_dict['side']
-      self.origin_assemble_date = rows_dict['assemble_date']
-      day, month, year = rows_dict['assemble_date'].day, rows_dict['assemble_date'].month, rows_dict['assemble_date'].year
-      self.assemble_date.text = f'{day}/{month}/{year}'
-      self.time_on_asseble.text = rows_dict['time_on_assemble']
-      e_type = rows_dict['engine_type']
-      self.engine_type_info_lbl.text = f'PT6-A{e_type}'
-
       # fields init
       self.engine_info_panel.visible = True
       self.test_form_panel.visible = True

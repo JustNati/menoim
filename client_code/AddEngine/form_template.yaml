@@ -8,7 +8,7 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
 - type: ColumnPanel
-  properties: {col_widths: '{"KBKKOW":50}'}
+  properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -62,45 +62,6 @@ components:
       data_bindings: []
     - name: label_4
       properties: {align: right, text: ':צד'}
-      type: Label
-      layout_properties: {}
-  - name: flow_panel_4
-    properties: {align: right}
-    type: FlowPanel
-    layout_properties: {grid_position: 'VTKQKG,IHBIJV'}
-    components:
-    - name: assembly_date
-      properties: {align: right}
-      type: DatePicker
-      layout_properties: {}
-    - name: label_5
-      properties: {align: right, text: ':תאריך הרכבה'}
-      type: Label
-      layout_properties: {}
-  - name: flow_panel_5
-    properties: {align: right}
-    type: FlowPanel
-    layout_properties: {grid_position: 'QFIKKZ,AOVMWQ'}
-    components:
-    - name: start_hours
-      properties: {align: right, type: number}
-      type: TextBox
-      layout_properties: {}
-    - name: label_6
-      properties: {align: right, text: ':שעות מנוע בהרכבה'}
-      type: Label
-      layout_properties: {}
-  - name: flow_panel_6
-    properties: {align: right}
-    type: FlowPanel
-    layout_properties: {grid_position: 'QWJMRU,CHMPEY'}
-    components:
-    - name: engine_type
-      properties: {align: right, type: number}
-      type: TextBox
-      layout_properties: {}
-    - name: label_7
-      properties: {align: right, text: ':סוג מנוע'}
       type: Label
       layout_properties: {}
   - name: add_engine

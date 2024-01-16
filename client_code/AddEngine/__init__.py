@@ -22,10 +22,7 @@ class AddEngine(AddEngineTemplate):
     # Check if All the fields are filled
     if (self.engine_num.text is None or
           self.engine_side.selected_value is None or
-          self.engine_type.text is None or
-          self.tail_num.selected_value is None or
-          self.assembly_date.date is None or
-          self.start_hours.text is None):
+          self.tail_num.selected_value is None):
       Notification("נא למלא את כל השדות",
              title="חסרים נתונים",
              style="danger").show()
@@ -42,10 +39,7 @@ class AddEngine(AddEngineTemplate):
     # If the engine is not in the database, and the place in the plane is empty,
     # create new engine in the database and change the engine number in the tails database
     else:   
-      newRow = app_tables.engines.add_row(assemble_date=self.assembly_date.date,
-                                          engine_num=self.engine_num.text,
-                                          engine_type=self.engine_type.text,
-                                        time_on_assemble=self.start_hours.text,
+      newRow = app_tables.engines.add_row(engine_num=self.engine_num.text,                              
                                         side=self.engine_side.selected_value,
                                         tail_num=self.tail_num.selected_value)
       if (self.engine_side.selected_value == 'right'):

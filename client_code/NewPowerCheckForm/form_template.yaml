@@ -56,43 +56,6 @@ components:
         properties: {text: צד מנוע, bold: true}
         type: Label
         layout_properties: {}
-    - name: flow_panel_3
-      properties: {align: right}
-      type: FlowPanel
-      layout_properties: {}
-      components:
-      - name: assemble_date
-        properties: {text: TEST}
-        type: Label
-        layout_properties: {}
-      - name: assemble_date_lbl
-        properties: {text: תאריך הרכבה, align: right, bold: true}
-        type: Label
-    - name: flow_panel_5
-      properties: {align: right}
-      type: FlowPanel
-      layout_properties: {}
-      components:
-      - name: time_on_asseble
-        properties: {text: TEST}
-        type: Label
-        layout_properties: {}
-      - name: time_on_asseble_lbl
-        properties: {text: שעות מנוע בהרכבה, bold: true}
-        type: Label
-        layout_properties: {}
-    - name: flow_panel_2
-      properties: {align: right}
-      type: FlowPanel
-      components:
-      - name: engine_type_info_lbl
-        properties: {}
-        type: Label
-      - name: engine_type_lbl
-        properties: {text: סוג מנוע, bold: true}
-        type: Label
-        layout_properties: {}
-      layout_properties: {}
   - name: test_form_panel
     properties: {visible: false}
     type: LinearPanel
