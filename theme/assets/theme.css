@@ -811,10 +811,6 @@ textarea.anvil-component[disabled] {
 .anvil-label>.label-text, a>.link-text {
   color:black;
 }
-.anvil-role-adminBtn > button.btn {
-  margin-top:300px;
-  border-radius: 50%;
-}
 
 /* Shadow values taken from 
 https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-material-design-elevations
