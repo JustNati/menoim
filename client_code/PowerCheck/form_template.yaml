@@ -14,17 +14,17 @@ components:
     layout_properties: {grid_position: 'RJKWEF,HRNSQP'}
     components:
     - name: new_test
-      properties: {text: בדיקת כח חדשה}
+      properties: {text: בדיקת כח חדשה, icon: 'fa:newspaper-o'}
       type: Button
       layout_properties: {grid_position: 'AOHUXW,XWGHCL'}
       event_bindings: {click: new_test_click}
     - name: history
-      properties: {text: היסטוריית בדיקות כוח}
+      properties: {text: היסטוריית בדיקות כוח, icon: 'fa:database'}
       type: Button
       layout_properties: {grid_position: 'QHUIGT,XZKYGW'}
       event_bindings: {click: history_click}
     - name: engine_graph
-      properties: {text: תרשים מנוע, align: center}
+      properties: {text: תרשים מנוע, align: center, icon: 'fa:area-chart'}
       type: Button
       layout_properties: {grid_position: 'FWCETC,REKYFE'}
       event_bindings: {click: engine_graph_click}

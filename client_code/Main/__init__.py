@@ -25,7 +25,6 @@ class Main(MainTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.admin_login.role=''
     # Any code you write here will run before the form opens.
 
   def torque_calc_click(self, **event_args) -> None:

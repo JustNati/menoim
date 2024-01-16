@@ -22,6 +22,7 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
     a = [x['name'] for x in app_tables.powertests.list_columns()]
     engines = sorted([r['engine_num'] for r in app_tables.engines.search()])
     self.engine_num_dd.items = engines
+    self.engine_autocomplete.suggestions = engines
     self.origin_assemble_date = None
   
   def clear_data(self):
@@ -78,14 +79,21 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
              style="success").show()
       
   def load_engine_data(self):
-    """This method is called when the button is clicked"""
-    if self.engine_num_dd.selected_value is None:
+    if (self.engine_num_dd.selected_value is None and self.engine_autocomplete.text == ''):
+      Notification("נא לבחור מספר מנוע",
+             title="מספר מנוע לא תקין",
+             style="warning").show()
+    elif (self.engine_autocomplete.text not in self.engine_num_dd.items and self.engine_num_dd.selected_value is None):
       Notification("נא לבחור מספר מנוע",
              title="מספר מנוע לא תקין",
              style="warning").show()
     else:
       # Engine details
-      rows = app_tables.engines.get(engine_num=self.engine_num_dd.selected_value)
+      rows = None
+      if (self.engine_autocomplete.text == ''):
+        rows = app_tables.engines.get(engine_num=self.engine_num_dd.selected_value)
+      else:
+        rows = app_tables.engines.get(engine_num=self.engine_autocomplete.text)
       rows_dict = {x[0]:x[1] for x in list(rows)}
       self.tail_num_info_lbl.text = rows_dict['tail_num']
       self.side_info_lbl.text = rows_dict['side']
@@ -100,6 +108,7 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
   def engine_num_dd_change(self, **event_args):
     """This method is called when an item is selected"""
     self.load_engine_data()
+    self.engine_autocomplete.text = ''
 
   def max_env_tmp_txt_change(self, **event_args):
     """This method is called when the text in this text box is edited"""
@@ -110,4 +119,12 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
 
   # ---------------------------------------------
   # ----------------- Validation ----------------
+
+  def engine_autocomplete_pressed_enter(self, **event_args):
+    self.load_engine_data()
+    self.engine_num_dd.selected_value = None
+
+  def engine_autocomplete_suggestion_clicked(self, **event_args):
+    self.load_engine_data()
+    self.engine_num_dd.selected_value = None
 
