@@ -1,68 +1,68 @@
 container: {type: ColumnPanel}
 components:
 - name: grid_panel_1
-  properties: {spacing_below: large, border: 1px solid black}
+  properties: {spacing_below: large, border: ''}
   type: GridPanel
-  layout_properties: {grid_position: 'ZSVRHQ,KQAGDA'}
+  layout_properties: {grid_position: 'KUHXWF,UMDEKK'}
   components:
   - name: label_2
-    properties: {text: הוספת בודק לבדיקת כוח, bold: true, font_size: 17, align: left}
+    properties: {text: הוספת בודק לבדיקת כוח, bold: true, font_size: 15, align: right}
     type: Label
-    layout_properties: {row: RQFVGH, width_xs: 4, col_xs: 0}
+    layout_properties: {row: BPZXBK, width_xs: 6, col_xs: 0}
   - name: label_1
-    properties: {align: right, text: הוספת מבצע לבדיקת כוח, font: '', font_size: 17,
-      bold: true}
+    properties: {align: right, text: הוספת מבצע לבדיקת כוח, font: '', font_size: 15,
+      bold: true, visible: true}
     type: Label
-    layout_properties: {row: RQFVGH, width_xs: 4, col_xs: 8}
+    layout_properties: {row: BPZXBK, width_xs: 6, col_xs: 6}
   - name: approver
     properties: {align: center, foreground: '#4ec551'}
     type: TextBox
-    layout_properties: {row: CVSSYU, width_xs: 3, col_xs: 0}
+    layout_properties: {row: ZYZERW, width_xs: 3, col_xs: 2}
   - name: reg_user
     properties: {align: center, foreground: '#33b7c4', background: ''}
     type: TextBox
-    layout_properties: {row: CVSSYU, width_xs: 3, col_xs: 9}
+    layout_properties: {row: ZYZERW, width_xs: 3, col_xs: 7}
   - name: add_approver
     properties: {text: הוספת בודק, bold: true, font_size: 12, background: 'theme:Gray
         600', foreground: 'theme:Gray 200'}
     type: Button
-    layout_properties: {row: AFFHBD, width_xs: 3, col_xs: 0}
+    layout_properties: {row: ESVKDU, width_xs: 3, col_xs: 2}
   - name: add_reg_user
     properties: {text: הוספת מבצע, font_size: 12, bold: true, background: 'theme:Gray
         600', foreground: 'theme:Gray 200'}
     type: Button
-    layout_properties: {row: AFFHBD, width_xs: 3, col_xs: 9}
+    layout_properties: {row: ESVKDU, width_xs: 3, col_xs: 7}
 - name: grid_panel_2
-  properties: {spacing_above: large, border: 1px solid black}
+  properties: {spacing_above: large, border: ''}
   type: GridPanel
   layout_properties: {grid_position: 'OBPBSS,MNUPHZ'}
   components:
   - name: label_2_copy
-    properties: {text: הורדת בודק מבדיקת כוח, bold: true, font_size: 17, align: left}
+    properties: {text: הורדת בודק מבדיקת כוח, bold: true, font_size: 15, align: left}
     type: Label
-    layout_properties: {row: YYBHRG, width_xs: 4, col_xs: 0}
+    layout_properties: {row: CZFNDA, width_xs: 4, col_xs: 2}
   - name: label_1_copy
-    properties: {align: right, text: הורדת מבצע מבדיקת כוח, font: '', font_size: 17,
+    properties: {align: right, text: הורדת מבצע מבדיקת כוח, font: '', font_size: 15,
       bold: true}
     type: Label
-    layout_properties: {row: YYBHRG, width_xs: 4, col_xs: 8}
+    layout_properties: {row: CZFNDA, width_xs: 4, col_xs: 5}
   - name: approver_rmv
     properties: {align: center, foreground: '#4ec551'}
     type: TextBox
-    layout_properties: {row: QPDXKP, width_xs: 3, col_xs: 0}
+    layout_properties: {row: HFKBSU, width_xs: 3, col_xs: 2}
   - name: reg_user_rmv
     properties: {align: center, foreground: '#33b7c4', background: ''}
     type: TextBox
-    layout_properties: {row: QPDXKP, width_xs: 3, col_xs: 9}
+    layout_properties: {row: HFKBSU, width_xs: 3, col_xs: 7}
   - name: remove_approver
     properties: {text: הורדת בודק, font_size: 12, bold: true, background: 'theme:Gray
         600', foreground: 'theme:Gray 200'}
     type: Button
-    layout_properties: {row: YFBRYO, width_xs: 3, col_xs: 0}
+    layout_properties: {row: HZOINS, width_xs: 3, col_xs: 2}
   - name: remove_reg_user
     properties: {text: הורדת מבצע, font_size: 12, bold: true, background: 'theme:Gray
         600', foreground: 'theme:Gray 200'}
     type: Button
-    layout_properties: {row: YFBRYO, width_xs: 3, col_xs: 9}
+    layout_properties: {row: HZOINS, width_xs: 3, col_xs: 7}
   data_bindings: []
 is_package: true

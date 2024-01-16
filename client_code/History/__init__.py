@@ -15,7 +15,7 @@ class History(HistoryTemplate):
     self.init_components(**properties)
     self.main_data_grid.role = 'wide'
     tails = sorted([r['tail_number'] for r in app_tables.tails.search()])
-    engines = sorted([r['engine_num'] for r in app_tables.engines.search()])
+    engines = list(set([r['engine_num'] for r in app_tables.powertests.search(tables.order_by('engine_num'))]))
     self.engine_num_dd.items = engines
     self.tail_num_dd.items = tails
     self.query = None

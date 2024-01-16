@@ -88,3 +88,9 @@ def search_engines_with_query_for_tail(query):
     }
     finished_results.append(new_row)
   return finished_results
+
+def check_permissions():
+  logged_user = anvil.users.get_user()
+  if (logged_user is not None):
+    return True
+  return False

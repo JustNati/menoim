@@ -14,10 +14,9 @@ from anvil.tables import app_tables
   # Search box - https://anvil.works/learn/tutorials/data-grids/searching    ✓
   # Filter by columns    ✓
   # present records by Reference Number - descending order.    ✓
-  # Consider management password instead of login user?
+  # Consider management password instead of login user?    ✓
   # Seperate between Jet/piston
   # think about UX/UI
-  # Change engine list in 'History' (currently display only added engines, not every engine in existance)
 
 # Validation - Consult with Stav Lobel for more tests:
   # Validate Results of power check!!!

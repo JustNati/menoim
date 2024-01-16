@@ -28,3 +28,22 @@ components:
       type: Button
       layout_properties: {grid_position: 'FWCETC,REKYFE'}
       event_bindings: {click: engine_graph_click}
+    - name: user_management
+      properties: {text: ניהול משתמשים}
+      type: Button
+      layout_properties: {grid_position: 'NWVYSX,JTOVYL'}
+      event_bindings: {click: user_management_click}
+    - name: remove_engine
+      properties: {text: הורדת מנוע}
+      type: Button
+      layout_properties: {grid_position: 'WYYASN,ZACIER'}
+      event_bindings: {click: remove_engine_click}
+    - name: add_engine
+      properties: {text: הרכבת מנוע}
+      type: Button
+      layout_properties: {grid_position: 'SEOQAE,NXCHSI'}
+      event_bindings: {click: add_engine_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}

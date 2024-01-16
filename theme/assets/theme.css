@@ -812,6 +812,9 @@ textarea.anvil-component[disabled] {
   color:black;
 }
 
+.break-container {
+    margin-top:55vh;
+}
 /* Shadow values taken from 
 https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-material-design-elevations
 */
