@@ -49,7 +49,7 @@ components:
       layout_properties: {}
   - name: send
     properties: {text: חשב ערך טורק, bold: true, font: '', background: '#93d3d4',
-      border: '', visible: true}
+      border: '', visible: true, icon: 'fa:calculator'}
     type: Button
     layout_properties: {grid_position: 'MUFOBR,TKBNSN'}
     event_bindings: {click: calc_torque}

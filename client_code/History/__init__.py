@@ -77,57 +77,112 @@ class History(HistoryTemplate):
   def reference_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.query='reference'
-    self.order = not self.order 
+    self.order = not self.order
+    self.reset_icons()
+    if (self.order):
+      self.reference.icon = 'fa:sort-alpha-asc'
+    else:
+      self.reference.icon = 'fa:sort-alpha-desc'
     self.update_order(self.query)
 
   def comments_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.query='comments'
     self.order = not self.order
+    self.reset_icons()
+    if (self.order):
+      self.comments.icon = 'fa:sort-alpha-asc'
+    else:
+      self.comments.icon = 'fa:sort-alpha-desc'
     self.update_order(self.query)
 
   def ff_diff_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.query='ff_diff'
     self.order = not self.order
+    self.reset_icons()
+    if (self.order):
+      self.ff_diff.icon = 'fa:sort-alpha-asc'
+    else:
+      self.ff_diff.icon = 'fa:sort-alpha-desc'
     self.update_order(self.query)
 
   def temp_diff_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.query='temp_diff'
     self.order = not self.order
+    self.reset_icons()
+    if (self.order):
+      self.temp_diff.icon = 'fa:sort-alpha-asc'
+    else:
+      self.temp_diff.icon = 'fa:sort-alpha-desc'
     self.update_order(self.query)
 
   def rpm_diff_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.query='rpm_diff'
     self.order = not self.order
+    self.reset_icons()
+    if (self.order):
+      self.rpm_diff.icon = 'fa:sort-alpha-asc'
+    else:
+      self.rpm_diff.icon = 'fa:sort-alpha-desc'
     self.update_order(self.query)
 
   def engine_hours_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.query='engine_hours'
     self.order = not self.order
+    self.reset_icons()
+    if (self.order):
+      self.engine_hours.icon = 'fa:sort-alpha-asc'
+    else:
+      self.engine_hours.icon = 'fa:sort-alpha-desc'
     self.update_order(self.query)
 
   def date_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.query='date'
     self.order = not self.order
+    self.reset_icons()
+    if (self.order):
+      self.date.icon = 'fa:sort-alpha-asc'
+    else:
+      self.date.icon = 'fa:sort-alpha-desc'
     self.update_order(self.query)
 
   def side_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.query='side'
     self.order = not self.order
+    self.reset_icons()
+    if (self.order):
+      self.side.icon = 'fa:sort-alpha-asc'
+    else:
+      self.side.icon = 'fa:sort-alpha-desc'
     self.update_order(self.query)
 
   def engine_num_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.query='engine_num'
     self.order = not self.order
+    self.reset_icons()
+    if (self.order):
+      self.engine_num.icon = 'fa:sort-alpha-asc'
+    else:
+      self.engine_num.icon = 'fa:sort-alpha-desc'
     self.update_order(self.query)
-    
+
+  def reset_icons(self):
+    self.engine_num.icon = None
+    self.side.icon = None
+    self.date.icon = None
+    self.engine_hours.icon = None
+    self.rpm_diff.icon = None
+    self.temp_diff.icon = None
+    self.ff_diff.icon = None
+    self.reference.icon = None
+    self.comments.icon = None
     
     
     

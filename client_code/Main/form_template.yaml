@@ -39,19 +39,19 @@ components:
         type: Button
         layout_properties: {grid_position: 'JRMBBI,RLWJMW'}
         event_bindings: {click: engine_startup_click}
+    - name: flow_panel_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {grid_position: 'RBALVV,EMHNEF'}
     - name: page_break_1
       properties: {border: transparent, margin_top: null}
       type: form:dep_km42uxb8ia8lq:PageBreak
       layout_properties: {grid_position: 'YHGDZV,UVRQKM'}
-    - name: navbar_links
-      properties: {align: center}
-      type: FlowPanel
-      layout_properties: {grid_position: 'XGSVLK,AXMHIB'}
-      components:
-      - name: admin_login
-        properties: {role: null, align: center, foreground: 'theme:Black', text: '',
-          font_size: 30, spacing_above: none, spacing_below: none, background: transparent,
-          bold: false, icon: 'fa:user-circle-o'}
-        type: Button
-        data_bindings: []
-        event_bindings: {click: admin_login_click}
+    - name: admin_login
+      properties: {role: null, align: center, foreground: 'theme:Black', text: '',
+        font_size: 30, spacing_above: none, spacing_below: none, background: transparent,
+        bold: false, icon: 'fa:user-circle-o'}
+      type: Button
+      data_bindings: []
+      event_bindings: {click: admin_login_click}
+      layout_properties: {grid_position: 'XRWPCK,BAJYEA'}

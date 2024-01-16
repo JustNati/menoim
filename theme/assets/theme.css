@@ -270,7 +270,7 @@ a:hover, a:active {
   /* Added another role 'wide' here (inside @media) and changed the min-width to constant 600px */
   .anvil-role-wide .anvil-data-row-panel {
     flex-wrap: nowrap;
-    min-width: 700px;
+    min-width: 1100px;
   }
  }
 
@@ -811,10 +811,10 @@ textarea.anvil-component[disabled] {
 .anvil-label>.label-text, a>.link-text {
   color:black;
 }
-
 .break-container {
     margin-top:55vh;
 }
+
 /* Shadow values taken from 
 https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-material-design-elevations
 */

@@ -64,7 +64,7 @@ components:
     components:
     - name: engine_num
       properties: {text: מס' מנוע, spacing_below: none, spacing_above: none, col_spacing: none,
-        wrap_on: never, bold: true, align: left}
+        wrap_on: never, bold: true, align: left, icon: ''}
       type: Link
       layout_properties: {column: HOAPHL}
       event_bindings: {click: engine_num_click}
