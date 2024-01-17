@@ -93,27 +93,32 @@ components:
         spacing_below: large, placeholder: שעות מנוע, border: 1px solid black}
       type: TextBox
       layout_properties: {}
-    - name: xy_panel_1
-      properties: {height: '100', border: 1px solid black, spacing_above: small, spacing_below: small,
-        align: right, width: null}
-      type: XYPanel
-      layout_properties: {}
+    - name: grid_panel_1
+      properties: {border: 1px solid black}
+      type: GridPanel
       components:
+      - name: label_2
+        properties: {align: right, text: OAT 'טמפ' הסביבה המקס, font_size: 10, foreground: 'theme:Black'}
+        type: Label
+        layout_properties: {row: RXJNBD, width_xs: 4, col_xs: 8}
       - name: env_final_tmp_lbl
         properties: {text: 'טמפ'' הסביבה המדווחת(+4): 0', font_size: 12, bold: true,
           align: right, spacing_above: large, spacing_below: none}
         type: Label
-        layout_properties: {x: 11.849972534924746, y: 66.86249923706055, width: 147.8000030517578}
-      - name: label_2
-        properties: {align: right, text: OAT 'טמפ' הסביבה המקס, font_size: 10, foreground: 'theme:Black'}
-        type: Label
-        layout_properties: {x: 427.6499908454716, y: 50, width: 200}
+        layout_properties: {row: RFRGET, width_xs: 3, col_xs: 0}
       - name: max_env_tmp_txt
         properties: {type: number, font_size: 12, spacing_above: large, spacing_below: none,
           align: right, placeholder: '', border: ''}
         type: TextBox
-        layout_properties: {x: 172.37496643140912, y: 70.16250038146973, width: 462.76251220703125}
+        layout_properties: {row: RFRGET, width_xs: 9, col_xs: 3}
         event_bindings: {change: max_env_tmp_txt_change}
+      layout_properties: {}
+    - name: xy_panel_1
+      properties: {height: 76.39996337890625, border: 1px solid black, spacing_above: small,
+        spacing_below: small, align: right, width: null}
+      type: XYPanel
+      layout_properties: {}
+      components: []
     - name: flow_panel_5
       properties: {align: right, spacing_above: large, spacing_below: large, spacing: none,
         border: 1px solid black}

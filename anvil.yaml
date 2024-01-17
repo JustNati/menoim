@@ -17,7 +17,7 @@ allow_embedding: false
 name: Menoim
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-metadata: {title: Menoim App}
+metadata: {title: Menoim App, logo_img: 'asset:Images/app-logo.jpg'}
 startup_form: null
 native_deps: {head_html: ''}
 db_schema:
