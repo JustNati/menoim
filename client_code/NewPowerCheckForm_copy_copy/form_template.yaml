@@ -1,0 +1,163 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {wrap_on: never}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: label_7
+    properties: {text: בדיקת כח חדשה, align: center, font_size: 28, bold: false}
+    type: Label
+    layout_properties: {grid_position: 'PWDGBS,IQYLYR'}
+  - name: flow_panel_4
+    properties: {align: center}
+    type: FlowPanel
+    layout_properties: {grid_position: 'EIWJHZ,JIMDGY'}
+    components:
+    - name: engine_autocomplete
+      properties: {placeholder: הקלד מס' מנוע}
+      type: form:dep_km42uxb8ia8lq:Autocomplete
+      event_bindings: {pressed_enter: engine_autocomplete_pressed_enter, suggestion_clicked: engine_autocomplete_suggestion_clicked}
+      layout_properties: {}
+    - name: engine_num_dd
+      properties: {include_placeholder: true, placeholder: בחרו מנוע, align: full}
+      type: DropDown
+      layout_properties: {}
+      event_bindings: {change: engine_num_dd_change}
+    - name: engine_num_lbl
+      properties: {text: מספר מנוע, bold: true}
+      type: Label
+  - name: engine_info_panel
+    properties: {visible: false}
+    type: LinearPanel
+    layout_properties: {grid_position: 'UVOUKR,KTTSXU'}
+    components:
+    - name: flow_panel_1
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: tail_num_info_lbl
+        properties: {text: TEST}
+        type: Label
+        layout_properties: {}
+      - name: tail_num_lbl
+        properties: {text: מספר זנב, bold: true}
+        type: Label
+        layout_properties: {}
+    - name: flow_panel_7
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: side_info_lbl
+        properties: {text: TEST}
+        type: Label
+        layout_properties: {}
+      - name: side_lbl
+        properties: {text: צד מנוע, bold: true}
+        type: Label
+        layout_properties: {}
+  - name: test_form_panel
+    properties: {visible: false}
+    type: LinearPanel
+    layout_properties: {grid_position: 'XCERGY,YYQUKV', full_width_row: true}
+    components:
+    - name: flow_panel_2
+      properties: {align: right, spacing_above: none}
+      type: FlowPanel
+      components:
+      - name: flow_panel_3
+        properties: {align: right, spacing_above: large, spacing_below: large}
+        type: FlowPanel
+        layout_properties: {}
+        components:
+        - name: recheck_btn
+          properties: {text: בדיקה חוזרת, font_size: 12}
+          type: CheckBox
+        - name: test_date
+          properties: {format: DD/MM/YYYY, date: null, font_size: 10, placeholder: תאריך}
+          type: DatePicker
+          layout_properties: {}
+      layout_properties: {}
+    - name: label_1
+      properties: {align: right, spacing_below: none, spacing_above: large, font_size: 8,
+        text: שעות מנוע, foreground: 'theme:Black'}
+      type: Label
+      layout_properties: {}
+    - name: engine_time
+      properties: {text: '', font_size: 12, align: right, type: number, spacing_above: none,
+        spacing_below: large, placeholder: שעות מנוע, border: 1px solid black}
+      type: TextBox
+      layout_properties: {}
+    - name: xy_panel_1
+      properties: {height: '100', border: 1px solid black, spacing_above: small, spacing_below: small,
+        align: right, width: null}
+      type: XYPanel
+      layout_properties: {}
+      components:
+      - name: env_final_tmp_lbl
+        properties: {text: 'טמפ'' הסביבה המדווחת(+4): 0', font_size: 12, bold: true,
+          align: right, spacing_above: large, spacing_below: none}
+        type: Label
+        layout_properties: {x: 11.849972534924746, y: 66.86249923706055, width: 147.8000030517578}
+      - name: label_2
+        properties: {align: right, text: OAT 'טמפ' הסביבה המקס, font_size: 10, foreground: 'theme:Black'}
+        type: Label
+        layout_properties: {x: 427.6499908454716, y: 50, width: 200}
+      - name: max_env_tmp_txt
+        properties: {type: number, font_size: 12, spacing_above: large, spacing_below: none,
+          align: right, placeholder: '', border: ''}
+        type: TextBox
+        layout_properties: {x: 172.37496643140912, y: 70.16250038146973, width: 462.76251220703125}
+        event_bindings: {change: max_env_tmp_txt_change}
+    - name: flow_panel_5
+      properties: {align: right, spacing_above: large, spacing_below: large, spacing: none,
+        border: 1px solid black}
+      type: FlowPanel
+      components: []
+    - name: barometric_pressure_txt
+      properties: {type: number, font_size: 12, spacing_below: large, align: right,
+        placeholder: גובה לחץ ברומטרי, spacing_above: large, border: 1px solid black}
+      type: TextBox
+      layout_properties: {}
+    - name: engine_torque_txt
+      properties: {type: number, font_size: 12, spacing_above: large, spacing_below: large,
+        align: right, placeholder: פיתול מנוע, border: 1px solid black}
+      type: TextBox
+      layout_properties: {}
+    - name: n1_rpm_txt
+      properties: {type: number, font_size: 12, spacing_above: large, spacing_below: large,
+        align: right, placeholder: בעת הבדיקה N1 סל"ד מנוע, border: 1px solid black}
+      type: TextBox
+      layout_properties: {}
+    - name: out_itt_ff_temp_txt
+      properties: {type: number, font_size: 12, align: right, spacing_above: large,
+        spacing_below: large, placeholder: בעת הבדיקה ITT זרימת דלק, border: 1px solid black}
+      type: TextBox
+      layout_properties: {}
+    - name: out_wf_ff_txt
+      properties: {type: number, font_size: 12, align: right, spacing_above: large,
+        spacing_below: large, placeholder: בעת הבדיקה WF זרימת דלק, background: '',
+        border: 1px solid black}
+      type: TextBox
+      layout_properties: {}
+    - name: notes_area
+      properties: {align: right, spacing_above: large, text: '', placeholder: הערות,
+        spacing_below: large}
+      type: TextArea
+      layout_properties: {}
+    - name: flow_panel_17
+      properties: {align: center}
+      type: FlowPanel
+      layout_properties: {}
+      components:
+      - name: update_btn
+        properties: {text: בדוק שמישות, foreground: 'theme:White', background: 'theme:Primary
+            500', spacing_above: large, spacing_below: none}
+        type: Button
+        layout_properties: {}
+        event_bindings: {click: update_btn_click}
