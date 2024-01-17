@@ -32,6 +32,16 @@ roles:
 - name: wide
   components: [DataGrid, ColumnPanel]
 - {name: space}
+- name: button-height
+  components: [Button]
+- name: torque-calc-image
+  components: [Button]
+- name: power-test-image
+  components: [Button]
+- name: engine-startup-image
+  components: [Button]
+- name: admin-login-image
+  components: [Button]
 color_scheme:
   preset_groups:
   - name: Primary Colour
