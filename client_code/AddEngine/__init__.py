@@ -45,12 +45,21 @@ class AddEngine(AddEngineTemplate):
       if (self.engine_side.selected_value == 'right'):
         changed_tail = app_tables.tails.get(tail_number=self.tail_num.selected_value)
         changed_tail['right_engine_num'] = self.engine_num.text
+        Notification("!מנוע הותקן בהצלחה",
+             title="הוספה הצליחה",
+             style="success").show()
+        self.engine_num.text= None
+        self.engine_side.selected_value = None
+        self.tail_num.selected_value = None
       else:
         changed_tail = app_tables.tails.get(tail_number=self.tail_num.selected_value)
         changed_tail['left_engine_num'] = self.engine_num.text
-      Notification("!מנוע הותקן בהצלחה",
+        Notification("!מנוע הותקן בהצלחה",
              title="הוספה הצליחה",
              style="success").show()
+        self.engine_num.text= None
+        self.engine_side.selected_value = None
+        self.tail_num.selected_value = None
 
 
 
