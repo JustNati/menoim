@@ -34,3 +34,21 @@ class PowerCheckAdmin(PowerCheckAdminTemplate):
 
   def user_management_click(self, **event_args):
     routing.set_url_hash('UserManagement')
+
+  def link_1_click(self, **event_args):
+    routing.set_url_hash('NewPowerCheckForm')
+
+  def link_2_click(self, **event_args):
+    routing.set_url_hash('History')
+
+  def link_3_click(self, **event_args):
+    routing.set_url_hash('EngineGraph')
+
+  def link_4_click(self, **event_args):
+    routing.set_url_hash('UserManagement')
+
+  def link_5_click(self, **event_args):
+    routing.set_url_hash('RemoveEngine')
+
+  def link_6_click(self, **event_args):
+    routing.set_url_hash('AddEngine')

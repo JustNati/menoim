@@ -23,4 +23,13 @@ class PowerCheck(PowerCheckTemplate):
   def engine_graph_click(self, **event_args):
     routing.set_url_hash('EngineGraph')
 
+  def link_1_click(self, **event_args):
+    routing.set_url_hash('NewPowerCheckForm')
+
+  def link_2_click(self, **event_args):
+    routing.set_url_hash('History')
+
+  def link_3_click(self, **event_args):
+    routing.set_url_hash('EngineGraph')
+
 

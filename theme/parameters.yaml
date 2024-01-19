@@ -42,6 +42,21 @@ roles:
   components: [Button]
 - name: admin-login-image
   components: [Button]
+- name: second-button-height
+  components: [Button]
+- {name: history-image}
+- name: powertest-image
+  components: [Button]
+- name: engine-graph-image
+  components: [Button]
+- name: add-engine-image
+  components: [Button]
+- name: user-management-image
+  components: [Button]
+- name: remove-engine-image
+  components: [Button]
+- name: third-button-height
+  components: [Button]
 color_scheme:
   preset_groups:
   - name: Primary Colour

@@ -8,56 +8,80 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: performance
-    properties:
-      text: בדיקת כח
-      background: transparent
-      foreground: theme:White
-      spacing_above: none
-      icon: fa:power-off
-      role: [button-height, power-test-image]
-      bold: true
-    type: Button
-    layout_properties: {grid_position: 'IWDHPM,DIVDVY'}
-    event_bindings: {click: performance_click}
-  - name: torque_calc
-    properties:
-      text: 'חישוב טורק
+  - name: link_1
+    properties: {spacing_above: none, spacing_below: none}
+    type: Link
+    layout_properties: {grid_position: 'IWDHPM,UVRNCT'}
+    components:
+    - name: performance
+      properties:
+        text: בדיקת כח
+        background: transparent
+        foreground: theme:White
+        spacing_above: none
+        icon: fa:power-off
+        role: [button-height, power-test-image]
+        bold: true
+      type: Button
+      layout_properties: {grid_position: 'ENNMND,BGRAWT'}
+      event_bindings: {click: performance_click}
+    event_bindings: {click: link_1_click}
+  - name: link_2
+    properties: {spacing_above: none, spacing_below: none}
+    type: Link
+    layout_properties: {grid_position: 'UTHONA,NZDAYB'}
+    components:
+    - name: torque_calc
+      properties:
+        text: 'חישוב טורק
 
-        '
-      foreground: theme:White
-      background: transparent
-      role: [button-height, torque-calc-image]
-      icon: fa:calculator
-      bold: true
-    type: Button
-    layout_properties: {grid_position: 'UTHONA,XHJATW'}
-    data_bindings: []
-    event_bindings: {click: torque_calc_click}
-  - name: engine_startup
-    properties:
-      text: הרצת מנוע (חופית)
-      background: transparent
-      foreground: theme:White
-      icon: fa:plane
-      role: [button-height, engine-startup-image]
-      bold: true
-    type: Button
-    layout_properties: {grid_position: 'BXJGBS,YBZZMZ'}
-    event_bindings: {click: engine_startup_click}
-  - name: admin_login
-    properties:
-      role: [admin-login-image, button-height]
-      align: center
-      foreground: white
-      text: ' כניסת מנהל'
-      font_size: null
-      spacing_above: none
-      spacing_below: none
-      background: transparent
-      bold: true
-      icon: fa:user-circle-o
-    type: Button
-    data_bindings: []
-    event_bindings: {click: admin_login_click}
-    layout_properties: {grid_position: 'VJCYEC,ONMXJP'}
+          '
+        foreground: theme:White
+        background: transparent
+        role: [button-height, torque-calc-image]
+        icon: fa:calculator
+        bold: true
+      type: Button
+      layout_properties: {grid_position: 'KQOXJC,AKHEBV'}
+      data_bindings: []
+      event_bindings: {click: torque_calc_click}
+    event_bindings: {click: link_2_click}
+  - name: link_3
+    properties: {spacing_above: none, spacing_below: none}
+    type: Link
+    layout_properties: {grid_position: 'BXJGBS,NBWJFR'}
+    components:
+    - name: engine_startup
+      properties:
+        text: הרצת מנוע (חופית)
+        background: transparent
+        foreground: theme:White
+        icon: fa:plane
+        role: [button-height, engine-startup-image]
+        bold: true
+      type: Button
+      layout_properties: {grid_position: 'MIQQIZ,EJAXDL'}
+      event_bindings: {click: engine_startup_click}
+    event_bindings: {click: link_3_click}
+  - name: link_4
+    properties: {spacing_above: none, spacing_below: none}
+    type: Link
+    layout_properties: {grid_position: 'VJCYEC,XIJYIE'}
+    components:
+    - name: admin_login
+      properties:
+        role: [admin-login-image, button-height]
+        align: center
+        foreground: white
+        text: ' כניסת מנהל'
+        font_size: null
+        spacing_above: none
+        spacing_below: none
+        background: transparent
+        bold: true
+        icon: fa:user-circle-o
+      type: Button
+      data_bindings: []
+      event_bindings: {click: admin_login_click}
+      layout_properties: {grid_position: 'USOWUZ,AYXCME'}
+    event_bindings: {click: link_4_click}

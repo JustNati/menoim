@@ -13,18 +13,52 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'RJKWEF,HRNSQP'}
     components:
-    - name: new_test
-      properties: {text: בדיקת כח חדשה, icon: 'fa:newspaper-o'}
-      type: Button
-      layout_properties: {grid_position: 'AOHUXW,XWGHCL'}
-      event_bindings: {click: new_test_click}
-    - name: history
-      properties: {text: היסטוריית בדיקות כוח, icon: 'fa:database'}
-      type: Button
-      layout_properties: {grid_position: 'QHUIGT,XZKYGW'}
-      event_bindings: {click: history_click}
-    - name: engine_graph
-      properties: {text: תרשים מנוע, align: center, icon: 'fa:area-chart'}
-      type: Button
-      layout_properties: {grid_position: 'FWCETC,REKYFE'}
-      event_bindings: {click: engine_graph_click}
+    - name: link_1
+      properties: {spacing_above: none, spacing_below: none}
+      type: Link
+      layout_properties: {grid_position: 'AOHUXW,ACVZVV'}
+      components:
+      - name: new_test
+        properties:
+          text: בדיקת כח חדשה
+          icon: fa:newspaper-o
+          foreground: white
+          role: [second-button-height, powertest-image]
+          bold: true
+        type: Button
+        layout_properties: {grid_position: 'EOIXRW,EKFEAD'}
+        event_bindings: {click: new_test_click}
+      event_bindings: {click: link_1_click}
+    - name: link_2
+      properties: {spacing_above: none, spacing_below: none}
+      type: Link
+      layout_properties: {grid_position: 'QHUIGT,KIYLKY'}
+      components:
+      - name: history
+        properties:
+          text: היסטוריית בדיקות כוח
+          icon: fa:database
+          bold: true
+          foreground: white
+          role: [second-button-height, history-image]
+        type: Button
+        layout_properties: {grid_position: 'WVRRZX,CEHZZB'}
+        event_bindings: {click: history_click}
+      event_bindings: {click: link_2_click}
+    - name: link_3
+      properties: {spacing_above: none, spacing_below: none}
+      type: Link
+      layout_properties: {grid_position: 'FWCETC,BZSCKK'}
+      components:
+      - name: engine_graph
+        properties:
+          text: תרשים מנוע
+          align: center
+          icon: fa:area-chart
+          bold: true
+          foreground: white
+          role: [engine-graph-image, second-button-height]
+        type: Button
+        layout_properties: {grid_position: 'YIVIXU,KTQPRC'}
+        event_bindings: {click: engine_graph_click}
+      event_bindings: {click: link_3_click}

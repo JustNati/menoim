@@ -40,5 +40,20 @@ class Main(MainTemplate):
     routing.set_url_hash('EngineStartup')
 
   def admin_login_click(self, **event_args):
-    user = anvil.users.login_with_form()
+    user = anvil.users.login_with_form(allow_cancel=True)
+
+  def link_1_click(self, **event_args):
+    if (check_permissions()):
+      routing.set_url_hash('PowerCheckAdmin')
+    else:
+      routing.set_url_hash('PowerCheck')
+
+  def link_2_click(self, **event_args):
+   routing.set_url_hash('TorqueCalc')
+
+  def link_3_click(self, **event_args):
+    routing.set_url_hash('EngineStartup')
+
+  def link_4_click(self, **event_args):
+    user = anvil.users.login_with_form(allow_cancel=True)
       

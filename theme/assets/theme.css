@@ -6,7 +6,6 @@
 .anvil-role-wide .data-grid-child-panel {
   overflow-x: auto;
 }
-
 .anvil-role-wide .anvil-data-row-panel {
   flex-wrap: nowrap;
   min-width: -moz-min-content;
@@ -271,6 +270,15 @@ a:hover, a:active {
   .anvil-role-wide .anvil-data-row-panel {
     flex-wrap: nowrap;
     min-width: 1100px;
+  }
+  .anvil-role-third-button-height > .btn{
+    font-size:15px;
+    border-radius: 20px;
+    max-height: 28.5vh;
+    min-height: 28.5vh;
+    max-width: 44.8vw;
+    min-width: 44.8vw;
+    width:42.5vw;
   }
  }
 
@@ -841,6 +849,60 @@ textarea.anvil-component[disabled] {
   background-repeat: no-repeat;
   background-size: 100% 200%;
   border-radius:20px;
+}
+.anvil-role-history-image {
+  background-image: url(_/theme/Images/history_image.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius:20px;
+}
+.anvil-role-powertest-image {
+  background-image: url(_/theme/Images/new_powercheck_image.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 140%;
+  border-radius:20px;
+}
+.anvil-role-engine-graph-image {
+  background-image: url(_/theme/Images/engine_graphs_image.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius:20px;
+}
+.anvil-role-add-engine-image {
+  background-image: url(_/theme/Images/add_engine_image.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 150%;
+  border-radius:20px;
+}
+.anvil-role-remove-engine-image {
+  background-image: url(_/theme/Images/remove_engine_image.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius:20px;
+}
+.anvil-role-user-management-image {
+  background-image: url(_/theme/Images/user_management_picture.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius:20px;
+}
+
+.anvil-role-second-button-height > .btn{
+  font-size:30px;
+  border-radius: 20px;
+  max-height: 28.5vh;
+  min-height: 28.5vh;
+  max-width: 90vw;
+  min-width: 17vw;
+}
+.anvil-role-third-button-height > .btn{
+  font-size:25px;
+  border-radius: 20px;
+  max-height: 28.5vh;
+  min-height: 28.5vh;
+  max-width: 42.5vw;
+  min-width: 42.5vw;
+  width:42.5vw;
 }
 
 
