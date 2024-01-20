@@ -13,8 +13,9 @@ components:
     properties: {}
     type: DropDown
     event_bindings: {change: engines_dd_change}
+    layout_properties: {width: 142.387951171875}
   - name: label_1
-    properties: {align: right, text: ':מס'' מנוע'}
+    properties: {align: right, text: ':מס'' מנוע', role: subheading}
     type: Label
     layout_properties: {}
 - name: plot_1

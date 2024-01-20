@@ -6,6 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil_extras import routing
+from ..EngineStartupResult import EngineStartupResult
 
 @routing.route('EngineStartup')
 class EngineStartup(EngineStartupTemplate):
@@ -141,6 +142,8 @@ class EngineStartup(EngineStartupTemplate):
       Notification("הבדיקה שמישה, כל הנתונים במגבלות",
              title="!שמיש",
              style="success").show()
+      same_page = EngineStartupResult(self.right_magneto.text, self.left_magneto.text, self.manifold_press.text, self.max_ff.text, self.cht_max.text, self.max_oil_press.text, self.oil_temp.text, self.min_oil_press.text, self.cht_min.text, self.mixture_dilute.text, self.metered_ffp_min.text, self.unmetered_ffp_min.text, self.max_rpm.text, self.metered_ffp_max.text, self.unmetered_ffp_max.text,)
+      alert(same_page, large=True, buttons=[])
       all_the_data = [self.right_magneto, self.left_magneto, 
                    self.manifold_press,
                    self.max_ff, self.cht_max, self.max_oil_press,
