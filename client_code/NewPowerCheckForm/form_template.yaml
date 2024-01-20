@@ -105,7 +105,7 @@ components:
           align: right
           type: number
           role: [textbox-special, text-padding]
-          border: 2px solid black
+          border: 1px solid black
           placeholder: 'הכנס שעות מנוע '
         type: TextBox
         layout_properties: {grid_position: 'FPAJYP,XJLSWL'}
@@ -124,7 +124,7 @@ components:
           type: Label
           layout_properties: {}
         - name: max_env_tmp_txt
-          properties: {type: number, font_size: null, role: textbox-special, border: 2px solid black,
+          properties: {type: number, font_size: null, role: textbox-special, border: 1px solid black,
             align: right}
           type: TextBox
           layout_properties: {width: 117.57499999999999}
@@ -135,7 +135,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'UHSBHV,ZDJSYJ'}
       - name: barometric_pressure_txt
-        properties: {type: number, font_size: null, role: textbox-special, border: 2px solid black,
+        properties: {type: number, font_size: null, role: textbox-special, border: 1px solid black,
           align: right}
         type: TextBox
         layout_properties: {grid_position: 'YYVCFU,YQJTZT'}
@@ -145,7 +145,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'HVIFBN,TDKIXG'}
       - name: engine_torque_txt
-        properties: {type: number, font_size: null, role: textbox-special, border: 2px solid black,
+        properties: {type: number, font_size: null, role: textbox-special, border: 1px solid black,
           align: right}
         type: TextBox
         layout_properties: {grid_position: 'QRSOSH,FOOFAX'}
@@ -155,7 +155,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'ZWOYAH,GLIAFN'}
       - name: n1_rpm_txt
-        properties: {type: number, font_size: null, role: textbox-special, border: 2px solid black,
+        properties: {type: number, font_size: null, role: textbox-special, border: 1px solid black,
           align: right}
         type: TextBox
         layout_properties: {grid_position: 'MJPAWU,QAEYFU'}
@@ -166,7 +166,7 @@ components:
         layout_properties: {grid_position: 'EKIBZB,IHWKYW'}
       - name: out_itt_ff_temp_txt
         properties: {type: number, font_size: null, align: right, role: textbox-special,
-          border: 2px solid black}
+          border: 1px solid black}
         type: TextBox
         layout_properties: {grid_position: 'VHJTTR,QHBDYU'}
       - name: out_wf_ff_lbl
@@ -175,7 +175,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'KEKVUY,QBRUTQ'}
       - name: out_wf_ff_txt
-        properties: {type: number, font_size: null, role: textbox-special, border: 2px solid black,
+        properties: {type: number, font_size: null, role: textbox-special, border: 1px solid black,
           align: right}
         type: TextBox
         layout_properties: {grid_position: 'CEJHDC,YQGCGY'}
@@ -184,7 +184,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'TDEJYF,EHFZES'}
       - name: notes_area
-        properties: {align: right, role: textbox-special, border: 2px solid black,
+        properties: {align: right, role: textbox-special, border: 1px solid black,
           height: '80'}
         type: TextArea
         layout_properties: {grid_position: 'UEPWBP,RLSJRP'}

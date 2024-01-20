@@ -2,237 +2,233 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{}', background: ''}
 components:
+- name: spacer_2
+  properties: {height: '20'}
+  type: Spacer
+  layout_properties: {grid_position: 'UVZBZY,ZUKDHS'}
 - name: headline_1
   properties: {role: headline, align: center, text: טופס הרצה של מנוע חופית, font: '',
     font_size: 28, foreground: '', background: '', bold: true}
   type: Label
   layout_properties: {grid_position: 'ZALCUT,LTMHHQ'}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'HAUQZX,ZKLZPK'}
 - name: label_2
-  properties: {align: right, foreground: '', text: 'בדיקה ב- 1700 סל"ד    ', font_size: 15,
+  properties: {align: right, foreground: '', text: בדיקה ב- 1700 סל"ד, font_size: 19,
     spacing_above: large, spacing_below: none, italic: true, bold: true, underline: false}
   type: Label
   layout_properties: {grid_position: 'MOZKSA,HUQQKQ'}
 - name: label_1
-  properties: {align: right, text: נפילות מגנטו (מקס' 150), font_size: 15, underline: false,
-    bold: true, spacing_below: none, spacing_above: none}
+  properties: {align: right, text: נפילות מגנטו (מקס' 150), font_size: null, underline: false,
+    bold: true, spacing_below: none, spacing_above: none, role: subheading}
   type: Label
   layout_properties: {grid_position: 'LVGNDX,ZLOSHN'}
-- name: flow_panel_2
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'LNIPJG,YFFFIT'}
-  components:
-  - name: left_magneto
-    properties: {type: number, align: center, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {width: 73.19998779296876}
-  - name: label_4
-    properties: {text: ':מגנטו שמאל', align: right, spacing_above: none, spacing_below: none}
-    type: Label
-    layout_properties: {}
-  - name: right_magneto
-    properties: {type: number, align: center, foreground: '', spacing_above: none,
-      spacing_below: none}
-    type: TextBox
-    layout_properties: {width: 65.599951171875}
-    data_bindings: []
-  - name: label_3
-    properties: {text: ':מגנטו ימין', align: right, spacing_above: none, spacing_below: none}
-    type: Label
-    layout_properties: {}
+- name: label_3
+  properties: {text: ':מגנטו ימין', align: right, spacing_above: none, spacing_below: none,
+    role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'WPDCUP,HURQPK'}
+- name: right_magneto
+  properties: {type: number, align: right, foreground: '', spacing_above: none, spacing_below: none,
+    role: textbox-special, border: 1px solid black}
+  type: TextBox
+  layout_properties: {grid_position: 'WGBEPD,GMAKKF'}
+  data_bindings: []
+- name: label_4
+  properties: {text: ':מגנטו שמאל', align: right, spacing_above: none, spacing_below: none,
+    role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'SBTELZ,DKIAWX'}
+- name: left_magneto
+  properties: {type: number, align: right, spacing_above: none, spacing_below: none,
+    role: textbox-special, border: 1px solid black}
+  type: TextBox
+  layout_properties: {grid_position: 'DTITUC,VSXWQM'}
+- name: spacer_3
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'KEXXWL,AFURKI'}
 - name: label_5
-  properties: {align: right, text: 'בדיקה ב- 2700 סל"ד    ', bold: true, font: '',
-    font_size: 15, spacing_above: none, italic: true, spacing_below: none}
+  properties: {align: right, text: בדיקה ב- 2700 סל"ד, bold: true, font: '', font_size: 19,
+    spacing_above: none, italic: true, spacing_below: none}
   type: Label
   layout_properties: {grid_position: 'UEFJPF,PYJHNB'}
-- name: flow_panel_3
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'BMRYXZ,GWKBON'}
-  components:
-  - name: manifold_press
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {}
-  - name: label_6
-    properties: {align: right, text: ':(מקס'' 29.6) MANIFOLD PRESS', underline: false,
-      spacing_above: none, spacing_below: none}
-    type: Label
-    layout_properties: {}
-- name: flow_panel_4
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'QYGHTJ,DWCBBE'}
-  components:
-  - name: max_ff
-    properties: {type: number, align: center, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {}
-  - name: label_7
-    properties: {text: ':(25 - 26.4) MAX F.F', align: right, spacing_above: none,
-      spacing_below: none}
-    type: Label
-    layout_properties: {}
-- name: flow_panel_5
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'JJPKHV,LEEMBY'}
-  components:
-  - name: cht_max
-    properties: {type: number, align: center, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {}
-  - name: label_8
-    properties: {text: ':(מקס'' 238) C.H.T', align: right, spacing_above: none, spacing_below: none}
-    type: Label
-    layout_properties: {}
-- name: flow_panel_6
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'KPWZAG,OVGXEM'}
-  components:
-  - name: max_oil_press
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {}
-  - name: label_9
-    properties: {align: left, text: ':(10 - 60) MAX OIL PRESS', spacing_above: none,
-      spacing_below: none}
-    type: Label
-    layout_properties: {}
-- name: flow_panel_7
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'QVYLJV,UHITXL'}
-  components:
-  - name: oil_temp
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {}
-  - name: label_10
-    properties: {text: ':(מקס'' 116) OIL TEMP', align: left, spacing_above: none,
-      spacing_below: none}
-    type: Label
-    layout_properties: {}
+- name: label_6
+  properties: {align: right, text: ':(מקס'' 29.6) MANIFOLD PRESS', underline: false,
+    spacing_above: none, spacing_below: none, role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'XOPUOP,HFQHEH'}
+- name: manifold_press
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    role: textbox-special, border: 1px solid black}
+  type: TextBox
+  layout_properties: {grid_position: 'ZQGMRA,GWAKEY'}
+- name: label_7
+  properties: {text: ':(25 - 26.4) MAX F.F', align: right, spacing_above: none, spacing_below: none,
+    role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'HENUKE,LHFODA'}
+- name: max_ff
+  properties: {type: number, align: right, spacing_above: none, spacing_below: none,
+    role: textbox-special, border: 1px solid black}
+  type: TextBox
+  layout_properties: {grid_position: 'XGCUEM,GONWBT'}
+- name: label_8
+  properties: {text: ':(מקס'' 238) C.H.T', align: right, spacing_above: none, spacing_below: none,
+    role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'GDJNFZ,SXIHEU'}
+- name: cht_max
+  properties: {type: number, align: right, spacing_above: none, spacing_below: none,
+    role: textbox-special, border: 1px solid black}
+  type: TextBox
+  layout_properties: {grid_position: 'TBDHJW,YLSGPK'}
+- name: label_9
+  properties: {align: right, text: ':(10 - 60) MAX OIL PRESS', spacing_above: none,
+    spacing_below: none, role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'NAJYHI,HWEGHP'}
+- name: max_oil_press
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    border: 1px solid black, role: textbox-special}
+  type: TextBox
+  layout_properties: {grid_position: 'PMNXVI,QMIPMB'}
+- name: label_10
+  properties: {text: ':(מקס'' 116) OIL TEMP', align: right, spacing_above: none, spacing_below: none,
+    role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'HUOHIJ,NLKWIM'}
+- name: oil_temp
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    role: textbox-special, foreground: '', border: 1px solid black}
+  type: TextBox
+  layout_properties: {grid_position: 'KRRKUW,HPZYTO'}
+- name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'UXGXOZ,YQLKFL'}
 - name: label_11
-  properties: {align: right, text: 'בדיקה ב- 750 סל"ד    ', bold: true, italic: true,
-    font_size: 15, spacing_above: none, spacing_below: none}
+  properties: {align: right, text: בדיקה ב- 750 סל"ד, bold: true, italic: true, font_size: 19,
+    spacing_above: none, spacing_below: none}
   type: Label
   layout_properties: {grid_position: 'QVOVOD,OKHEQT'}
-- name: flow_panel_8
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'FARRUB,HJLBSI'}
-  components:
-  - name: min_oil_press
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {}
-  - name: label_12
-    properties: {text: ':(10 - 60) MIN OIL PRESS', align: right, spacing_above: none,
-      spacing_below: none}
-    type: Label
-    layout_properties: {}
-- name: flow_panel_9
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'FWIFDN,FTZXQZ'}
-  components:
-  - name: cht_min
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {}
-  - name: label_13
-    properties: {text: ':(מקס'' 238) C.H.T', spacing_above: none, spacing_below: none}
-    type: Label
-    layout_properties: {}
-- name: flow_panel_10
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'LWZKEZ,GPACSY'}
-  components:
-  - name: mixture_dilute
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {}
-  - name: label_14
-    properties: {text: ':דילול תערובת (50 - 25)', spacing_above: none, spacing_below: none}
-    type: Label
-    layout_properties: {}
+- name: label_12
+  properties: {text: ':(10 - 60) MIN OIL PRESS', align: right, spacing_above: none,
+    spacing_below: none, role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'ITCBCA,WWLEMY'}
+- name: min_oil_press
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    border: 1px solid black, role: textbox-special}
+  type: TextBox
+  layout_properties: {grid_position: 'VTLPTH,POBMXR'}
+- name: label_13
+  properties: {text: ':(מקס'' 238) C.H.T', spacing_above: none, spacing_below: none,
+    align: right, role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'HTUZII,JQKVZC'}
+- name: cht_min
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    role: textbox-special, border: 1px solid black}
+  type: TextBox
+  layout_properties: {grid_position: 'DWNKWP,NPDMOZ'}
+- name: label_14
+  properties: {text: ':דילול תערובת (50 - 25)', spacing_above: none, spacing_below: none,
+    align: right, role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'LRAMAJ,UACQWA'}
+- name: mixture_dilute
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    role: textbox-special, border: 1px solid black}
+  type: TextBox
+  layout_properties: {grid_position: 'ZOKLHX,RYEOJM'}
+- name: spacer_5
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'GLSMWL,PYQXIN'}
 - name: label_15
-  properties: {align: right, text: 'לחצי דלק (סרק)  ', bold: true, italic: true, font_size: 15,
+  properties: {align: right, text: לחצי דלק (סרק), bold: true, italic: true, font_size: 19,
     spacing_above: none, spacing_below: none}
   type: Label
   layout_properties: {grid_position: 'AKSHYN,PGNXXU'}
 - name: label_16
-  properties: {align: right, text: ':סל"ד 600 (סרק)', spacing_above: none, spacing_below: none}
+  properties: {align: right, text: ':סל"ד 600 (סרק)', spacing_above: none, spacing_below: none,
+    role: subheading}
   type: Label
   layout_properties: {grid_position: 'MXZOCD,KEZEPV'}
-- name: flow_panel_13
-  properties: {align: right, spacing_below: none, spacing_above: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'KHILRS,GOTXTN'}
-  components:
-  - name: unmetered_ffp_min
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {width: 56.97498779296875}
-  - name: label_18
-    properties: {text: ':לחץ דלק לא מדוד', spacing_above: none, spacing_below: none}
-    type: Label
-    layout_properties: {}
-  - name: metered_ffp_min
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {width: 48.9750244140625}
-  - name: label_17
-    properties: {text: ':לחץ דלק מדוד', spacing_above: none, spacing_below: none}
-    type: Label
-    layout_properties: {}
+- name: label_17
+  properties: {text: ':לחץ דלק מדוד', spacing_above: none, spacing_below: none, align: right,
+    role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'GTYFCV,VEPUVE'}
+- name: metered_ffp_min
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    role: textbox-special, border: 1px solid black}
+  type: TextBox
+  layout_properties: {grid_position: 'MBOFDO,MWIXRR'}
+- name: label_18
+  properties: {text: ':לחץ דלק לא מדוד', spacing_above: none, spacing_below: none,
+    align: right, role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'IHMGOT,UPHIRT'}
+- name: unmetered_ffp_min
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    border: 1px solid black, role: textbox-special}
+  type: TextBox
+  layout_properties: {grid_position: 'ZJRTAS,XHZTHL'}
+- name: spacer_6
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'JXZUWF,UFCWAD'}
 - name: label_22
-  properties: {align: right, text: לחצי דלק (מקסימום סל"ד), font_size: 15, italic: true,
+  properties: {align: right, text: לחצי דלק (מקסימום סל"ד), font_size: 19, italic: true,
     bold: true, spacing_above: none, spacing_below: none}
   type: Label
   layout_properties: {grid_position: 'XJZSMW,FIGJGO'}
-- name: flow_panel_11
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'SBYOCD,WCCCOB'}
-  components:
-  - name: max_rpm
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {width: 54.7874267578125}
-  - name: label_19
-    properties: {text: ':סל"ד מקסימלי (2700 - 2650)', align: center, spacing_above: none,
-      spacing_below: none}
-    type: Label
-    layout_properties: {}
-- name: flow_panel_12
-  properties: {align: right, spacing_above: none, spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'HENSXC,QPCWRG'}
-  components:
-  - name: unmetered_ffp_max
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {width: 56.1625}
-  - name: label_21
-    properties: {text: ':לחץ דלק לא מדוד ', spacing_above: none, spacing_below: none}
-    type: Label
-    layout_properties: {}
-  - name: metered_ffp_max
-    properties: {align: center, type: number, spacing_above: none, spacing_below: none}
-    type: TextBox
-    layout_properties: {width: 49.1}
-  - name: label_20
-    properties: {text: ':לחץ דלק מדוד', spacing_above: none, spacing_below: none}
-    type: Label
-    layout_properties: {}
+- name: label_19
+  properties: {text: ':סל"ד מקסימלי (2700 - 2650)', align: right, spacing_above: none,
+    spacing_below: none, role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'WYWDHN,JUSJQK'}
+- name: max_rpm
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    border: 1px solid black, role: textbox-special}
+  type: TextBox
+  layout_properties: {grid_position: 'GKMSFU,JZBSSF'}
+- name: label_20
+  properties: {text: ':לחץ דלק מדוד', spacing_above: none, spacing_below: none, align: right,
+    role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'UIUQLI,QAKXOC'}
+- name: metered_ffp_max
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    border: 1px solid black, role: textbox-special}
+  type: TextBox
+  layout_properties: {grid_position: 'IIYZDI,ACVFWE'}
+- name: label_21
+  properties: {text: ':לחץ דלק לא מדוד ', spacing_above: none, spacing_below: none,
+    align: right, role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'FLYSMN,EVXLQZ'}
+- name: unmetered_ffp_max
+  properties: {align: right, type: number, spacing_above: none, spacing_below: none,
+    border: 1px solid black, role: textbox-special}
+  type: TextBox
+  layout_properties: {grid_position: 'YRAJJD,FXAQQP'}
+- name: spacer_7
+  properties: {height: '62'}
+  type: Spacer
+  layout_properties: {grid_position: 'ITNIIN,CFTSKO'}
 - name: check
-  properties: {text: בדוק, spacing_above: large, font_size: 30, background: 'theme:Primary
-      500', foreground: white, icon: 'fa:dashboard'}
+  properties: {text: בדוק, spacing_above: large, font_size: 25, background: '', foreground: white,
+    icon: 'fa:dashboard', role: new-submit}
   type: Button
   layout_properties: {grid_position: 'RUGTWV,UYXABO'}
   event_bindings: {click: check_click}
+- name: spacer_8
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'UHLGWT,KWJVUM'}
 is_package: true

@@ -18,7 +18,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'LYNSKG,IUEUKP'}
   - name: engine_num
-    properties: {align: right, role: textbox-special, border: 2px solid black}
+    properties: {align: right, role: textbox-special, border: 1px solid black}
     type: TextBox
     layout_properties: {grid_position: 'ZDOZXX,PSUYGF'}
   - name: flow_panel_2
