@@ -9,9 +9,13 @@ components:
   layout_properties: {slot: default}
   components:
   - name: label_1
-    properties: {align: center, text: הורדת מנוע מרשימת המנועים, font_size: 25}
+    properties: {align: center, text: הורדת מנוע מרשימת המנועים, font_size: 25, bold: true}
     type: Label
     layout_properties: {grid_position: 'BYGDJT,LFMOXX'}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'TMNRSD,QXXZAB'}
   - name: flow_panel_1
     properties: {align: right}
     type: FlowPanel
@@ -20,17 +24,18 @@ components:
     - name: engines_dd
       properties: {placeholder: מס' מנוע, include_placeholder: false}
       type: DropDown
-      layout_properties: {}
+      layout_properties: {width: 144.7879755859375}
     - name: label_2
-      properties: {align: right, text: ':מנוע להסרה'}
+      properties: {align: right, text: ':מנוע להסרה', role: subheading}
       type: Label
       layout_properties: {}
+  - name: spacer_2
+    properties: {height: '52'}
+    type: Spacer
+    layout_properties: {grid_position: 'XNEWQI,ZLAFIV'}
   - name: remove_engine
-    properties: {text: הסרת מנוע, font_size: 25}
+    properties: {text: הסרת מנוע, font_size: 25, role: new-submit, foreground: white,
+      icon: 'fa:remove'}
     type: Button
     layout_properties: {grid_position: 'ICAVIZ,RIMPAJ'}
     event_bindings: {click: remove_engine_click}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
