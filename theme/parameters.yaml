@@ -44,7 +44,8 @@ roles:
   components: [Button]
 - name: second-button-height
   components: [Button]
-- {name: history-image}
+- name: history-image
+  components: [Button]
 - name: powertest-image
   components: [Button]
 - name: engine-graph-image
@@ -57,6 +58,14 @@ roles:
   components: [Button]
 - name: third-button-height
   components: [Button]
+- name: subheading
+  components: [Label, TextBox]
+- name: textbox-special
+  components: [TextBox, DatePicker, TextArea]
+- name: new-submit
+  components: [Button]
+- name: text-padding
+  components: [TextArea, TextBox]
 color_scheme:
   preset_groups:
   - name: Primary Colour

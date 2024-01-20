@@ -681,11 +681,7 @@ body>div[data-notify="container"].alert-warning>span[data-notify="title"]{
 input.anvil-component, textarea.anvil-component, .anvil-component select, .anvil-datepicker input {
   font-size: 16px;
   line-height: 1.5;
-  border-radius: 0;
-  background-color: transparent;
-  color: rgba(0,0,0,0.87);
-  
-  box-shadow: none;
+  text-indent:5px;
 }
 
 .anvil-dropdown {
@@ -707,7 +703,7 @@ input.anvil-component, .anvil-component select, .anvil-datepicker input {
 textarea.anvil-component {
   padding: 4px 8px;
   border: 1px solid rgba(0,0,0,0.42);
-  border-radius: 2px;
+  border-radius: 16px;
   transition: border 0.2s, padding 0.2s;
   -moz-transition: none; /* Firefox is jumpy, so disable transitions */
 }
@@ -764,12 +760,7 @@ input.anvil-component::placeholder, textarea.anvil-component::placeholder  {
   color: rgba(255,255,255,0.8);
 }
 
-input.anvil-component:hover, .anvil-component select:hover, .anvil-datepicker input:hover {
-  border-bottom: 2px solid rgba(0,0,0,.87);
-  padding-bottom: 3px;
-}
-
-input.anvil-component:focus, .anvil-component select:focus, .anvil-datepicker input:focus {
+input.anvil-component:focus, .anvil-component select:focus{
   border-bottom: 2px solid %color:Primary 700%;
   padding-bottom: 3px;
   box-shadow: none;
@@ -904,8 +895,24 @@ textarea.anvil-component[disabled] {
   min-width: 42.5vw;
   width:42.5vw;
 }
-
-
+.anvil-role-subheading {
+  font-size:16px;
+}
+.anvil-role-textbox-special {
+  border-radius: 16px;
+  border-color: black;
+  border: 1px solid black;
+  text-indent:20px;
+}
+.anvil-role-new-submit > .btn {
+  background-color: #444344;
+  border-radius:16px;
+  font-size: 16px;
+}
+.anvil-role-text-padding > textbox.anvil-component, .anvil-role-text-padding > .form-textbox-input {
+  padding-right: 10px;
+  text-indent: 20px !important;
+}
 /* Shadow values taken from 
 https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-material-design-elevations
 */

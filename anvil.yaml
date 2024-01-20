@@ -38,12 +38,6 @@ db_schema:
     - name: side
       admin_ui: {width: 200}
       type: string
-    - name: assmble_date
-      admin_ui: {width: 200}
-      type: date
-    - name: assmble_eng_hours
-      admin_ui: {width: 200}
-      type: number
     - name: test_date
       admin_ui: {width: 200}
       type: date

@@ -39,8 +39,6 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
       'engine_num' : self.engine_num_dd.selected_value,
       'tail' : self.tail_num_info_lbl.text,
       'side' : self.side_info_lbl.text,
-      'assmble_date' : self.origin_assemble_date,
-      'assmble_eng_hours' : float(self.time_on_asseble.text),
       'test_date' : self.test_date.date,
       'is_retest' : self.recheck_btn.checked,
       'cur_engine_hours' : self.engine_time.text,
