@@ -155,3 +155,32 @@ db_schema:
     - name: is_submiter
       admin_ui: {order: 1.5, width: 200}
       type: bool
+  airpowertests:
+    client: none
+    server: full
+    columns:
+    - name: tail_num
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: date
+      admin_ui: {width: 200, order: 1}
+      type: date
+    - name: pilot_name
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: outside_temp
+      admin_ui: {width: 200, order: 3}
+      type: number
+    - name: speed
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: torque
+      admin_ui: {width: 200, order: 5}
+      type: number
+    - name: engine_temp
+      admin_ui: {width: 200, order: 6}
+      type: number
+    - name: n1_rpm
+      admin_ui: {width: 200, order: 7}
+      type: number
+    title: airPowerTests

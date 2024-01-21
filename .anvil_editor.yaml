@@ -6,6 +6,7 @@ unique_ids:
     Main: SIKQKL3VM75TA4H5PAMWIBV2S53ONHED
     History.ItemTemplate4: '1705241069520223767856576.8395'
     History.ItemTemplate6: '1705241650805246799748603.12503'
+    AirPowerCheck: '170584512128165891711376.95571'
     EngineStartup: '1705060872483235306916744.98462'
     History.ItemTemplate11: '1705241946695322213325175.3316'
     AddEngine.ItemTemplate1: '1704799807787979621908900.8708'
@@ -51,6 +52,7 @@ unique_ids:
     Images/history_image.jpeg: '1705673202696472552266357.83856'
     Images/add_engine_image.jpg: '1705676034992991940378441.0061'
     Images/enginestartup_image.jpeg: '1705491690727772815739586.0165'
+    Images/air_power_test_image.jpeg: '170584541343182976646005.122'
     Images/torque_calc_image.jpg: '1705491700352330235348454.56506'
     Images/.gitkeep: '1705491676715813308919085.0558'
     Images/admin-login-image.jpg: '1705491685729120598332662.33388'

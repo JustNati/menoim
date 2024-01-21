@@ -814,8 +814,8 @@ textarea.anvil-component[disabled] {
 .anvil-role-button-height > .btn{
   font-size:30px;
   border-radius: 20px;
-  max-height: 19vh;
-  min-height: 19vh;
+  max-height: 16vh;
+  min-height: 16vh;
 }
 .anvil-role-torque-calc-image {
   background-image: url(_/theme/Images/torque_calc_image.jpg);
@@ -912,6 +912,12 @@ textarea.anvil-component[disabled] {
 .anvil-role-text-padding > textbox.anvil-component, .anvil-role-text-padding > .form-textbox-input {
   padding-right: 10px;
   text-indent: 20px !important;
+}
+.anvil-role-air-power-test-image {
+  background-image: url(_/theme/Images/air_power_test_image.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  border-radius:20px;
 }
 /* Shadow values taken from 
 https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-material-design-elevations

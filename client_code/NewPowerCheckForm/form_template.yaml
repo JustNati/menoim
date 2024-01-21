@@ -130,7 +130,7 @@ components:
           layout_properties: {width: 117.57499999999999}
           event_bindings: {change: max_env_tmp_txt_change}
       - name: barometric_pressure_lbl
-        properties: {text: גובה לחץ ברומטרי, font_size: null, bold: false, align: right,
+        properties: {text: ':גובה לחץ ברומטרי', font_size: null, bold: false, align: right,
           role: subheading}
         type: Label
         layout_properties: {grid_position: 'UHSBHV,ZDJSYJ'}

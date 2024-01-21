@@ -66,6 +66,8 @@ roles:
   components: [Button]
 - name: text-padding
   components: [TextArea, TextBox]
+- name: air-power-test-image
+  components: [Button]
 color_scheme:
   preset_groups:
   - name: Primary Colour

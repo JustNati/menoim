@@ -26,6 +26,24 @@ components:
       layout_properties: {grid_position: 'ENNMND,BGRAWT'}
       event_bindings: {click: performance_click}
     event_bindings: {click: link_1_click}
+  - name: link_5
+    properties: {}
+    type: Link
+    layout_properties: {grid_position: 'YMGXAS,KLIJBJ'}
+    components:
+    - name: air_performance
+      properties:
+        text: בדיקת כח באוויר
+        background: transparent
+        foreground: theme:White
+        spacing_above: none
+        icon: fa:power-off
+        role: [button-height, air-power-test-image]
+        bold: true
+      type: Button
+      layout_properties: {grid_position: 'AMNMVL,IKJNQV'}
+      event_bindings: {click: performance_click}
+    event_bindings: {click: link_5_click}
   - name: link_2
     properties: {spacing_above: none, spacing_below: none}
     type: Link

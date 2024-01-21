@@ -1,0 +1,48 @@
+container: {type: ColumnPanel}
+components:
+- name: spacer_1
+  properties: {height: '20'}
+  type: Spacer
+  layout_properties: {grid_position: 'LRSEWD,MLCOGL'}
+- name: headline_1
+  properties: {role: headline, align: center, text: בדיקת כוח באוויר, font_size: 40,
+    bold: true}
+  type: Label
+  layout_properties: {grid_position: 'UGZQFA,PHABKE'}
+- name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'ZTBRXW,DIIHIL'}
+- name: flow_panel_1
+  properties: {align: right}
+  type: FlowPanel
+  layout_properties: {grid_position: 'UBSJCL,WXYKRO'}
+  components:
+  - name: tail_num_dd
+    properties: {}
+    type: DropDown
+    layout_properties: {width: 140.7999267578125}
+  - name: label_1
+    properties: {align: right, text: מס' זנב, role: subheading, bold: false}
+    type: Label
+    layout_properties: {}
+- name: flow_panel_2
+  properties: {align: right}
+  type: FlowPanel
+  layout_properties: {grid_position: 'WCYOWZ,RAUPPU'}
+  components:
+  - name: date_picker_1
+    properties: {align: right}
+    type: DatePicker
+  - name: label_2
+    properties: {align: right, text: תאריך, role: subheading, font_size: null, bold: false}
+    type: Label
+- name: label_3
+  properties: {align: right, text: שם הטייס, bold: false, role: subheading}
+  type: Label
+  layout_properties: {grid_position: 'TDLFQA,JWRXZF'}
+- name: pilot_name
+  properties: {align: right, role: textbox-special, border: 1px solid black}
+  type: TextBox
+  layout_properties: {grid_position: 'FZNSSL,JYSDDM'}
+is_package: true

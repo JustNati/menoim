@@ -18,6 +18,7 @@ from ..UserManagement import UserManagement
 from ..History import History
 from ..utils import check_permissions
 from ..PowerCheckAdmin import PowerCheckAdmin
+from ..AirPowerCheck import AirPowerCheck
 
 @routing.route('', title='Home')
 @routing.main_router
@@ -56,4 +57,13 @@ class Main(MainTemplate):
 
   def link_4_click(self, **event_args):
     user = anvil.users.login_with_form(allow_cancel=True)
+
+  def link_5_click(self, **event_args):
+    if (check_permissions()):
+      routing.set_url_hash('AirPowerCheck')
+    else:
+      routing.set_url_hash('')
+      Notification("אין גישה למשתמשים פרט למנהל",
+             title="אין גישה",
+             style="danger").show()
       
