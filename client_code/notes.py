@@ -28,3 +28,8 @@ from anvil.tables import app_tables
 
 # Code refactor:
   # Comments.
+
+
+# removal reason
+# management indicator
+# 
