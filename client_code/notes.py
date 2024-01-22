@@ -15,15 +15,14 @@ from anvil.tables import app_tables
   # Filter by columns    ✓
   # present records by Reference Number - descending order.    ✓
   # Consider management password instead of login user?    ✓
-  # Seperate between Jet/piston
-  # think about UX/UI
+  # think about UX/UI    ✓
 
 # Validation - Consult with Stav Lobel for more tests:
-  # Validate Results of power check!!!
-  # new power tests
-  # wrong engine numbers
-  # wrong tail numbers
-  # Add engine before removing
+  # Validate Results of power check!!!    ✓
+  # new power tests    ✓
+  # wrong engine numbers    ✓
+  # wrong tail numbers   ✓
+  # Add engine before removing   ✓
   # 
 
 # Code refactor:
