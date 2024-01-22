@@ -1,109 +1,27 @@
 container: {type: ColumnPanel}
 components:
 - name: spacer_1
-  properties: {height: '20'}
+  properties: {height: '100'}
   type: Spacer
-  layout_properties: {grid_position: 'LRSEWD,MLCOGL'}
-- name: headline_1
-  properties: {role: headline, align: center, text: בדיקת כוח באוויר, font_size: 40,
-    bold: true}
-  type: Label
-  layout_properties: {grid_position: 'UGZQFA,PHABKE'}
-- name: spacer_2
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'ZTBRXW,DIIHIL'}
-- name: column_panel_1
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'FIGRRE,CZKTBJ'}
-  components:
-  - name: flow_panel_1
-    properties: {align: right}
-    type: FlowPanel
-    layout_properties: {grid_position: 'BLPGUZ,AGMHBG'}
-    components:
-    - name: tail_num_dd
-      properties: {placeholder: בחר מספר זנב, include_placeholder: true}
-      type: DropDown
-      layout_properties: {width: 140.7999267578125}
-    - name: label_1
-      properties: {align: right, text: מס' זנב, role: subheading, bold: false}
-      type: Label
-      layout_properties: {}
-  - name: flow_panel_2
-    properties: {align: right}
-    type: FlowPanel
-    layout_properties: {grid_position: 'SNAFKU,XMHWAB'}
-    components:
-    - name: date
-      properties: {align: right, format: DD/MM/YYYY}
-      type: DatePicker
-      layout_properties: {}
-    - name: label_2
-      properties: {align: right, text: תאריך, role: subheading, font_size: null, bold: false}
-      type: Label
-  - name: label_3
-    properties: {align: right, text: שם הטייס, bold: false, role: subheading}
-    type: Label
-    layout_properties: {grid_position: 'OWSOHC,NTHZXU'}
-  - name: pilot_name
-    properties: {align: right, role: textbox-special, border: 1px solid black}
-    type: TextBox
-    layout_properties: {grid_position: 'FGVQAO,IQXRQY', full_width_row: false}
-  - name: spacer_3
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'NWYEFA,KUHOJI'}
-  - name: label_4
-    properties: {align: right, text: טמפ' חיצונית, role: subheading}
-    type: Label
-    layout_properties: {grid_position: 'OFZSIS,OHXXGP'}
-  - name: outside_temp
-    properties: {align: right, role: textbox-special, border: 1px solid black}
-    type: TextBox
-    layout_properties: {grid_position: 'QDEVSM,QTNXFW', full_width_row: false}
-  - name: label_5
-    properties: {align: right, text: מהירות, role: subheading}
-    type: Label
-    layout_properties: {grid_position: 'ZZPJDP,NZDDZS'}
-  - name: speed
-    properties: {align: right, role: textbox-special, border: 1px solid black}
-    type: TextBox
-    layout_properties: {grid_position: 'YXHFNU,QYMXFX', full_width_row: false}
-  - name: label_6
-    properties: {align: right, text: פיתול, role: subheading}
-    type: Label
-    layout_properties: {grid_position: 'HZKWNY,VQQWBZ'}
-  - name: torque
-    properties: {align: right, role: textbox-special, border: 1px solid black}
-    type: TextBox
-    layout_properties: {grid_position: 'STPUEO,BNEYJY', full_width_row: false}
-  - name: label_7
-    properties: {align: right, text: טמפ' מנוע, role: subheading}
-    type: Label
-    layout_properties: {grid_position: 'NVQACO,UUNHAH'}
-  - name: engine_temp
-    properties: {align: right, role: textbox-special, border: 1px solid black}
-    type: TextBox
-    layout_properties: {grid_position: 'YUJNST,IDEEQI', full_width_row: false}
-  - name: label_8
-    properties: {text: N1 סל"ד, align: right, role: subheading}
-    type: Label
-    layout_properties: {grid_position: 'LLDFQL,PYRFLB'}
-  - name: n1_rpm
-    properties: {align: right, role: textbox-special, border: 1px solid black}
-    type: TextBox
-    layout_properties: {grid_position: 'WDAPFR,GSMQQB', full_width_row: false}
-    data_bindings: []
-- name: spacer_4
-  properties: {height: '50'}
-  type: Spacer
-  layout_properties: {grid_position: 'XFKHRX,KMGAIB'}
-- name: update_btn
-  properties: {text: בדוק שמישות, foreground: white, background: '', icon: '', role: new-submit,
-    bold: true}
+  layout_properties: {grid_position: 'MKNQRI,WSZTVH'}
+- name: button_1
+  properties: {text: '', role: round-button, background: '#26d960', foreground: white,
+    font_size: 80, icon: 'fa:plus', border: ''}
   type: Button
-  layout_properties: {grid_position: 'BDGAKW,YMRYOL'}
-  event_bindings: {click: update_btn_click}
+  layout_properties: {grid_position: 'OZRBZK,BDPGKR'}
+  event_bindings: {click: button_1_click}
+- name: spacer_2
+  properties: {height: '100'}
+  type: Spacer
+  layout_properties: {grid_position: 'WNLAPU,OAVVEQ'}
+- name: button_2
+  properties: {text: '', role: round-button, icon: 'fa:area-chart', foreground: orange,
+    font_size: 70, border: ''}
+  type: Button
+  layout_properties: {grid_position: 'OPGFLK,NZISLH'}
+  event_bindings: {click: button_2_click}
+- name: spacer_3
+  properties: {height: '100'}
+  type: Spacer
+  layout_properties: {grid_position: 'CUUYLJ,LYSNGM'}
 is_package: true

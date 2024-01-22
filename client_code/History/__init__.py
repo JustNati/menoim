@@ -63,6 +63,7 @@ class History(HistoryTemplate):
     self.engine_num_dd.selected_value = None
     self.loaded_data = returned_engines
     self.repeating_panel_data.items = returned_engines
+    self.reset_icons()
 
   def engine_num_dd_change(self, **event_args):
     self.query = 'engine'

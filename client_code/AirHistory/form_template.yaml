@@ -1,0 +1,107 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- name: flow_panel_1
+  properties: {align: right}
+  type: FlowPanel
+  layout_properties: {grid_position: 'AEJYWO,IRWJRD'}
+  components:
+  - name: tail_num_dd
+    properties: {include_placeholder: true}
+    type: DropDown
+    layout_properties: {width: 62.99998779296875}
+    event_bindings: {change: tail_num_dd_change}
+  - name: label_8
+    properties: {align: right, text: 'מס'' זנב      '}
+    type: Label
+    layout_properties: {}
+- name: flow_panel_2
+  properties: {align: right, spacing: medium, vertical_align: full}
+  type: FlowPanel
+  layout_properties: {grid_position: 'VAXAPF,OYMFGM'}
+  components:
+  - name: send_query
+    properties: {text: חפש, align: right, foreground: 'theme:White', background: 'theme:Primary
+        500', bold: true, icon: 'fa:search'}
+    type: Button
+    event_bindings: {click: send_query_click}
+  - name: search_query
+    properties: {align: right, placeholder: הכנס פרטי סינון, text: ''}
+    type: TextBox
+    layout_properties: {width: 228.5370244140625}
+  - name: label_9
+    properties: {text: ' '}
+    type: Label
+    layout_properties: {}
+- name: main_data_grid
+  properties:
+    columns:
+    - {id: IHECWU, data_key: reference, title: ''}
+    - {id: HIYJVL, data_key: date, title: '', width: '120'}
+    - {id: HOAPHL, data_key: pilot_name, title: '', width: '', expand: false}
+    - {id: VAMYTQ, data_key: outside_temp, title: ''}
+    - {id: ZRCJXP, data_key: speed, title: '', width: '', expand: false}
+    - {id: ILKEHH, data_key: torque, title: ''}
+    - {id: NIKEKR, data_key: engine_temp, title: ''}
+    - {id: IEIHDH, data_key: n1_rpm, title: ''}
+    rows_per_page: 7
+  type: DataGrid
+  components:
+  - name: data_row_panel_2
+    properties: {auto_display_data: false}
+    type: DataRowPanel
+    components:
+    - name: pilot_name
+      properties: {text: שם הטייס, spacing_below: none, spacing_above: none, col_spacing: medium,
+        wrap_on: never, bold: true, align: left, icon: ''}
+      type: Link
+      layout_properties: {column: HOAPHL}
+      event_bindings: {click: pilot_name_click}
+    - name: outside_temp
+      properties: {text: טפמ' חיצונית, wrap_on: never, spacing_above: none, spacing_below: none,
+        col_spacing: medium, bold: true, align: left}
+      type: Link
+      layout_properties: {column: VAMYTQ}
+      event_bindings: {click: outside_temp_click}
+    - name: date
+      properties: {text: תאריך, wrap_on: never, spacing_above: none, spacing_below: none,
+        col_spacing: medium, bold: true, align: left}
+      type: Link
+      layout_properties: {column: HIYJVL}
+      event_bindings: {click: date_click}
+    - name: torque
+      properties: {text: פיתול, spacing_above: none, spacing_below: none, bold: true,
+        align: left}
+      type: Link
+      layout_properties: {column: ILKEHH}
+      event_bindings: {click: torque_click}
+    - name: engine_temp
+      properties: {text: טמפ' מנוע, spacing_above: none, spacing_below: none, bold: true,
+        align: left}
+      type: Link
+      layout_properties: {column: NIKEKR}
+      event_bindings: {click: engine_temp_click}
+    - name: reference
+      properties: {text: סימוכין, spacing_above: none, spacing_below: none, bold: true,
+        align: left}
+      type: Link
+      layout_properties: {column: IHECWU}
+      event_bindings: {click: reference_click}
+    - name: n1_rpm
+      properties: {text: N1 סל"ד, spacing_above: none, spacing_below: none, bold: true,
+        align: left}
+      type: Link
+      layout_properties: {column: IEIHDH}
+      event_bindings: {click: n1_rpm_click}
+    - name: speed
+      properties: {text: מהירות, bold: true, spacing_above: none, spacing_below: none}
+      type: Link
+      layout_properties: {column: ZRCJXP}
+      event_bindings: {click: speed_click}
+    layout_properties: {pinned: true}
+  - name: repeating_panel_data
+    properties: {item_template: History.RowTemplate12}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'PXDKDA,SUFKAR'}
+is_package: true

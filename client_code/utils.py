@@ -96,3 +96,32 @@ def check_permissions():
   if (logged_user['is_moderator'] is not None and logged_user is not False):
     return True
   return False
+
+def search_air_tests(query):
+  result = app_tables.airpowertests.search(tables.order_by("reference", ascending=False))
+  finished_results = []
+  if query:
+    result = [
+      row for row in result
+        if query in str(row['reference'])
+        or query in str(row['date'].strftime("%d/%m/%Y"))
+        or query in str(row['pilot_name'])
+        or query in str(row['outside_temp'])
+        or query in str(row['speed'])
+        or query in str(row['torque'])
+        or query in str(row['engine_temp'])
+        or query in str(row['n1_rpm'])
+    ]
+  for r in result:
+    new_row = {
+          'reference': r['reference'],
+          'date': r['date'].strftime("%d/%m/%Y"),
+          'pilot_name': r['pilot_name'],
+          'outside_temp': r['outside_temp'],
+          'speed': r['speed'],
+          'torque': r['torque'],
+          'engine_temp': r['engine_temp'],
+          'n1_rpm': r['n1_rpm'] 
+    }
+    finished_results.append(new_row)
+  return finished_results
