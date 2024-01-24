@@ -933,39 +933,10 @@ textarea.anvil-component[disabled] {
 /* Shadow values taken from 
 https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-material-design-elevations
 */
-
-@-webkit-keyframes jello {
-    0% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
-    50% {
-        -webkit-transform: scale3d(1.5, 1.5, 1.5);
-        transform: scale3d(1.5, 1.5, 1.5);
-    }
-    to {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
-}
-@keyframes jello {
-    0% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
-    50% {
-        -webkit-transform: scale3d(1.5, 1.5, 1.5);
-        transform: scale3d(1.5, 1.5, 1.5);
-    }
-    to {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
-}
 #loadingSpinner {
     -webkit-animation: jello;
     animation: jello;
-  	animation-duration: 1s;
+  	animation-duration: 0.8s;
     animation-iteration-count: infinite;
     width: 250px;
     height:250px;
