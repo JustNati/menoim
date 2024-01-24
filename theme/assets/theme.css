@@ -925,6 +925,11 @@ textarea.anvil-component[disabled] {
   height: 150px;
   border: 1px solid gray;
 }
+.anvil-role-round-button-size > .btn{
+  width: 50px;
+  height: 50px;
+  border: none;
+}
 /* Shadow values taken from 
 https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-material-design-elevations
 */

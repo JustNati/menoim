@@ -1,74 +1,120 @@
 container: {type: ColumnPanel}
 components:
-- name: grid_panel_1
-  properties: {spacing_below: large, border: ''}
-  type: GridPanel
-  layout_properties: {grid_position: 'KUHXWF,UMDEKK'}
+- name: spacer_1
+  properties: {height: '50'}
+  type: Spacer
+  layout_properties: {grid_position: 'JSAGPW,XDXWLM'}
+- name: flow_panel_1
+  properties: {align: center}
+  type: FlowPanel
+  layout_properties: {grid_position: 'QIINSU,IPOLVC'}
   components:
-  - name: label_2
-    properties: {text: הוספת בודק לבדיקת כוח, bold: true, font_size: 15, align: right}
-    type: Label
-    layout_properties: {row: BPZXBK, width_xs: 6, col_xs: 0}
+  - name: add_reg_user
+    properties:
+      text: ''
+      font_size: 14
+      bold: true
+      background: theme:Gray 200
+      foreground: '#7deb8b'
+      role: [round-button, round-button-size]
+      icon: fa:user-plus
+    type: Button
+    layout_properties: {width: null}
+    event_bindings: {click: add_reg_user_click}
+  - name: reg_user
+    properties: {align: center, foreground: 'theme:Black', background: ''}
+    type: TextBox
+    layout_properties: {width: 130.988}
   - name: label_1
     properties: {align: right, text: הוספת מבצע לבדיקת כוח, font: '', font_size: 15,
       bold: true, visible: true}
     type: Label
-    layout_properties: {row: BPZXBK, width_xs: 6, col_xs: 6}
+- name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'ZKFKLO,ZNZZRI'}
+- name: flow_panel_2
+  properties: {align: center}
+  type: FlowPanel
+  layout_properties: {grid_position: 'IBWCQH,LLHPQX'}
+  components:
+  - name: add_approver
+    properties:
+      text: ''
+      bold: true
+      font_size: 14
+      background: theme:Gray 200
+      foreground: '#82afd7'
+      role: [round-button, round-button-size]
+      icon: fa:user-plus
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: add_approver_click}
   - name: approver
     properties: {align: center, foreground: 'theme:Black'}
     type: TextBox
-    layout_properties: {row: ZYZERW, width_xs: 3, col_xs: 2}
-  - name: reg_user
-    properties: {align: center, foreground: 'theme:Black', background: ''}
-    type: TextBox
-    layout_properties: {row: ZYZERW, width_xs: 3, col_xs: 7}
-  - name: add_approver
-    properties: {text: הוספת בודק, bold: true, font_size: 12, background: 'theme:Gray
-        600', foreground: 'theme:Gray 200'}
-    type: Button
-    layout_properties: {row: ESVKDU, width_xs: 3, col_xs: 2}
-    event_bindings: {click: add_approver_click}
-  - name: add_reg_user
-    properties: {text: הוספת מבצע, font_size: 12, bold: true, background: 'theme:Gray
-        600', foreground: 'theme:Gray 200'}
-    type: Button
-    layout_properties: {row: ESVKDU, width_xs: 3, col_xs: 7}
-    event_bindings: {click: add_reg_user_click}
-- name: grid_panel_2
-  properties: {spacing_above: large, border: ''}
-  type: GridPanel
-  layout_properties: {grid_position: 'OBPBSS,MNUPHZ'}
-  components:
-  - name: label_2_copy
-    properties: {text: הורדת בודק מבדיקת כוח, bold: true, font_size: 15, align: left}
+    layout_properties: {width: 137.38801220703124}
+  - name: label_2
+    properties: {text: הוספת בודק לבדיקת כוח, bold: true, font_size: 15, align: right}
     type: Label
-    layout_properties: {row: CZFNDA, width_xs: 4, col_xs: 2}
+- name: spacer_3
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'GALLZK,HJEKTU'}
+- name: flow_panel_3
+  properties: {align: center}
+  type: FlowPanel
+  layout_properties: {grid_position: 'RLILNS,ZFFZAJ'}
+  components:
+  - name: remove_reg_user
+    properties:
+      text: ''
+      font_size: 16
+      bold: true
+      background: theme:Gray 200
+      foreground: '#ec4f59'
+      role: [round-button, round-button-size]
+      icon: fa:minus
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: remove_reg_user_click}
+  - name: submiter_dd
+    properties: {include_placeholder: true, foreground: 'theme:Black'}
+    type: DropDown
+    layout_properties: {width: 130.98701220703126}
+    event_bindings: {}
   - name: label_1_copy
     properties: {align: right, text: הורדת מבצע מבדיקת כוח, font: '', font_size: 15,
       bold: true}
     type: Label
-    layout_properties: {row: CZFNDA, width_xs: 4, col_xs: 5}
+- name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'HKUPPF,QASHGO'}
+- name: flow_panel_4
+  properties: {align: center}
+  type: FlowPanel
+  layout_properties: {grid_position: 'GWCGAR,TLBXBV'}
+  components:
+  - name: remove_approver
+    properties:
+      text: ''
+      font_size: 16
+      bold: true
+      background: theme:Gray 200
+      foreground: '#ec4f59'
+      role: [round-button, round-button-size]
+      icon: fa:minus
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: remove_approver_click}
   - name: approver_dd
     properties: {include_placeholder: true, foreground: 'theme:Black'}
     type: DropDown
-    layout_properties: {row: PZLHZP, width_xs: 3, col_xs: 2}
+    layout_properties: {width: 139.58701220703125}
     event_bindings: {}
-  - name: submiter_dd
-    properties: {include_placeholder: true, foreground: 'theme:Black'}
-    type: DropDown
-    layout_properties: {row: PZLHZP, width_xs: 3, col_xs: 7}
-    event_bindings: {}
-  - name: remove_approver
-    properties: {text: הורדת בודק, font_size: 12, bold: true, background: 'theme:Gray
-        600', foreground: 'theme:Gray 200'}
-    type: Button
-    layout_properties: {row: HZOINS, width_xs: 3, col_xs: 2}
-    event_bindings: {click: remove_approver_click}
-  - name: remove_reg_user
-    properties: {text: הורדת מבצע, font_size: 12, bold: true, background: 'theme:Gray
-        600', foreground: 'theme:Gray 200'}
-    type: Button
-    layout_properties: {row: HZOINS, width_xs: 3, col_xs: 7}
-    event_bindings: {click: remove_reg_user_click}
-  data_bindings: []
+  - name: label_2_copy
+    properties: {text: הורדת בודק מבדיקת כוח, bold: true, font_size: 15, align: right}
+    type: Label
+    layout_properties: {}
 is_package: true
