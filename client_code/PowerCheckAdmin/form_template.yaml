@@ -8,33 +8,27 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: card_1
-    properties: {role: card, col_widths: '{}'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'RJKWEF,HRNSQP', full_width_row: false}
+  - name: link_2
+    properties: {}
+    type: Link
+    layout_properties: {grid_position: 'CJAVIA,DILXGY'}
     components:
-    - name: link_2
-      properties: {}
-      type: Link
-      layout_properties: {grid_position: 'NPAPNI,SEADBV'}
-      components:
-      - name: history
-        properties:
-          text: היסטוריית בדיקות כוח
-          bold: true
-          role: [history-image, second-button-height]
-          align: center
-          foreground: white
-          spacing_above: medium
-          spacing_below: medium
-        type: Button
-        layout_properties: {grid_position: 'NURGYD,SHJZHO'}
-        event_bindings: {click: history_click}
-      event_bindings: {click: link_2_click}
+    - name: history
+      properties:
+        text: היסטוריית בדיקות כוח
+        bold: true
+        role: [history-image, second-button-height]
+        align: center
+        foreground: white
+        spacing_above: medium
+        spacing_below: medium
+      type: Button
+      layout_properties: {grid_position: 'NURGYD,SHJZHO'}
+      event_bindings: {click: history_click}
     - name: link_1
       properties: {}
       type: Link
-      layout_properties: {grid_position: 'NPAPNI,EINKLT'}
+      layout_properties: {grid_position: 'NURGYD,QJEFRB'}
       components:
       - name: new_test
         properties:
@@ -52,7 +46,7 @@ components:
     - name: link_4
       properties: {}
       type: Link
-      layout_properties: {grid_position: 'PPFVYP,YXIARD'}
+      layout_properties: {grid_position: 'IZHCHF,MBTTIS'}
       components:
       - name: user_management
         properties:
@@ -66,63 +60,60 @@ components:
         type: Button
         layout_properties: {grid_position: 'QLSHPG,TNDYMG'}
         event_bindings: {click: user_management_click}
+      - name: link_3
+        properties: {}
+        type: Link
+        layout_properties: {grid_position: 'QLSHPG,SJNBRH'}
+        components:
+        - name: engine_graph
+          properties:
+            text: תרשים מנוע
+            align: center
+            bold: true
+            role: [engine-graph-image, second-button-height]
+            foreground: white
+            spacing_above: medium
+            spacing_below: medium
+          type: Button
+          layout_properties: {grid_position: 'MXWWKI,DVBVOC'}
+          event_bindings: {click: engine_graph_click}
+        event_bindings: {click: link_3_click}
+      - name: link_6
+        properties: {}
+        type: Link
+        layout_properties: {grid_position: 'EAAZRL,ICLUDB'}
+        components:
+        - name: add_engine
+          properties:
+            text: הרכבת מנוע
+            bold: true
+            align: center
+            role: [add-engine-image, second-button-height]
+            foreground: white
+            spacing_above: medium
+            spacing_below: medium
+          type: Button
+          layout_properties: {grid_position: 'MLOHXS,VWPHMK'}
+          event_bindings: {click: add_engine_click}
+        - name: link_5
+          properties: {}
+          type: Link
+          layout_properties: {grid_position: 'MLOHXS,VLOEXK'}
+          components:
+          - name: remove_engine
+            properties:
+              text: הורדת מנוע
+              bold: true
+              align: center
+              role: [remove-engine-image, second-button-height]
+              border: ''
+              foreground: white
+              spacing_above: medium
+              spacing_below: medium
+            type: Button
+            layout_properties: {grid_position: 'KOOMAI,YCATEW'}
+            event_bindings: {click: remove_engine_click}
+          event_bindings: {click: link_5_click}
+        event_bindings: {click: link_6_click}
       event_bindings: {click: link_4_click}
-    - name: link_3
-      properties: {}
-      type: Link
-      layout_properties: {grid_position: 'PPFVYP,AVREFP'}
-      components:
-      - name: engine_graph
-        properties:
-          text: תרשים מנוע
-          align: center
-          bold: true
-          role: [engine-graph-image, second-button-height]
-          foreground: white
-          spacing_above: medium
-          spacing_below: medium
-        type: Button
-        layout_properties: {grid_position: 'MXWWKI,DVBVOC'}
-        event_bindings: {click: engine_graph_click}
-      event_bindings: {click: link_3_click}
-    - name: link_6
-      properties: {}
-      type: Link
-      layout_properties: {grid_position: 'FNXQIS,GEQPIV'}
-      components:
-      - name: add_engine
-        properties:
-          text: הרכבת מנוע
-          bold: true
-          align: center
-          role: [add-engine-image, second-button-height]
-          foreground: white
-          spacing_above: medium
-          spacing_below: medium
-        type: Button
-        layout_properties: {grid_position: 'MLOHXS,VWPHMK'}
-        event_bindings: {click: add_engine_click}
-      event_bindings: {click: link_6_click}
-    - name: link_5
-      properties: {}
-      type: Link
-      layout_properties: {grid_position: 'FNXQIS,EXQAGW'}
-      components:
-      - name: remove_engine
-        properties:
-          text: הורדת מנוע
-          bold: true
-          align: center
-          role: [remove-engine-image, second-button-height]
-          border: ''
-          foreground: white
-          spacing_above: medium
-          spacing_below: medium
-        type: Button
-        layout_properties: {grid_position: 'KOOMAI,YCATEW'}
-        event_bindings: {click: remove_engine_click}
-      event_bindings: {click: link_5_click}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
+    event_bindings: {click: link_2_click}

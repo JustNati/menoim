@@ -14,8 +14,21 @@ class RemoveEngine(RemoveEngineTemplate):
     self.init_components(**properties)
     engines = sorted([r['engine_num'] for r in app_tables.engines.search()])
     self.engines_dd.items = engines
+    self.tail_data_grid.rows_per_page = '100'
+    self.load_data()
     # Any code you write here will run before the form opens.
 
+  def load_data(self):
+    tail_data = app_tables.tails.search(tables.order_by('tail_number'))
+    finsihed_rows = []
+    for r in tail_data:
+      finsihed_rows.append({
+        'tail_number': r['tail_number'],
+        'left_engine': r['left_engine_num'],
+        'right_engine': r['right_engine_num']
+      })
+    self.repeating_panel_1.items = finsihed_rows
+  
   def remove_engine_click(self, **event_args):
     """This method is called when the button is clicked"""
     engine_to_remove = app_tables.engines.get(engine_num=self.engines_dd.selected_value)
@@ -39,4 +52,5 @@ class RemoveEngine(RemoveEngineTemplate):
       # Update the list after user removes engine so he wont remove the same engine by mistake
       engines = sorted([r['engine_num'] for r in app_tables.engines.search()])
       self.engines_dd.items = engines
+      self.load_data()
     

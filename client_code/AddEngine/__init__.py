@@ -15,7 +15,20 @@ class AddEngine(AddEngineTemplate):
     tails = sorted([r['tail_number'] for r in app_tables.tails.search(q.any_of(left_engine_num='-1', right_engine_num='-1'))])
     self.tails = tails
     self.tail_num.items = tails
+    self.tail_data_grid.rows_per_page = '100'
+    self.load_data()
     # Any code you write here will run before the form opens.
+
+  def load_data(self):
+    tail_data = app_tables.tails.search(tables.order_by('tail_number'))
+    finsihed_rows = []
+    for r in tail_data:
+      finsihed_rows.append({
+        'tail_number': r['tail_number'],
+        'left_engine': r['left_engine_num'],
+        'right_engine': r['right_engine_num']
+      })
+    self.repeating_panel_1.items = finsihed_rows
     
   def add_engine_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -51,6 +64,7 @@ class AddEngine(AddEngineTemplate):
         self.engine_num.text= None
         self.engine_side.selected_value = None
         self.tail_num.selected_value = None
+        self.load_data()
       else:
         changed_tail = app_tables.tails.get(tail_number=self.tail_num.selected_value)
         changed_tail['left_engine_num'] = self.engine_num.text
@@ -60,6 +74,7 @@ class AddEngine(AddEngineTemplate):
         self.engine_num.text= None
         self.engine_side.selected_value = None
         self.tail_num.selected_value = None
+        self.load_data()
 
 
 
