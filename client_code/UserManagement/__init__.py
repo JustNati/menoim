@@ -16,7 +16,7 @@ class UserManagement(UserManagementTemplate):
     self.approver_dd.items = sorted([r['name'] for r in app_tables.users.search(is_approver=True)])
     # Any code you write here will run before the form opens.
 
-  def clear_data():
+  def clear_data(self):
     self.reg_user.text= ''
     self.approver.text=''
     self.submiter_dd.items = sorted([r['name'] for r in app_tables.users.search(is_submiter=True)])
