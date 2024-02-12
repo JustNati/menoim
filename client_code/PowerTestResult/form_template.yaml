@@ -135,11 +135,3 @@ components:
         layout_properties: {}
         event_bindings: {click: update_btn_click}
       layout_properties: {}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
-- name: title_lbl
-  properties: {text: נתוני מנוע}
-  type: Label
-  layout_properties: {slot: title}
