@@ -108,6 +108,18 @@ components:
         properties: {text: שמישות, bold: true, font_size: 12}
         type: Label
         layout_properties: {}
+    - name: flow_panel_3_copy
+      properties: {align: right}
+      type: FlowPanel
+      components:
+      - name: cur_reference
+        properties: {font_size: 12}
+        type: Label
+        layout_properties: {}
+      - name: wf_ff_lbl_copy
+        properties: {text: ':סימוכין', bold: true, font_size: 12}
+        type: Label
+        layout_properties: {}
     - name: flow_panel_4
       properties: {align: center}
       type: FlowPanel

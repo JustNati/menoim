@@ -58,7 +58,7 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
              style="danger").show()
     else:
       res_modal = PowerTestResult(new_record['test_n1_rpm'], new_record['test_itt'], new_record['max_env_temp_OAT'], 
-                                  new_record['test_wf'], new_record['barometric_pressure'],)
+                                  new_record['test_wf'], new_record['barometric_pressure'], new_record['reference'],)
       alert(res_modal, large=True, dismissible=False, buttons=[])
       if res_modal.updated:
         res_record = {

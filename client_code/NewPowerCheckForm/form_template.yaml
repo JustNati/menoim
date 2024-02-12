@@ -160,7 +160,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'MJPAWU,QAEYFU'}
       - name: out_itt_ff_lbl
-        properties: {text: בעת הבדיקה ITT זרימת דלק, font_size: null, bold: false,
+        properties: {text: בעת הבדיקה ITT טמפ' מנוע, font_size: null, bold: false,
           align: right, role: subheading}
         type: Label
         layout_properties: {grid_position: 'EKIBZB,IHWKYW'}
