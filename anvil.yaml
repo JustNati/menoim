@@ -3,6 +3,9 @@ dependencies:
 - dep_id: dep_km42uxb8ia8lq
   version: {dev: false}
   resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
+- dep_id: dep_npzgivelf7ctt
+  version: {dev: false}
+  resolution_hints: {app_id: CDO4O7KBJQWKJJYG, name: Push Notifications, package_name: Push_Notifications}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
