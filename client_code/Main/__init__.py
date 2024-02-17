@@ -21,7 +21,6 @@ from ..PowerCheckAdmin import PowerCheckAdmin
 from ..AirPowerCheck import AirPowerCheck
 from ..NewAirPowerCheck import NewAirPowerCheck
 from ..AirHistory import AirHistory
-from Push_Notifications import firebase
 
 @routing.route('', title='Home')
 @routing.main_router

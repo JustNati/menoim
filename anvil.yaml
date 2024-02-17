@@ -158,6 +158,9 @@ db_schema:
     - name: is_submiter
       admin_ui: {order: 1.5, width: 200}
       type: bool
+    - name: Push_Notification_Token
+      admin_ui: {width: 200, order: 10}
+      type: simpleObject
   airpowertests:
     client: full
     server: full

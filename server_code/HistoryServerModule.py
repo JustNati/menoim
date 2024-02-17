@@ -20,3 +20,14 @@ import anvil.server
 @anvil.server.callable
 def get_powertest():
   return app_tables.powertests.search()
+  
+@anvil.server.callable
+def store_token(token):
+    user=anvil.users.get_user()
+    user_tokens=user['Push_Notification_Token']
+    
+    if user_tokens==None:
+        user['Push_Notification_Token']=[token]
+    else:
+        user_tokens.append(token)
+        user['Push_Notification_Token']=user_tokens
