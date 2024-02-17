@@ -12,17 +12,6 @@ from anvil_extras import routing
 #
 #    Module1.say_hello()
 #
-try:
-  from Push_Notifications import firebase
-except:
-  print('You have not added Push Notifications dependency yet. Generate one by visiting https://push-notifications.anvil.app')
-
-try:
-  token=firebase.request_push_notifications()
-  if firebase.not_exists(token): #Ensuring that the device is not already registered
-    anvil.server.call('store_token',token) #Now we can store the token
-except:
-  print('Push Notifications are not supported on your browser. Please use a different browser')
   
 routing.set_url_hash("", replace_current_url=True)
 routing.launch()

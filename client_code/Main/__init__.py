@@ -28,6 +28,17 @@ class Main(MainTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    try:
+      from Push_Notifications import firebase
+    except:
+      print('You have not added Push Notifications dependency yet. Generate one by visiting https://push-notifications.anvil.app')
+    try:
+      token=firebase.request_push_notifications()
+      print('it works!')
+      if firebase.not_exists(token): #Ensuring that the device is not already registered
+        anvil.server.call('store_token',token) #Now we can store the token
+    except:
+      print('Push Notifications are not supported on your browser. Please use a different browser')
     # Any code you write here will run before the form opens.
 
   def torque_calc_click(self, **event_args) -> None:

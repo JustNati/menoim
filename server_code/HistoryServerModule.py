@@ -23,7 +23,9 @@ def get_powertest():
   
 @anvil.server.callable
 def store_token(token):
+    print('second stage!')
     user=anvil.users.get_user()
+    print(user)
     user_tokens=user['Push_Notification_Token']
     
     if user_tokens==None:
