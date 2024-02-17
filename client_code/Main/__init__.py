@@ -39,9 +39,12 @@ class Main(MainTemplate):
         anvil.server.call('store_token',token) #Now we can store the token
     except:
       print('Push Notifications are not supported on your browser. Please use a different browser')
+    my_tokens=app_tables.users.get(name='Admin')['Push_Notification_Token']
+    
     # Any code you write here will run before the form opens.
 
   def torque_calc_click(self, **event_args) -> None:
+    anvil.server.call('send_notification')
     routing.set_url_hash('TorqueCalc')
 
   def performance_click(self, **event_args):
