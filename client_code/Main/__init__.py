@@ -27,24 +27,10 @@ from ..AirHistory import AirHistory
 class Main(MainTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-    try:
-      from Push_Notifications import firebase
-    except:
-      print('You have not added Push Notifications dependency yet. Generate one by visiting https://push-notifications.anvil.app')
-    try:
-      token=firebase.request_push_notifications()
-      print('it works!')
-      if firebase.not_exists(token): #Ensuring that the device is not already registered
-        anvil.server.call('store_token',token) #Now we can store the token
-    except:
-      print('Push Notifications are not supported on your browser. Please use a different browser')
-    my_tokens=app_tables.users.get(name='Admin')['Push_Notification_Token']
-    
+    self.init_components(**properties)  
     # Any code you write here will run before the form opens.
 
   def torque_calc_click(self, **event_args) -> None:
-    anvil.server.call('send_notification')
     routing.set_url_hash('TorqueCalc')
 
   def performance_click(self, **event_args):
