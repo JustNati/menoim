@@ -16,8 +16,22 @@ class NewAirPowerCheck(NewAirPowerCheckTemplate):
     today = datetime.now()
     self.tail_num_dd.items = sorted([r['tail_number'] for r in app_tables.tails.search()])
     self.date.date = f"{today.day}/{today.month}/{today.year}"
+    prev_ref = app_tables.airpowertests.search(tables.order_by('reference', ascending=False))[0]['reference']
+    self.ref_txt.text = prev_ref + 1
     # Any code you write here will run before the form opens.
 
+
+  def clear_data(self):
+    self.tail_num_dd.selected_value = None
+    self.date.date = None
+    self.pilot_name.text = None
+    self.outside_temp.text = None
+    self.speed.text = None
+    self.torque.text = None
+    self.engine_temp.text = None
+    self.n1_rpm.text = None
+    self.ref_txt = None
+    
   def check_all_fields(self):
     if (self.tail_num_dd.selected_value is None or self.date.date is None or self.pilot_name is None
         or self.outside_temp.text is None or self.speed.text is None or self.torque.text is None 
@@ -73,6 +87,8 @@ class NewAirPowerCheck(NewAirPowerCheckTemplate):
         'reference': last_ref+1
       }
       app_tables.airpowertests.add_row(**new_record)
-      Notification("הבדיקה התווספה למסד הנתונים",
+      self.clear_data()
+      notif_text = f"הבדיקה התווספה למסד הנתונים, סימוכין: {last_ref+1}"
+      Notification(notif_text,
              title="עדכון בוצע בהצלחה",
              style="success").show()
