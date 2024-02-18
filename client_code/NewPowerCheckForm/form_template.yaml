@@ -85,7 +85,8 @@ components:
         layout_properties: {grid_position: 'LANCKH,KJMMTK'}
         components:
         - name: recheck_btn
-          properties: {text_post: בדיקה חוזרת, checked_color: '#83d643', align: left}
+          properties: {text_post: בדיקה חוזרת, checked_color: '#83d643', align: left,
+            checked: false}
           type: form:dep_km42uxb8ia8lq:Switch
           layout_properties: {}
         - name: test_date

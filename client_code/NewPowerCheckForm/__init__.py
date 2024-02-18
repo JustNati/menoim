@@ -29,6 +29,20 @@ class NewPowerCheckForm(NewPowerCheckFormTemplate):
     self.engine_info_panel.visible = False
     self.test_form_panel.visible = False
     self.engine_num_dd.selected_value = None
+    self.engine_autocomplete.text = None
+    self.test_date.date = None
+    self.tail_num_info_lbl.text = None
+    self.side_info_lbl.text = None
+    self.engine_time.text = None
+    self.max_env_tmp_txt.text = None
+    self.barometric_pressure_txt.text = None
+    self.engine_torque_txt.text = None
+    self.n1_rpm_txt.text = None
+    self.out_itt_ff_temp_txt.text = None
+    self.out_wf_ff_txt.text = None
+    self.notes_area.text = None
+    self.recheck_btn.checked = False
+    
     routing.set_url_hash('NewPowerCheckForm')
     
   def update_test(self):
